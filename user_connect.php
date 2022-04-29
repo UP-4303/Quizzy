@@ -12,7 +12,6 @@ if(isset($_POST["login"])){
 	}
 }
 include("lib/head.php");
-include("lib/top_bar.php");
 ?>
 
 <h2 class="titre">Authentification</h2>
