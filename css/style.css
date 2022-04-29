@@ -39,8 +39,8 @@
 
 #top_bar:after {
 	content: "";
-    width: 80px;
-    height: 80px;
+    width: 70%;
+    height: 50%;
     position: absolute;
     left: 30%;
     bottom: 50%;
