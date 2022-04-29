@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <title>TP2</title>
   <link rel="stylesheet" href="css/style.css">
-  <script src=""></script>
+  <script src="js/scripte.js"></script>
  </head>
  <body>
  
