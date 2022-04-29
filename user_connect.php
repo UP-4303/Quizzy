@@ -33,6 +33,9 @@ include("lib/top_bar.php");
 		</tr>
 	</table>
 </form>
+
+<a href="index.php">menu</a>
+
 </div>
 
 <?php
