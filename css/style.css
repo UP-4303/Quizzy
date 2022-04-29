@@ -1,5 +1,8 @@
 .no_margin {
 	margin: 0px;
+}
+
+.no_padding {
 	padding: 0px;
 }
 
@@ -15,8 +18,10 @@
 	grid-row-start: 1;
 	grid-row-end: 1;
 
-	width: 216px;
-	height: 136px
+	margin: 10px;
+
+	width: 324px;
+	height: 204px
 	z-index: 1;
 }
 
