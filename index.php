@@ -1,14 +1,11 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <link rel="stylesheet" href="">
-  <script src=""></script>
- </head>
- <body>
+<?php
+include("lib/head.php");
+?>
 
-	<p>Hello world</p>
+	<header>
+		<img href="images/logo.png" alt="logo" />
+	</header>
 
- </body>
-</html>
+<?php
+include("lib/foot.php");
+?>
