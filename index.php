@@ -1,10 +1,9 @@
 <?php
 include("lib/head.php");
+include("lib/top_bar.php");
 ?>
 
-	<header>
-		<img src="images/logo.png" alt="logo" />
-	</header>
+
 
 <?php
 include("lib/foot.php");
