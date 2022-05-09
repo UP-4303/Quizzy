@@ -8,9 +8,9 @@ CRUD: Gestion de l'entité user
 	CR: créé un nouvel enregistrement  
 	suppose un id auto-incrementé
 */
-function create_user($conn,$login, $passwd, $nickname){
+function create_user($conn,$email, $passwd, $nickname){
 	$password=md5($passwd)
-	$sql="INSERT INTO `users`(`login`, `password`, `nickname`) values ('$login', '$password', '$nickname')";
+	$sql="INSERT INTO `users`(`email`, `password`, `nickname`) values ('$email', '$password', '$nickname')";
 	$ret=mysqli_query($conn, $sql) ;
 	return $ret ; 	
 }
@@ -49,6 +49,15 @@ function select_user($conn, $id){
 		$ret=mysqli_fetch_assoc($ret);
 	}
 	return $ret ;
+}
+
+function get_user($conn, $email, $password){
+	$passwd=md5($password);
+	$sql="SELECT * FROM `users` WHERE `email`=$email AND `password`=$passwd";
+	if ($ret=mysqli_query($conn, $sql)){
+		return $ret;
+	}
+	return $ret;
 }
 
 function select_all_users($conn){
