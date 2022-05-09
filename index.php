@@ -1,7 +1,8 @@
 <?php
 include("lib/head.php");
 
-print_r($_SESSION)
+print_r($_SESSION);
+unset($_SESSION);
 ?>
 
 <a href="user_singup.php">connexion</a>
