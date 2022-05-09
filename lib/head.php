@@ -14,7 +14,6 @@
     <header>
         <div id="top_container" class="no_margin">
             <a href="/l1_info_4/Quizzy" id="logo_link"><img src="images/logo.png" alt="logo" id="logo"></a>
-            <div id="top_bar" class="no_margin"></div>
             <input id="searchbox" type="text" class="form-input" placeholder="Chercher un quizz" name="search" title="Rechercher">
         </div>
     </header>
