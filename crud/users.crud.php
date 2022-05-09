@@ -9,7 +9,7 @@ CRUD: Gestion de l'entité user
 	suppose un id auto-incrementé
 */
 function create_user($conn,$email, $passwd, $nickname){
-	$password=md5($passwd)
+	$password=md5($passwd);
 	$sql="INSERT INTO `users`(`email`, `password`, `nickname`) values ('$email', '$password', '$nickname')";
 	$ret=mysqli_query($conn, $sql) ;
 	return $ret ; 	
@@ -19,7 +19,7 @@ function create_user($conn,$email, $passwd, $nickname){
 	U 
 */
 function update_passwd($conn, $id, $passwd){
-	$password=md5($passwd)
+	$password=md5($passwd);
 	$sql="UPDATE `users` set `password`='$password' WHERE `id`=$id";
 	$ret=mysqli_query($conn, $sql);
 	return $ret;
@@ -58,6 +58,14 @@ function get_user($conn, $email, $password){
 		return $ret;
 	}
 	return $ret;
+}
+
+function connect($conn, $email, $password){
+	if ($user=get_user($conn, $email, $password)){
+		$_SESSION['session']=time();
+		$_SESSION['id']=$user["id"];
+		$_SESSION['admin']=$user["is_admin"];
+	}
 }
 
 function select_all_users($conn){
