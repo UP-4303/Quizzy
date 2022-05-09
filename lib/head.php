@@ -13,7 +13,7 @@
     include("db/db_connect.php") ;
     ?>
     <header>
-        <div id="top_container" class="no_margin">
+        <div id="top_container" class="no_margin no_padding">
             <div id="logo_wrapper">
                 <a href="/l1_info_4/Quizzy" id="logo_link"><img src="images/logo.png" alt="logo" id="logo"></a>
             </div>
