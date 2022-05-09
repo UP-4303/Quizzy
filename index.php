@@ -1,5 +1,7 @@
 <?php
 include("lib/head.php");
+
+print_r($_SESSION)
 ?>
 
 <a href="user_connect.php">connexion</a>
