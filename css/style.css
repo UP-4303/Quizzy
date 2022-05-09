@@ -20,6 +20,7 @@
 	grid-row-end: 1;
 
 	margin: 10px;
+	z-index: 1;
 }
 
 #logo {
