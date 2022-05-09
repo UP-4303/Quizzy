@@ -53,10 +53,8 @@ function select_user($conn, $id){
 
 function get_user($conn, $email, $password){
 	$passwd=md5($password);
-	print_r("get_user");
-	print_r($email);
-	print_r($password);
 	$sql="SELECT * FROM `users` WHERE `email`='".$email."' AND `password`='".$passwd."'";
+	print_r($sql)
 	if ($ret=mysqli_query($conn, $sql)){
 		return $ret;
 	}

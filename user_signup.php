@@ -11,7 +11,7 @@ if (isset($_SESSION['session'])){
 			if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
 				if (strlen($_POST['passwd']) >= 8){
 					//ON DOIT AUSSI VERIFIER SI LE PSEUDO N EXISTE PAS DEJA
-					#create_user($conn, $_POST['email'], $_POST['passwd'], $_POST['nickname']);
+					//create_user($conn, $_POST['email'], $_POST['passwd'], $_POST['nickname']);
 					connect($conn, $_POST["email"], $_POST['passwd']);
 					print("<h3>Compte créé !</h3>");
 				}else{
