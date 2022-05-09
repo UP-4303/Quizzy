@@ -10,7 +10,7 @@
  
     <?php
     session_start();
-    include("db/db_connect.php") ;
+    include_once("db/db_connect.php") ;
     ?>
     <header>
         <div id="top_container" class="no_margin no_padding">
@@ -21,4 +21,13 @@
                 <input id="searchbox" type="text" class="form-input" placeholder="Chercher un quizz" name="search" title="Rechercher">
             </div>
         </div>
+        <?php
+            if (isset($_SESSION['id'])){
+                include_once("crud/users.crud.php");
+                $user=select_user($conn, $_SESSION['id']);
+                print("<h4>Connecté en tant que : ".$user["nickname"]."</h4>");
+            }else{
+                print("<h4>Vous êtes déconnecté negro :(</h4>");
+            }
+        ?>
     </header>
