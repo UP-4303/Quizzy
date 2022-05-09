@@ -6,10 +6,13 @@
 	padding: 0px;
 }
 
-#top_container {
-	display: flex;
+#header {
 	position: sticky;
 	top: 0;
+}
+
+#top_container {
+	display: flex;
 
 	justify-content: space-evenly;
 	flex-wrap: wrap;

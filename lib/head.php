@@ -25,7 +25,7 @@
     }
     include_once("db/db_connect.php") ;
     ?>
-    <header>
+    <header id="header">
         <div id="top_container" class="no_margin no_padding">
             <div id="logo_wrapper">
                 <a href="/l1_info_4/Quizzy" id="logo_link" class="no_margin no_padding"><img src="images/logo.png" alt="logo" id="logo"></a>
