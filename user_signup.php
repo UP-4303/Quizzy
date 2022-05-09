@@ -1,8 +1,8 @@
 <?php
 include("lib/head.php");
 include("crud/users.crud.php");
+print_r($_SESSION);
 if (isset($_SESSION['session'])){
-	print_r($_SESSION);
 	header("Location: index.php");
 }else{
 	if (isset($_POST['email'])){
