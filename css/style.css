@@ -65,4 +65,19 @@
 	width: 15%;
 	height: 20%;
 	border-radius: 20%;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	overflow-wrap: break-word;
+}
+
+#test {
+	background-image: url("images/test.jpg");
+}
+
+.nomQuizz {
+	background-color: white;
+	padding: 1%;
+	border: solid white ;
+	border-radius: 30%;
 }

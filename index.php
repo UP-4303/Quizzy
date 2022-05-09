@@ -3,15 +3,15 @@ include("lib/head.php");
 ?>
 
 <ul id="list_quizz">
-	<li class="quizz">abc</li>
-	<li class="quizz">def</li>
-	<li class="quizz">ghi</li>
-	<li class="quizz">jkl</li>
-	<li class="quizz">mno</li>
-	<li class="quizz">pqr</li>
-	<li class="quizz">stu</li>
-	<li class="quizz">vwx</li>
-	<li class="quizz">yz </li>
+	<li id="test" class="quizz"><div class="nomQuizz">AAAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabc</div></li>
+	<li class="quizz"><div class="nomQuizz">def</div></li>
+	<li class="quizz"><div class="nomQuizz">ghi</div></li>
+	<li class="quizz"><div class="nomQuizz">jkl</div></li>
+	<li class="quizz"><div class="nomQuizz">mno</div></li>
+	<li class="quizz"><div class="nomQuizz">pqr</div></li>
+	<li class="quizz"><div class="nomQuizz">stu</div></li>
+	<li class="quizz"><div class="nomQuizz">vwx</div></li>
+	<li class="quizz"><div class="nomQuizz">yz </div></li>
 </ul>
 
 <?php
