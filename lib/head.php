@@ -21,6 +21,7 @@
         }else if ($act == "inscription"){
             header("Location: user_signup.php");
         }
+        unset($_GET['action']);
     }
     include_once("db/db_connect.php") ;
     ?>
@@ -43,7 +44,7 @@
             }else{
                 print("<h4>Vous êtes déconnecté espèce de gros porc de merde va faire du sport sale chien :(</h4>");
                 print('<input type="submit" name="action" value="connexion">');
-                print('<input type="submit" name="action"> value="inscription');
+                print('<input type="submit" name="action" value="inscription">');
             }
         ?>
         </form>
