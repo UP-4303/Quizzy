@@ -16,8 +16,7 @@
 	background-color: #fc6600;
 }
 
-#logo_link {
-	display: inline;
+#logo_wrapper {
 
 	padding-top: auto;
 	padding-bottom: auto;
@@ -26,13 +25,19 @@
 }
 
 #logo {
+	padding: auto;
+
 	width: 10%;
 	height: auto;
 	z-index: 1;
 }
 
+#searchbox_wrapper {
+
+}
+
 #searchbox {
-	display: inline;
+
 
 	padding-top: auto;
 	padding-bottom: auto;
