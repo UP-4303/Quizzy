@@ -10,7 +10,9 @@ if (isset($_SESSION['time'])){
 			if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
 				if (strlen($_POST['passwd']) >= 8){
 					//ON DOIT AUSSI VERIFIER SI LE PSEUDO N EXISTE PAS DEJA
-					create_user($conn, $_POST['email'], $_POST['passwd'], $_POST['nickname'])
+					create_user($conn, $_POST['email'], $_POST['passwd'], $_POST['nickname']);
+					connect($conn, $_POST["email"], $_POST['passwd']);
+					print("<h3>Compte créé !</h3>")
 				}else{
 					print("<h3>Mot de passe doit faire au moins 8 caractères.</h3>");
 				}
@@ -27,7 +29,7 @@ if (isset($_SESSION['time'])){
 <h2 class="titre">Inscription</h2>
 
 <div id="auth">
-<form method="POST" action="user_validate.php">
+<form method="POST" action="user_signup.php">
 	Pseudo: <input type="text" name="nickname">
 	Mail: <input type="text" name="email">
 	Password: <input type="text" name="passwd">
