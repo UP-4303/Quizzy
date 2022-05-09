@@ -2,7 +2,7 @@
 include_once("lib/head.php");
 include_once("crud/users.crud.php");
 print_r($_SESSION);
-if (isset($_SESSION['session'])){
+if (isset($_SESSION['id'])){
 	header("Location: index.php");
 }else{
 	if (isset($_POST['email'])){
