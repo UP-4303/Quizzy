@@ -13,7 +13,7 @@
     ?>
     <header>
         <div id="top_container" class="no_margin">
-            <a href="/" ><img src="images/logo.png" alt="logo" id="logo"></a>
+            <a href="/l1_info_4/Quizzy" id="logo"><img src="images/logo.png" alt="logo"></a>
             <div id="top_bar" class="no_margin"></div>
             <input id="searchbox" type="text" class="form-input" placeholder="Chercher un quizz" name="search" title="Rechercher">
         </div>
