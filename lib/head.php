@@ -15,5 +15,6 @@
         <div id="top_container" class="no_margin">
             <img src="images/logo.png" alt="logo" id="logo">
             <div id="top_bar" class="no_margin"></div>
+            <input id="searchbox" type="text" class="form-input" placeholder="Rechercher sur le Web de manière privée…" name="search" title="Rechercher">
         </div>
     </header>
