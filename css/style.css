@@ -17,12 +17,14 @@
 }
 
 #logo_wrapper {
-	align-items: center;	
-	width: 10%;
+	align-items: center;
+	width: 30%;
 	z-index: 1;
 }
 
 #logo {
+
+
 	width: 10%;
 	height: auto;
 	z-index: 1;
