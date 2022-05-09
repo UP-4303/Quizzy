@@ -21,10 +21,12 @@
 	z-index: 1;
 }
 
+#logo_link {
+	vertical-align: middle;
+}
+
 #logo {
 	vertical-align: middle;
-
-	padding: auto;
 
 	width: 10%;
 	height: auto;
