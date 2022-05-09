@@ -13,14 +13,16 @@
 	width: 100%;
 }
 
-#logo {
+#logo_link {
 	grid-column-start: 1;
 	grid-column-end: 1;
 	grid-row-start: 1;
 	grid-row-end: 1;
 
 	margin: 10px;
+}
 
+#logo {
 	width: 10%;
 	height: auto;
 	z-index: 1;
