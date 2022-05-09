@@ -1,9 +1,9 @@
 <?php
 include("lib/head.php");
 include("crud/users.crud.php");
-include("lib/auth.php")
+include("lib/auth.php");
 if (isset($_SESSION['time'])){
-	header("Location: index.php")
+	header("Location: index.php");
 }else{
 	if (isset($_POST['email'])){
 		if ($_POST["passwd"] == $_POST["passwd_confirm"]){
