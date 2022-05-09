@@ -17,7 +17,8 @@
 	align-items: center;
 }
 
-#logo_wrapper {	
+#logo_wrapper {
+	align-items: center;	
 	width: auto;
 	z-index: 1;
 }
@@ -35,6 +36,7 @@
 }
 
 #searchbox_wrapper {
+	align-items: center;
 	width: auto;
 	z-index: 1;
 }
