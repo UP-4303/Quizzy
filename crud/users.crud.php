@@ -56,7 +56,7 @@ function get_user($conn, $email, $password){
 	$sql="SELECT * FROM `users` WHERE `email`='".$email."' AND `password`='".$passwd."'";
 	print_r($sql);
 	if ($ret=mysqli_query($conn, $sql)){
-		return $ret;
+		return mysqli_fetch_assoc($ret);
 	}
 	return $ret;
 }
