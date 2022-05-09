@@ -67,7 +67,7 @@ function connect($conn, $email, $password){
 		$_SESSION['admin']=$user["is_admin"];
 		print_r($_SESSION);
 	}
-	print("panik");
+	print_r($user);
 
 }
 
