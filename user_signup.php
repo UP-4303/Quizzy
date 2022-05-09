@@ -1,7 +1,6 @@
 <?php
 include_once("lib/head.php");
 include_once("crud/users.crud.php");
-session_start();
 print_r($_SESSION);
 if (isset($_SESSION['session'])){
 	header("Location: index.php");

@@ -9,6 +9,7 @@
 <body class="no_margin no_padding">
  
     <?php
+    session_start();
     include("db/db_connect.php") ;
     ?>
     <header>
