@@ -48,14 +48,3 @@
 	height: 5%;
 	z-index: 1;
 }
-
-/*#top_bar:after {
-	content: "";
-    width: 70%;
-    height: 50%;
-    position: absolute;
-    left: 30%;
-    bottom: 50%;
-    background-color: #ffffff;
-    border-radius: 10%;
-}*/
