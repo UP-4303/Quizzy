@@ -1,11 +1,6 @@
 <?php
 include("lib/head.php");
-
-print_r($_SESSION);
-unset($_SESSION);
 ?>
-
-<a href="user_signup.php">connexion</a>
 
 <ul id="list_quizz">
 	<li class="quizz">abc</li>

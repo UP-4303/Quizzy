@@ -10,7 +10,18 @@
  
     <?php
     session_start();
-    print_r($_GET);
+    if (isset($_GET['action'])){
+        $act=$_GET['action'];
+        if ($act == "déconnexion"){
+            unset($_SESSION["id"]);
+            unset($_SESSION["session"]);
+            unset($_SESSION["admin"]);
+        }else if ($act == "connexion"){
+            header("Location: user_connect.php");
+        }else if ($act == "inscription"){
+            header("Location: user_signup.php");
+        }
+    }
     include_once("db/db_connect.php") ;
     ?>
     <header>
@@ -28,11 +39,11 @@
                 include_once("crud/users.crud.php");
                 $user=select_user($conn, $_SESSION['id']);
                 print("<h4>Connecté en tant que : ".$user["nickname"]."</h4>");
-                print('<input type="submit" name="déconnexion">');
+                print('<input type="submit" name="action" value="déconnexion">');
             }else{
                 print("<h4>Vous êtes déconnecté espèce de gros porc de merde va faire du sport sale chien :(</h4>");
-                print('<input type="submit" name="connexion">');
-                print('<input type="submit" name="inscription">');
+                print('<input type="submit" name="action" value="connexion">');
+                print('<input type="submit" name="action"> value="inscription');
             }
         ?>
         </form>
