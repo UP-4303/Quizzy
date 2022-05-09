@@ -47,6 +47,8 @@
 	grid-row-start: 1;
 	grid-row-end: 1;
 
-	
+	width: 50%;
+	height: 10%;
+
 	z-index: 1;
 }
