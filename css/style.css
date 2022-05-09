@@ -14,17 +14,21 @@
 	height: 200px;
 
 	background-color: #fc6600;
+	align-items: center;
 }
 
-#logo_wrapper {	
+#logo_wrapper {
+	align-items: center;	
 	width: auto;
 	z-index: 1;
 }
 
+#logo_link {
+	vertical-align: middle;
+}
+
 #logo {
 	vertical-align: middle;
-
-	padding: auto;
 
 	width: 10%;
 	height: auto;
@@ -32,6 +36,7 @@
 }
 
 #searchbox_wrapper {
+	align-items: center;
 	width: auto;
 	z-index: 1;
 }
