@@ -1,7 +1,6 @@
 <?php
 include("lib/head.php");
 include("crud/users.crud.php");
-include("lib/auth.php");
 if (isset($_SESSION['time'])){
 	header("Location: index.php");
 }else{
@@ -34,6 +33,7 @@ if (isset($_SESSION['time'])){
 	Mail: <input type="text" name="email">
 	Password: <input type="text" name="passwd">
 	Confirm Password: <input type="text" name="passwd_confirm">
+	<input type="submit" value="Créer">
 </form>
 
 </div>
