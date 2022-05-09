@@ -21,6 +21,7 @@
         }else if ($act == "inscription"){
             header("Location: user_signup.php");
         }
+        unset($_GET['action']);
     }
     include_once("db/db_connect.php") ;
     ?>
