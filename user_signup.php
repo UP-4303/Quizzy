@@ -12,7 +12,7 @@ if (isset($_SESSION['time'])){
 					//ON DOIT AUSSI VERIFIER SI LE PSEUDO N EXISTE PAS DEJA
 					create_user($conn, $_POST['email'], $_POST['passwd'], $_POST['nickname']);
 					connect($conn, $_POST["email"], $_POST['passwd']);
-					print("<h3>Compte créé !</h3>")
+					print("<h3>Compte créé !</h3>");
 				}else{
 					print("<h3>Mot de passe doit faire au moins 8 caractères.</h3>");
 				}
