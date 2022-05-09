@@ -9,6 +9,7 @@
 #top_container {
 	display: flex;
 	position: sticky;
+	top: 0px;
 
 	justify-content: space-evenly;
 	flex-wrap: wrap;
