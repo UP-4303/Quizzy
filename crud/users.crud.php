@@ -65,7 +65,10 @@ function connect($conn, $email, $password){
 		$_SESSION['session']=time();
 		$_SESSION['id']=$user["id"];
 		$_SESSION['admin']=$user["is_admin"];
+		print_r($_SESSION);
 	}
+	print("panik");
+
 }
 
 function select_all_users($conn){
