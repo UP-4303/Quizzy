@@ -60,6 +60,14 @@ function get_user($conn, $email, $password){
 	return $ret;
 }
 
+function connect($conn, $email, $password){
+	if ($user=get_user($conn, $email, $password)){
+		$_SESSION['session']=time();
+		$_SESSION['id']=$user["id"];
+		$_SESSION['admin']=$user["is_admin"];
+	}
+}
+
 function select_all_users($conn){
 	$sql="SELECT * FROM `users`";
 	if ($ret=mysqli_query($conn, $sql)){
