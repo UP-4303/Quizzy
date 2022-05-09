@@ -20,6 +20,8 @@
 }
 
 #logo_wrapper {
+	display: flex;
+	align-items: center;
 	z-index: 1;
 }
 
@@ -30,7 +32,9 @@
 }
 
 #searchbox_wrapper {
-	width: auto;
+	display: flex;
+	align-items: center;
+	flex-grow: 1.5;
 	z-index: 1;
 }
 
@@ -63,7 +67,7 @@
 }
 
 #test {
-	background-image: url("../images/test.jpg");
+	background-image: url("images/test.jpg");
 }
 
 .nomQuizz {
