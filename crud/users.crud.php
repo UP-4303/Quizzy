@@ -61,6 +61,7 @@ function get_user($conn, $email, $password){
 }
 
 function connect($conn, $email, $password){
+	session_start();
 	if ($user=get_user($conn, $email, $password)){
 		$_SESSION['session']=time();
 		$_SESSION['id']=$user["id"];
