@@ -56,16 +56,16 @@ function get_user($conn, $email, $password){
 	$sql="SELECT * FROM `users` WHERE `email`='".$email."' AND `password`='".$passwd."'";
 	print_r($sql);
 	if ($ret=mysqli_query($conn, $sql)){
-		return $ret;
+		return mysqli_fetch_assoc($ret);
 	}
 	return $ret;
 }
 
 function connect($conn, $email, $password){
 	if ($user=get_user($conn, $email, $password)){
-		//$_SESSION['session']=time();
-		//$_SESSION['id']=$user["id"];
-		//$_SESSION['admin']=$user["is_admin"];
+		$_SESSION['session']=time();
+		$_SESSION['id']=$user["id"];
+		$_SESSION['admin']=$user["is_admin"];
 		print_r($_SESSION);
 	}
 	print_r($user);
