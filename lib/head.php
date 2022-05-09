@@ -44,7 +44,7 @@
             }else{
                 print("<h4>Vous êtes déconnecté espèce de gros porc de merde va faire du sport sale chien :(</h4>");
                 print('<input type="submit" name="action" value="connexion">');
-                print('<input type="submit" name="action"> value="inscription');
+                print('<input type="submit" name="action" value="inscription">');
             }
         ?>
         </form>

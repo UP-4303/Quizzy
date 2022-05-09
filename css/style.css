@@ -63,7 +63,7 @@
 }
 
 #test {
-	background-image: url("images/test.jpg");
+	background-image: url("../images/test.jpg");
 }
 
 .nomQuizz {
