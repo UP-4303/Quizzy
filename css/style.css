@@ -10,6 +10,7 @@
 	display: flex;
 	position: sticky;
 
+	justify-content: space-evenly;
 	flex-wrap: wrap;
 
 	width: 100%;
@@ -36,6 +37,8 @@
 }
 
 #searchbox_wrapper {
+	flex-grow: 3;
+
 	display: flex;
 	align-items: center;
 	width: auto;
@@ -44,6 +47,7 @@
 
 #searchbox {
 	width: 100%;
+	max-width: 200px;
 	height: 20px;
 
 	color: black;
