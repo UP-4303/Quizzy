@@ -4,7 +4,7 @@ include("lib/head.php");
 print_r($_SESSION)
 ?>
 
-<a href="user_singup.php">connexion</a>
+<a href="user_signup.php">connexion</a>
 
 <ul id="list_quizz">
 	<li class="quizz">abc</li>
