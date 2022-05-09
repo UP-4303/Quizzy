@@ -19,8 +19,8 @@
 }
 
 #logo_wrapper {
+	display: flex;
 	align-items: center;
-	width: 30%;
 	z-index: 1;
 }
 
@@ -33,6 +33,7 @@
 }
 
 #searchbox_wrapper {
+	display: flex;
 	align-items: center;
 	width: auto;
 	z-index: 1;
