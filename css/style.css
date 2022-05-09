@@ -10,7 +10,7 @@
 	display: flex;
 	position: sticky;
 
-	justify-content: space-evenly;
+	justify-content: space-around;
 	flex-wrap: wrap;
 
 	width: 100%;
@@ -20,8 +20,6 @@
 }
 
 #logo_wrapper {
-	display: flex;
-	align-items: center;
 	z-index: 1;
 }
 
@@ -36,9 +34,6 @@
 
 #searchbox_wrapper {
 	flex-grow: 3;
-
-	display: flex;
-	align-items: center;
 	width: auto;
 	z-index: 1;
 }
