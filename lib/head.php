@@ -42,7 +42,7 @@
                 print("<h4>Connecté en tant que : ".$user["nickname"]."</h4>");
                 print('<input type="submit" name="action" value="déconnexion">');
             }else{
-                print("<h4>Vous êtes déconnecté espèce de gros porc de merde va faire du sport sale chien :(</h4>");
+                print("<h4>Déconnecté</h4>");
                 print('<input type="submit" name="action" value="connexion">');
                 print('<input type="submit" name="action" value="inscription">');
             }
