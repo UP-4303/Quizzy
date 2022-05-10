@@ -1,7 +1,7 @@
 @font-face {
 	font-family: "Code New Roman";
-	src: url("os-vps418.infomaniak.ch:1180/l1_info_4/Quizzy/fonts/code_new_roman/Code_New_Roman.otf") format("opentype"),
-		url("os-vps418.infomaniak.ch:1180/l1_info_4/Quizzy/fonts/code_new_roman/Code_New_Roman.woff") format("woff");
+	src: url("/l1_info_4/Quizzy/fonts/code_new_roman/Code_New_Roman.otf") format("opentype"),
+		url("/l1_info_4/Quizzy/fonts/code_new_roman/Code_New_Roman.woff") format("woff");
 }
 
 * {
