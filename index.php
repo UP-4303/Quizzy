@@ -3,7 +3,7 @@ include("lib/head.php");
 ?>
 
 <ul id="list_quizz">
-	<li id="test" class="quizz"><div class="nomQuizz">AAAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabc</div></li>
+	<li id="test" class="quizz"><div class="nomQuizz">WWWWWWWWWWWWWWWWWWWWWWW</div></li>
 	<li class="quizz"><div class="nomQuizz">def</div></li>
 	<li class="quizz"><div class="nomQuizz">ghi</div></li>
 	<li class="quizz"><div class="nomQuizz">jkl</div></li>
