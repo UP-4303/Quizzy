@@ -78,6 +78,23 @@
 	border-left: 0px;
 }
 
+#menu_pannel {
+	height: 100%;
+	width: 50%;
+	border-right: 5px black;
+}
+
+#menu_top_wrapper {
+	top: 210px;
+}
+
+#menu_bottom_wrapper {
+	bottom: 10px;
+}
+
+
+
+
 #list_quizz {
 	list-style: none;
 	display: flex;

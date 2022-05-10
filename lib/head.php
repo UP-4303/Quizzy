@@ -47,6 +47,16 @@
                 </lord-icon>
             </div>
         </div>
+
+        <div id="menu_pannel">
+            <div id="menu_top_wrapper">
+                <p>test top</p>
+            </div>
+            <div id="menu_bottom_wrapper">
+                <p>test bottom</p>
+            </div>
+        </div>
+
         <form action="" method="get">
         <?php
             if (isset($_SESSION['id'])){
