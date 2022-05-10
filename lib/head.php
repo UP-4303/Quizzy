@@ -30,10 +30,21 @@
         <div id="top_container" class="no_margin no_padding">
             <div id="logo_wrapper">
                 <a href="/l1_info_4/Quizzy" id="logo_link" class="no_margin no_padding"><img src="images/logo.png" alt="logo" id="logo"></a>
+                <lord-icon id="menu_icon"
+                    src="https://cdn.lordicon.com/jtqpkhoh.json"
+                    trigger="click"
+                    stroke="90"
+                    colors="primary:#000000,secondary:#fc6600">
+                </lord-icon>
             </div>
             <div id="searchbox_wrapper">
                 <input id="searchbox" type="text" class="form-input" placeholder="Chercher un quizz" name="search" title="Rechercher">
-                <lord-icon id="searchbox_icon" src="https://cdn.lordicon.com/msoeawqm.json" trigger="hover" colors="primary:#fc6600,secondary:#000000"></lord-icon>
+                <lord-icon id="searchbox_icon"
+                    src="https://cdn.lordicon.com/msoeawqm.json"
+                    trigger="morph"
+                    stroke="90"
+                    colors="primary:#fc6600,secondary:#000000">
+                </lord-icon>
             </div>
         </div>
         <form action="" method="get">
