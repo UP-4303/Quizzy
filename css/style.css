@@ -4,7 +4,7 @@
 		url("/l1_info_4/Quizzy/fonts/code_new_roman/Code_New_Roman.woff") format("woff");
 }
 
-header, body, footer {
+* {
 	font-family: "Code New Roman", sans-serif, monospace, system-ui;
 }
 
