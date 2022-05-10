@@ -55,7 +55,7 @@
 
 #searchbox_wrapper {
 	display: flex;
-	align-items: center;
+	align-items: top;
 	flex-grow: 2;
 	z-index: 1;
 }
