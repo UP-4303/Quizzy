@@ -84,14 +84,15 @@
 	border: solid black ;
 	margin: 5%;
 	text-align: center;
-	padding: 10%;
-	width: 15%;
-	height: 20%;
+	padding: 15%;
 	border-radius: 20%;
 	background-position: center;
 	display: flex;
 	justify-content: center;
 	overflow-wrap: break-word;
+	width: 1em;
+	height: 1em;
+	font-size: 1em;
 }
 
 #test {
@@ -100,7 +101,5 @@
 
 .nomQuizz {
 	background-color: white;
-	padding: 1%;
-	border: solid white ;
-	border-radius: 30%;
+	padding: 3%;
 }
