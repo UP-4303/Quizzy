@@ -1,3 +1,13 @@
+@font-face {
+	font-family: "Code New Roman";
+	src: url("/fonts/code_new_roman/Code_New_Roman.otf") format("opentype"),
+		url("/fonts/code_new_roman/Code_New_Roman.woff") format("woff");
+}
+
+* {
+	font-family: "Code New Roman", system-ui;
+}
+
 .no_margin {
 	margin: 0px;
 }
