@@ -97,7 +97,7 @@
 
 #test {
 	background-image: url("../images/test.jpg");
-	background-size: contain;
+	background-size: cover;
 	background-repeat: no-repeat;
 }
 
