@@ -108,6 +108,7 @@
 .nomQuizz {
 	background-color: white;
 	padding: 5%;
-	max-width: 100%;
+	width: 1em;
+	height: auto;
 	overflow-wrap: anywhere;
 }
