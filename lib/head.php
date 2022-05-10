@@ -48,7 +48,7 @@
             </div>
         </div>
 
-        <div id="menu_pannel">
+        <div id="menu_pannel" class="no_margin no_padding">
             <div id="menu_top_wrapper">
                 <p>test top</p>
             </div>
