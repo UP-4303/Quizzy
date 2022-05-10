@@ -5,7 +5,7 @@
 }
 
 header, body, footer {
-	font-family: "Code New Roman", sans-serif monospace, system-ui;
+	font-family: "Code New Roman", sans-serif, monospace, system-ui;
 }
 
 .no_margin {
