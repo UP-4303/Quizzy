@@ -54,6 +54,7 @@
 #searchbox_wrapper {
 	display: flex;
 	align-items: flex-start;
+	padding-top: 60px;
 	flex-grow: 2;
 	z-index: 1;
 }
