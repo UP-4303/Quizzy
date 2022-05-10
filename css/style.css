@@ -109,5 +109,5 @@
 	background-color: white;
 	padding: 5%;
 	max-width: 100%;
-	overflow-wrap: break-word;
+	overflow-wrap: anywhere;
 }
