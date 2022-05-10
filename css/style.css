@@ -5,7 +5,7 @@
 }
 
 * {
-	font-family: "Code New Roman", system-ui;
+	font-family: "Code New Roman", sans-serif monospace, system-ui;
 }
 
 .no_margin {
