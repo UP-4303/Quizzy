@@ -53,12 +53,15 @@
 	color: black;
 	font-size: 24px;
 	border: 1px solid #ccc;
+	border-right: 0px;
 }
 
 #searchbox_icon {
 	height: 30px;
 	width: auto;
 	background-color: white;
+	border: 1px solid #ccc;
+	border-left: 0px;
 }
 
 #list_quizz {
