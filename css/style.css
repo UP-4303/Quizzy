@@ -13,14 +13,15 @@
 
 #top_container {
 	display: flex;
+	align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 
-	justify-content: space-evenly;
-	flex-wrap: wrap;
+    width: 100%;
+    height: 150px;
 
-	width: 100%;
-	height: 150px;
-
-	background-color: #fc6600;
+    background-color: #fc6600;
 }
 
 #logo_wrapper {
@@ -47,11 +48,15 @@
 #searchbox {
 	width: 100%;
 	max-width: 500px;
-	height: 20px;
+	height: 30px;
 
 	color: black;
-	font-size: 17px;
-	border: 1px solid #000000;
+	font-size: 24px;
+	border: 1px solid #ccc;
+}
+
+#searchbox_icon {
+	
 }
 
 #list_quizz {
