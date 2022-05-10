@@ -3,6 +3,7 @@ include("lib/head.php");
 ?>
 
 <?php
+include_once("crud/users.crud.php");
 
 $user = select_user($conn, 14) ;
 
