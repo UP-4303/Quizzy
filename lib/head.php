@@ -33,7 +33,7 @@
             </div>
             <div id="searchbox_wrapper">
                 <input id="searchbox" type="text" class="form-input" placeholder="Chercher un quizz" name="search" title="Rechercher">
-                <lord-icon id="searchbox_icon" src="https://cdn.lordicon.com/msoeawqm.json" trigger="loop" colors="primary:#fc6600,secondary:#000000" style="width:250px;height:250px"></lord-icon>
+                <lord-icon id="searchbox_icon" src="https://cdn.lordicon.com/msoeawqm.json" trigger="hover" colors="primary:#fc6600,secondary:#000000" style="width:250px;height:250px"></lord-icon>
             </div>
         </div>
         <form action="" method="get">

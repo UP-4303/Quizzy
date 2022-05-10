@@ -56,7 +56,9 @@
 }
 
 #searchbox_icon {
-	
+	height: 30px;
+	width: auto;
+	background-color: white;
 }
 
 #list_quizz {
