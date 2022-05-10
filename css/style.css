@@ -97,6 +97,8 @@
 
 #test {
 	background-image: url("../images/test.jpg");
+	background-size: contain;
+	background-repeat: no-repeat;
 }
 
 .nomQuizz {
