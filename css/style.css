@@ -89,7 +89,6 @@
 	background-position: center;
 	display: flex;
 	justify-content: center;
-	overflow-wrap: break-word;
 	width: 1em;
 	height: 1em;
 	font-size: 1.5em;
@@ -104,4 +103,6 @@
 .nomQuizz {
 	background-color: white;
 	padding: 5%;
+	max-width: 100%;
+	overflow-wrap: break-word;
 }
