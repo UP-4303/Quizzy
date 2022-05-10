@@ -94,8 +94,8 @@
 	background-position: center;
 	display: flex;
 	justify-content: center;
-	width: 1em;
-	height: 1em;
+	width: 3em;
+	height: 3em;
 	font-size: 1.5em;
 }
 
@@ -108,7 +108,8 @@
 .nomQuizz {
 	background-color: white;
 	padding: 5%;
-	width: 1em;
-	height: auto;
+	width: 25vw;
+	height: fit-content;
 	overflow-wrap: anywhere;
+	flex-shrink: 0.5;
 }
