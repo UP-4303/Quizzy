@@ -142,13 +142,10 @@
 #cont_profil {
 	display: flex;
 	justify-content: space-around;
-	max-width: 35%;
-	max-height: 35%;
+	align-items: center;
 }
 
 #profil_pic {
-	max-width: 35%;
-	max-height: 35%;
 	height: auto;
 	width: auto;
 	margin: 5%;
@@ -156,10 +153,20 @@
 
 #profil_info {
 	margin: 5%;
-	margin-right: 30%;
 }
 
 #cont_pic {
 	display: flex;
 	justify-content: center;
+	align-items: center;
+	margin: 5%;
+	width: 0.5em;
+}
+
+#cont_info {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5%;
+	width: 0.5em;
 }
