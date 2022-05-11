@@ -10,7 +10,7 @@ $user = select_user($conn, 14) ;
 $info = "<ul>\n" ;
 $info .= "\t<li>pseudo : ".$user["nickname"]."</li>\n" ;
 $info .= "\t<li>email : ".$user["email"]."</li>\n" ;
-$info .= "</ul>\n>" ;
+$info .= "</ul>\n" ;
 
 echo $info ;
 
