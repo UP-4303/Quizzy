@@ -6,29 +6,14 @@ if (isset($_SESSION['id'])){
 	header("Location: index.php");
 }else{
 	if (isset($_POST['email'])){
-		if ($_POST["passwd"] == $_POST["passwd_confirm"]){
-			if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
-				if (strlen($_POST['passwd']) >= 8){
-					if (! email_exist($conn, $_POST['email'])){
-						if (! nickname_exist($conn, $_POST['nickname'])){
-							create_user($conn, $_POST['email'], $_POST['passwd'], $_POST['nickname']);
-							connect($conn, $_POST["email"], $_POST['passwd']);
-							print("<h3>Compte créé !</h3>");
-						}else{
-							print("<h3>Ce pseudo est déjà pris.</h3>");
-						}
-					}else{
-						print("<h3>Cet email est déjà utilisé.</h3>");
-					}
-				}else{
-					print("<h3>Mot de passe doit faire au moins 8 caractères.</h3>");
-				}
-			}else{
-				print("<h3>Email incorrect.</h3>");
-			}
-		}else{
-			print("<h3>Le mot de passe et sa confirmation sont différentes !</h3>");
-		}
+		if ($_POST["passwd"] != $_POST["passwd_confirm"]){print("<h3>Le mot de passe et sa confirmation sont différentes !</h3>");return;}
+		if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){print("<h3>Email incorrect.</h3>");return;}
+		if (strlen($_POST['passwd']) >= 8){print("<h3>Mot de passe doit faire au moins 8 caractères.</h3>");return;}
+		if (! email_exist($conn, $_POST['email'])){print("<h3>Cet email est déjà utilisé.</h3>");return;}
+		if (! nickname_exist($conn, $_POST['nickname'])){print("<h3>Ce pseudo est déjà pris.</h3>");return;}
+		create_user($conn, $_POST['email'], $_POST['passwd'], $_POST['nickname']);
+		connect($conn, $_POST["email"], $_POST['passwd']);
+		print("<h3>Compte créé !</h3>");
 	}
 }
 ?>
