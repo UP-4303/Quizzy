@@ -96,15 +96,18 @@
 
 	height: 100vh;
 	width: 25vw;
-	border-right: 5px black;
-	background-color: yellow;
+	min-width: 200px;
+	border-right: 2px solid black;
+	background-color: white;
 }
 
 #menu_top_wrapper {
+	position: absolute;
 	top: 210px;
 }
 
 #menu_bottom_wrapper {
+	position: absolute;
 	bottom: 10px;
 }
 
