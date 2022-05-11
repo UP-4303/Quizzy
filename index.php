@@ -14,7 +14,7 @@ include("lib/head.php");
 	<li class="quizz"><div class="nomQuizz">yz </div></li>
 </ul>
 
-<a href="profile.php">proflie</a>
+<a href="profil.php">profil</a>
 
 <?php
 include("lib/foot.php");
