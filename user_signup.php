@@ -2,8 +2,9 @@
 include_once("lib/head.php");
 include_once("crud/users.crud.php");
 print_r($_SESSION);
-print_r(email_exist($conn, "blabla"));
-print_r(email_exist($conn, "jxds.lph@pm.me"));
+if (email_exist($conn, "blabla")){
+	print_r("PLUS FORT");
+}
 print_r("MOURIR");
 if (isset($_SESSION['id'])){
 	header("Location: index.php");
