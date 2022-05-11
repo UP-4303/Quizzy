@@ -29,9 +29,9 @@ if (isset($_SESSION['id'])){
 <div id="auth">
 <form method="POST" action="user_signup.php">
 	Pseudo: <input type="text" name="nickname">
-	Mail: <input type="text" name="email">
-	Password: <input type="text" name="passwd">
-	Confirm Password: <input type="text" name="passwd_confirm">
+	Mail: <input type="email" name="email">
+	Password: <input type="password" name="passwd">
+	Confirm Password: <input type="password" name="passwd_confirm">
 	<input type="submit" value="Créer">
 </form>
 
