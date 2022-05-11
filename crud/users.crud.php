@@ -74,8 +74,7 @@ function connect($conn, $email, $password){
 function email_exist($conn, $email){
 	$sql="SELECT * FROM `users` WHERE `email`='".$email."'";
 	if ($ret=mysqli_query($conn, $sql)){
-		print_r(mysqli_fetch_array($ret));
-		return is_null(mysqli_fetch_array($ret));
+		return $ret;
 	}
 	return false;
 }
