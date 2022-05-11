@@ -10,6 +10,7 @@ CRUD: Gestion de l'entité user
 */
 function create_user($conn,$email, $passwd, $nickname){
 	$password=md5($passwd);
+	$email=strtolower($email);
 	$sql="INSERT INTO `users`(`email`, `password`, `nickname`) values ('$email', '$password', '$nickname')";
 	$ret=mysqli_query($conn, $sql) ;
 	return $ret ; 	
@@ -68,8 +69,22 @@ function connect($conn, $email, $password){
 		print_r($_SESSION);
 	}
 	print_r($user);
-	
+}
 
+function email_exist($conn, $email){
+	$sql="SELECT * FROM `users` WHERE `email`='".$email."'";
+	if ($ret=mysqli_query($conn, $sql)){
+		return true;
+	}
+	return false;
+}
+
+function nickname_exist($conn, $nickname){
+	$sql="SELECT * FROM `users` WHERE `nickname`='".$nickname."'";
+	if ($ret=mysqli_query($conn, $sql)){
+		return true;
+	}
+	return false;
 }
 
 function select_all_users($conn){
