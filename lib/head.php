@@ -27,7 +27,8 @@
     include_once("db/db_connect.php") ;
     ?>
     <header id="header">
-        <svg id="top_svg"><path fill="#fc6600" fill-opacity="1" d="M 0 0 L 800 0 L 800 150 L 350 150 C 200 150 250 200 100 200 L 0 200 Z" id="top_container" class="no_margin no_padding">
+    <svg id="top_svg" class="no_margin no_padding"><path fill="#fc6600" fill-opacity="1" d="M 0 0 L 800 0 L 800 150 L 350 150 C 200 150 250 200 100 200 L 0 200 Z"></path></svg>
+        <div id="top_container">
             <div id="logo_wrapper">
                 <a href="/l1_info_4/Quizzy" id="logo_link" class="no_margin no_padding"><img src="images/logo.png" alt="logo" id="logo"></a>
                 <lord-icon id="menu_icon"
@@ -38,7 +39,8 @@
                 </lord-icon>
             </div>
             <div id="searchbox_wrapper">
-                <input id="searchbox" type="text" class="form-input" placeholder="Chercher un quizz" name="search" title="Rechercher">
+                <input id="searchbox" class="no_padding" 
+                type="text" class="form-input" placeholder="Chercher un quizz" name="search" title="Rechercher">
                 <lord-icon id="searchbox_icon"
                     src="https://cdn.lordicon.com/msoeawqm.json"
                     trigger="morph"
@@ -46,7 +48,7 @@
                     colors="primary:#fc6600,secondary:#000000">
                 </lord-icon>
             </div>
-        </path></svg>
+        </div>
 
         <div id="menu_pannel" class="no_margin no_padding">
             <div id="menu_top_wrapper">
