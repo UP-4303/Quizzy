@@ -7,6 +7,8 @@ function check_and_create($conn){
 		if ($_POST["passwd"] != $_POST["passwd_confirm"]){print("<h3>Le mot de passe et sa confirmation sont différentes !</h3>");return;}
 		if (! filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){print("<h3>Email incorrect.</h3>");return;}
 		if (strlen($_POST['passwd']) < 8){print("<h3>Mot de passe doit faire au moins 8 caractères.</h3>");return;}
+		if (strlen($_POST['nickname']) < 5){print("<h3>Le pseudo doit faire au moins 5 caractères.</h3>");return;}
+		if (filter_var($_POST['nickname'], FILTER_VALIDATE_EMAIL)){print("<h3>Le pseudo ne doit pas être un email valide.</h3>");return;}
 		if (email_exist($conn, $_POST['email'])){print("<h3>Cet email est déjà utilisé.</h3>");return;}
 		if (nickname_exist($conn, $_POST['nickname'])){print("<h3>Ce pseudo est déjà pris.</h3>");return;}
 		create_user($conn, $_POST['email'], $_POST['passwd'], $_POST['nickname']);
@@ -27,9 +29,9 @@ if (isset($_SESSION['id'])){
 <div id="auth">
 <form method="POST" action="user_signup.php">
 	Pseudo: <input type="text" name="nickname">
-	Mail: <input type="text" name="email">
-	Password: <input type="text" name="passwd">
-	Confirm Password: <input type="text" name="passwd_confirm">
+	Mail: <input type="email" name="email">
+	Password: <input type="password" name="passwd">
+	Confirm Password: <input type="password" name="passwd_confirm">
 	<input type="submit" value="Créer">
 </form>
 
