@@ -2,11 +2,11 @@
 include_once("lib/head.php");
 include_once("crud/users.crud.php");
 print_r($_SESSION);
+print_r(email_exist("blabla"));
+print_r(email_exist("jxds.lph@pm.me"));
 if (isset($_SESSION['id'])){
 	header("Location: index.php");
 }else{
-	print_r(email_exist("blabla"));
-	print_r(email_exist("jxds.lph@pm.me"));
 	if (isset($_POST['email'])){
 		if ($_POST["passwd"] == $_POST["passwd_confirm"]){
 			if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
