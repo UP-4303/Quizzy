@@ -39,8 +39,8 @@
                 </lord-icon>
             </div>
             <div id="searchbox_wrapper">
-                <input id="searchbox" class="no_padding" 
-                type="text" class="form-input" placeholder="Chercher un quizz" name="search" title="Rechercher">
+                <input id="searchbox" class="no_padding, form-input" 
+                type="text" placeholder="Chercher un quizz" name="search" title="Rechercher">
                 <lord-icon id="searchbox_icon"
                     src="https://cdn.lordicon.com/msoeawqm.json"
                     trigger="morph"
@@ -59,7 +59,7 @@
             </div>
         
 
-        <form action="" method="get">
+        <form action="#" method="get">
         <?php
             if (isset($_SESSION['id'])){
                 include_once("crud/users.crud.php");
