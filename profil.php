@@ -8,10 +8,10 @@ include_once("crud/users.crud.php");
  if (isset($_SESSION['id'])){
 	$user = select_user($conn, $_SESSION['id']) ;
 	
-	$info = "<div id='cont_profil'><ul id='profil_info'>\n" ;
+	$info = "<div id='cont_profil'><div id='cont_info'><ul id='profil_info'>\n" ;
 	$info .= "\t<li>pseudo : ".$user["nickname"]."</li>\n" ;
 	$info .= "\t<li>email : ".$user["email"]."</li>\n" ;
-	$info .= "</ul>\n" ;
+	$info .= "</ul></div>\n" ;
 	
 	echo $info ;
 	
