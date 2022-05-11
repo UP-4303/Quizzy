@@ -27,11 +27,13 @@
     flex-wrap: wrap;
 
     width: 100%;
-    height: 200px;
+    height: 100%;
 }
 
 #top_svg {
 	position: absolute;
+	width: 100%;
+    height: 200px;
 }
 
 #logo_wrapper {
