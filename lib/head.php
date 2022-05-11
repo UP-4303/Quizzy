@@ -27,7 +27,7 @@
     include_once("db/db_connect.php") ;
     ?>
     <header id="header">
-    <path fill="#fc6600" fill-opacity="1" d="M 0 0 L 800 0 L 800 150 L 350 150 C 200 150 250 200 100 200 L 0 200 Z" id="top_path" class="no_margin no_padding"></path>
+    <svg id="top_svg"><path fill="#fc6600" fill-opacity="1" d="M 0 0 L 800 0 L 800 150 L 350 150 C 200 150 250 200 100 200 L 0 200 Z" id="top_path" class="no_margin no_padding"></path></svg>
         <div id="top_container">
             <div id="logo_wrapper">
                 <a href="/l1_info_4/Quizzy" id="logo_link" class="no_margin no_padding"><img src="images/logo.png" alt="logo" id="logo"></a>
