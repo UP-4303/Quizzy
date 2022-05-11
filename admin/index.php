@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(!$_SESSION["is_admin"]){
-	header("Location: /") ; 
+if(!$_SESSION["admin"]){
+	header("Location: ../") ; 
 }
 ?>
 
