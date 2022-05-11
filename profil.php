@@ -17,7 +17,7 @@ echo $info ;
 if(isset($user["profile_picture"])) {
 	$image = $user["profile_picture"] ;
 } else {
-	$image = "default-avatar.jpb" ;
+	$image = "default-avatar.jpg" ;
 }
 
 echo "<img src='images/".$image."' alt='profil picture' />" ;
