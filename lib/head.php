@@ -57,7 +57,7 @@
             <div id="menu_bottom_wrapper">
                 <p>test bottom</p>
             </div>
-        </div>
+        
 
         <form action="" method="get">
         <?php
@@ -76,6 +76,6 @@
             }
         ?>
         </form>
-        
+        </div>
 
     </header>
