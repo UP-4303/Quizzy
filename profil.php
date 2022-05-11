@@ -21,7 +21,7 @@ include_once("crud/users.crud.php");
 		$image = "default-avatar.jpg" ;
 	}
 
-	echo "<img id='profil_pic' src='images/".$image."' alt='profil picture' ></div>" ;
+	echo "<div id='cont_pic'><img id='profil_pic' src='images/".$image."' alt='profil picture' ></div></div>" ;
  } else {
 	 echo "<p>veuillez vous connectez</p>" ;
  }
