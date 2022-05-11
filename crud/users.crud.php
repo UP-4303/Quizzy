@@ -66,9 +66,7 @@ function connect($conn, $email, $password){
 		$_SESSION['session']=time();
 		$_SESSION['id']=$user["id"];
 		$_SESSION['admin']=$user["is_admin"];
-		print_r($_SESSION);
 	}
-	print_r($user);
 }
 
 function email_exist($conn, $email){
