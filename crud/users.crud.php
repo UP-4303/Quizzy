@@ -66,15 +66,13 @@ function connect($conn, $email, $password){
 		$_SESSION['session']=time();
 		$_SESSION['id']=$user["id"];
 		$_SESSION['admin']=$user["is_admin"];
-		print_r($_SESSION);
 	}
-	print_r($user);
 }
 
 function email_exist($conn, $email){
 	$sql="SELECT * FROM `users` WHERE `email`='".$email."'";
 	if ($ret=mysqli_query($conn, $sql)){
-		return true;
+		return $ret->num_rows == 1;
 	}
 	return false;
 }
@@ -82,7 +80,7 @@ function email_exist($conn, $email){
 function nickname_exist($conn, $nickname){
 	$sql="SELECT * FROM `users` WHERE `nickname`='".$nickname."'";
 	if ($ret=mysqli_query($conn, $sql)){
-		return true;
+		return $ret->num_rows == 1;
 	}
 	return false;
 }
@@ -90,7 +88,7 @@ function nickname_exist($conn, $nickname){
 function select_all_users($conn){
 	$sql="SELECT * FROM `users`";
 	if ($ret=mysqli_query($conn, $sql)){
-		return $ret;
+		return mysqli_fetch_assoc($ret);
 	}
 	return $ret;
 }

@@ -7,7 +7,7 @@ include_once("crud/users.crud.php");
 
 $user = select_user($conn, 14) ;
 
-$info = "<div id='cont_profil'><ul>\n" ;
+$info = "<div id='cont_profil'><ul id='profil_info'>\n" ;
 $info .= "\t<li>pseudo : ".$user["nickname"]."</li>\n" ;
 $info .= "\t<li>email : ".$user["email"]."</li>\n" ;
 $info .= "</ul>\n" ;

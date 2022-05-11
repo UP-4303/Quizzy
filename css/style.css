@@ -137,12 +137,18 @@
 
 #cont_profil {
 	display: flex;
-	justify-content: space-around;
+	justify-content: space-between;
 }
 
 #profil_pic {
-	max-width: 10%;
-	max-height: 10%;
+	max-width: 35%;
+	max-height: 35%;
 	height: auto;
 	width: auto;
+	margin: 5%;
 }
+
+#profil_info {
+	margin: 5%;
+}
+
