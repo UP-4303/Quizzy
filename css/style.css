@@ -140,6 +140,8 @@
 #cont_profil {
 	display: flex;
 	justify-content: space-between;
+	max-width: 35%;
+	max-height: 35%;
 }
 
 #profil_pic {
