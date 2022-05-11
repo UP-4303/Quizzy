@@ -27,8 +27,7 @@
     include_once("db/db_connect.php") ;
     ?>
     <header id="header">
-        <div id="top_container" class="no_margin no_padding">
-            <svg viewBox="0 0 300 300"><path fill="#fc6600" fill-opacity="1" d="M 0 75 L 50 75 C 100 75 100 50 150 50 L 300 50 L 300 0 L 0 0 Z"></path></svg>
+        <svg viewBox="0 0 300 300" id="top_container" class="no_margin no_padding"><path fill="#fc6600" fill-opacity="1" d="M 0 75 L 50 75 C 100 75 100 50 150 50 L 300 50 L 300 0 L 0 0 Z">
             <div id="logo_wrapper">
                 <a href="/l1_info_4/Quizzy" id="logo_link" class="no_margin no_padding"><img src="images/logo.png" alt="logo" id="logo"></a>
                 <lord-icon id="menu_icon"
@@ -47,7 +46,7 @@
                     colors="primary:#fc6600,secondary:#000000">
                 </lord-icon>
             </div>
-        </div>
+        </path></svg>
 
         <div id="menu_pannel" class="no_margin no_padding">
             <div id="menu_top_wrapper">
