@@ -20,7 +20,7 @@ if (isset($_SESSION['id'])){
 <div id="auth">
 <form method="POST" action="user_connect.php">
 	Pseudo ou email: <input type="text" name="login">
-	Password: <input type="text" name="passwd">
+	Password: <input type="password" name="passwd">
 	<input type="submit" value="Créer">
 </form>
 
