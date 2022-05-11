@@ -52,21 +52,31 @@ function select_user($conn, $id){
 	return $ret ;
 }
 
-function get_user($conn, $email, $password){
+function get_user($conn, $login, $password){
 	$passwd=md5($password);
-	$sql="SELECT * FROM `users` WHERE `email`='".$email."' AND `password`='".$passwd."'";
-	if ($ret=mysqli_query($conn, $sql)){
-		return mysqli_fetch_assoc($ret);
+	if (filter_var($login, FILTER_VALIDATE_EMAIL)){
+		$sql="SELECT * FROM `users` WHERE `email`='".$login."' AND `password`='".$passwd."'";
+		if ($ret=mysqli_query($conn, $sql)){
+			return mysqli_fetch_assoc($ret);
+		}
+	}else{
+		$sql="SELECT * FROM `users` WHERE `nickname`='".$login."' AND `password`='".$passwd."'";
+		if ($ret=mysqli_query($conn, $sql)){
+			return mysqli_fetch_assoc($ret);
+		}
 	}
+	
 	return $ret;
 }
 
-function connect($conn, $email, $password){
-	if ($user=get_user($conn, $email, $password)){
+function connect($conn, $login, $password){
+	if ($user=get_user($conn, $login, $password)){
 		$_SESSION['session']=time();
 		$_SESSION['id']=$user["id"];
 		$_SESSION['admin']=$user["is_admin"];
+		return true;
 	}
+	return false;
 }
 
 function email_exist($conn, $email){
