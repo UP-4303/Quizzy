@@ -133,10 +133,14 @@
 	flex-shrink: 0.5;
 }
 
-#cont_profil_pic {
-	
+#cont_profil {
+	display: flex;
+	justify-content: space-around;
 }
 
 #profil_pic {
-	
+	max-width: 30%;
+	max-height: 30%;
+	height: auto;
+	width: auto;
 }

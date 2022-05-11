@@ -7,7 +7,7 @@ include_once("crud/users.crud.php");
 
 $user = select_user($conn, 14) ;
 
-$info = "<ul>\n" ;
+$info = "<div id='cont_profil'><ul>\n" ;
 $info .= "\t<li>pseudo : ".$user["nickname"]."</li>\n" ;
 $info .= "\t<li>email : ".$user["email"]."</li>\n" ;
 $info .= "</ul>\n" ;
@@ -20,7 +20,7 @@ if(isset($user["profile_picture"])) {
 	$image = "default-avatar.jpg" ;
 }
 
-echo "<div id='cont_profil_pic'><img id='profil_pic' src='images/".$image."' alt='profil picture' ></div>" ;
+echo "<img id='profil_pic' src='images/".$image."' alt='profil picture' ></div>" ;
 
 ?>
 
