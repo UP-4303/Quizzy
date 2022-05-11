@@ -28,6 +28,7 @@
     ?>
     <header id="header">
         <div id="top_container" class="no_margin no_padding">
+            <svg viewBox="0 0 300 300"><path fill="#fc6600" fill-opacity="1" d="M 0 75 L 50 75 C 100 75 100 50 150 50 L 300 50 L 300 0 L 0 0 Z"></path></svg>
             <div id="logo_wrapper">
                 <a href="/l1_info_4/Quizzy" id="logo_link" class="no_margin no_padding"><img src="images/logo.png" alt="logo" id="logo"></a>
                 <lord-icon id="menu_icon"
