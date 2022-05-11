@@ -2,9 +2,7 @@
 include_once("lib/head.php");
 include_once("crud/users.crud.php");
 
-if (isset($_SESSION['id'])){
-	header("Location: index.php");
-}else{
+function check_and_create(){
 	if (isset($_POST['email'])){
 		if ($_POST["passwd"] != $_POST["passwd_confirm"]){print("<h3>Le mot de passe et sa confirmation sont différentes !</h3>");return;}
 		if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){print("<h3>Email incorrect.</h3>");return;}
@@ -15,6 +13,12 @@ if (isset($_SESSION['id'])){
 		connect($conn, $_POST["email"], $_POST['passwd']);
 		print("<h3>Compte créé !</h3>");
 	}
+}
+
+if (isset($_SESSION['id'])){
+	header("Location: index.php");
+}else{
+	check_and_create();
 }
 ?>
 
