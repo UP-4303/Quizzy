@@ -139,6 +139,8 @@
 #cont_profil {
 	display: flex;
 	justify-content: space-between;
+	max-width: 35%;
+	max-height: 35%;
 }
 
 #profil_pic {
@@ -151,5 +153,6 @@
 
 #profil_info {
 	margin: 5%;
+	margin-right: 30%;
 }
 
