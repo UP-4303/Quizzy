@@ -30,6 +30,13 @@
     height: 200px;
 }
 
+#top_svg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+
 #logo_wrapper {
 	display: flex;
 	flex-direction: column;
