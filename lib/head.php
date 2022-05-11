@@ -53,29 +53,30 @@
         <div id="menu_pannel" class="no_margin no_padding">
             <div id="menu_top_wrapper">
                 <p>test top</p>
-            </div>
-            <div id="menu_bottom_wrapper">
+           
+				<form action="#" method="get">
+				<?php
+					if (isset($_SESSION['id'])){
+						include_once("crud/users.crud.php");
+						$user=select_user($conn, $_SESSION['id']);
+						print("<h4>Connecté en tant que : ".$user["nickname"]."</h4>");
+						print('<input type="submit" name="action" value="déconnexion">');
+						if ($_SESSION['admin']){
+							print("<a href='admin/index.php'>Accéder au dark web</a>");
+						}
+					}else{
+						print("<h4>Déconnecté</h4>");
+						print('<input type="submit" name="action" value="connexion">');
+						print('<input type="submit" name="action" value="inscription">');
+					}
+				?>
+				</form>
+			</div>
+		
+		<div id="menu_bottom_wrapper">
                 <p>test bottom</p>
-            </div>
-        
-
-        <form action="#" method="get">
-        <?php
-            if (isset($_SESSION['id'])){
-                include_once("crud/users.crud.php");
-                $user=select_user($conn, $_SESSION['id']);
-                print("<h4>Connecté en tant que : ".$user["nickname"]."</h4>");
-                print('<input type="submit" name="action" value="déconnexion">');
-                if ($_SESSION['admin']){
-                    print("<a href='admin/index.php'>Accéder au dark web</a>");
-                }
-            }else{
-                print("<h4>Déconnecté</h4>");
-                print('<input type="submit" name="action" value="connexion">');
-                print('<input type="submit" name="action" value="inscription">');
-            }
-        ?>
-        </form>
+        </div>
+		
         </div>
 
     </header>
