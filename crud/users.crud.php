@@ -74,7 +74,8 @@ function connect($conn, $email, $password){
 function email_exist($conn, $email){
 	$sql="SELECT * FROM `users` WHERE `email`='".$email."'";
 	if ($ret=mysqli_query($conn, $sql)){
-		return count(mysqli_fetch_array($ret)) == 1;
+		print_r(mysqli_fetch_array($ret));
+		return isset(mysqli_fetch_array($ret));
 	}
 	return false;
 }
@@ -82,7 +83,7 @@ function email_exist($conn, $email){
 function nickname_exist($conn, $nickname){
 	$sql="SELECT * FROM `users` WHERE `nickname`='".$nickname."'";
 	if ($ret=mysqli_query($conn, $sql)){
-		return count(mysqli_fetch_array($ret)) == 1;
+		return isset(mysqli_fetch_array($ret));
 	}
 	return false;
 }
