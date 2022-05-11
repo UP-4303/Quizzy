@@ -74,7 +74,7 @@
 			</div>
 		
 		<div id="menu_bottom_wrapper">
-                <p>test bottom</p>
+                <p><a href="https://youtu.be/iik25wqIuFo">contacts</a></p>
         </div>
 		
         </div>
