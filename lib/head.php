@@ -64,7 +64,7 @@
                 $user=select_user($conn, $_SESSION['id']);
                 print("<h4>Connecté en tant que : ".$user["nickname"]."</h4>");
                 print('<input type="submit" name="action" value="déconnexion">');
-                if ($_SESSION['is_admin']){
+                if ($_SESSION['admin']){
                     print("<a href='/admin/index.php'>Accéder au dark web</a>");
                 }
             }else{

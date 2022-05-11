@@ -21,7 +21,7 @@ if (isset($_SESSION['id'])){
 <form method="POST" action="user_connect.php">
 	Pseudo ou email: <input type="text" name="login">
 	Password: <input type="password" name="passwd">
-	<input type="submit" value="Créer">
+	<input type="submit" value="Connexion">
 </form>
 
 </div>
