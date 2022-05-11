@@ -65,7 +65,7 @@
                 print("<h4>Connecté en tant que : ".$user["nickname"]."</h4>");
                 print('<input type="submit" name="action" value="déconnexion">');
                 if ($_SESSION['admin']){
-                    print("<a href='/admin/index.php'>Accéder au dark web</a>");
+                    print("<a href='admin/index.php'>Accéder au dark web</a>");
                 }
             }else{
                 print("<h4>Déconnecté</h4>");
