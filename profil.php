@@ -7,7 +7,7 @@ include_once("crud/users.crud.php");
 
 $user = select_user($conn, 14) ;
 
-foreach($val as $key => $value) {
+foreach($user as $key => $value) {
 	echo $key." => ".$value ;
 }
 
