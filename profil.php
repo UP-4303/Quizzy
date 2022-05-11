@@ -20,7 +20,7 @@ if(isset($user["profile_picture"])) {
 	$image = "default-avatar.jpg" ;
 }
 
-echo "<div id='cont_profil_pic'><img id='profil_pic src='images/".$image."' alt='profil picture' ></div>" ;
+echo "<div id='cont_profil_pic'><img id='profil_pic' src='images/".$image."' alt='profil picture' ></div>" ;
 
 ?>
 
