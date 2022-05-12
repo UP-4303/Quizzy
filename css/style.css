@@ -281,6 +281,10 @@
 
 #cont_psd {
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5%;
+	width: 50%;
 }
 
 #chg_psd {
@@ -289,6 +293,10 @@
 
 #cont_mdp {
 	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 5%;
+	width: 50%;
 }
 
 #chg_mdp {
