@@ -112,6 +112,7 @@
 #menu_bottom_wrapper {
 	position: absolute;
 	bottom: 10px;
+	display: flex;
 }
 
 #top_menu_deco {
