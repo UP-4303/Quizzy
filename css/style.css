@@ -148,6 +148,7 @@
 	border-radius: 10px;
 	width: 20vw;
 	height: 20vw;
+	padding: 0;
 }
 
 .answer:active {
@@ -157,8 +158,9 @@
 
 .answer_name {
 	font-size: 150%;
-	padding: 5%;
-	width: 25vw;
+	padding: 0.5vw;
+	max-width: 19vw;
+	min-width: 18vw;
 	height: fit-content;
 	overflow-wrap: anywhere;
 }
