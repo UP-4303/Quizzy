@@ -4,7 +4,7 @@ include("lib/head.php");
 
 <ul id="list_quizz">
 	<?php
-	include_once("crud/users.crud.php");
+	include_once("crud/quizz.crud.php");
 	
 	$all_quizz = select_all_quizz($conn);
 	
