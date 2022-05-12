@@ -21,8 +21,6 @@ include("lib/head.php");
 	?>
 </ul>
 
-<a href="profil.php">profil</a>
-
 <?php
 include("lib/foot.php");
 ?>
