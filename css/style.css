@@ -139,6 +139,7 @@
 .answer_wrapper {
 	display: flex;
 	justify-content: center;
+	gap: 10px 10px;
 }
 
 #answer {
