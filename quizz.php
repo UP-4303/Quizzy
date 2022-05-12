@@ -1,8 +1,8 @@
 <?php
 //include("lib/head.php");
-
+include_once("db/db_connect.php") ;
 session_start();
-if(isset($_SESSION['id'])){
+if(!isset($_SESSION['id'])){
 	if (isset($_GET["quizz"])){
 		$id=$_GET['quizz'];
 	}else{
@@ -10,7 +10,7 @@ if(isset($_SESSION['id'])){
 	}
 }else{
 	print("Veuillez vous connecter pour accéder aux quizz.");
-	include("lib/foot.php");
+	include("db/db_disconnect.php") ;
 	return;
 }
 ?>
@@ -21,7 +21,6 @@ if(isset($_SESSION['id'])){
 <button>Oui</button> <button>Non</button>
 <button>Peut être</button><button>Juif</button>
 
-
 <?php
-	include("lib/foot.php");
+	include("db/db_disconnect.php") ;
 ?>
