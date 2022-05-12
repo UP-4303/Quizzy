@@ -6,9 +6,9 @@ include("lib/head.php");
 	<?php
 	include_once("crud/quizz.crud.php");
 	
-	print_r($all_quizz);
-	
 	$all_quizz = select_all_quizz($conn);
+	
+	print_r($all_quizz);
 	
 	foreach($all_quizz as $quizz){
 		/* echo "<li class='quizz'><div class='nomQuizz'>".$quizz[1]."</div></li>" ; */
