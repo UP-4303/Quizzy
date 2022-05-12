@@ -11,7 +11,7 @@ include("lib/head.php");
 	// print_r($all_quizz);
 	
 	foreach($all_quizz as $key => $quizz){
-		print_r($quizz);
+		print_r($key);
 		/* echo "<li class='quizz'><div class='nomQuizz'>".$quizz[1]."</div></li>" ; */
 	}
 	?>
