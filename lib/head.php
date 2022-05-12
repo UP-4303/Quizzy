@@ -52,8 +52,7 @@
 
         <div id="menu_pannel" class="no_margin no_padding">
             <div id="menu_top_wrapper">
-                <p>test top</p>
-           
+			
 				<form action="#" method="get">
 				<?php
 					if (isset($_SESSION['id'])){
