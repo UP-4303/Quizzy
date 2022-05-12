@@ -15,13 +15,19 @@ if(!isset($_SESSION['id'])){
 }
 ?>
 
-<h1 id="title">Titre</h1>
-<h2 id="question">Blablabla ?</h2>
-<h3 id="nombre">Question X</h3>
 
-<button id="choix_un">Oui</button> <button id="choix_deux">Non</button><br/>
-<button id="choix_trois">Peut être</button> <button id="choix_quatre">Juif</button>
+<div id="quizz_wrapper">
+	<span id="quizz_name">Nom du quizz</span>
+	<span id="quizz_question_number">Question n°X/Y</span>
+	<span id="quizz_question">Blablabla ?</span>
 
+	<div id="answer_wrapper">
+		<button id="choix_un">Oui</button>
+		<button id="choix_deux">Non</button>
+		<button id="choix_trois">Peut être</button>
+		<button id="choix_quatre">Je sais pas mon reuf</button>
+	</div>
+</div>
 
 <script src="js/quizz.js"></script>
 
