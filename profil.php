@@ -28,6 +28,16 @@ include_once("crud/users.crud.php");
 
 ?>
 
+<form action="#" method="get">
+	<input type="text" name="nvt_pseudo" value="nouveau pseudo" />
+	<input type="submit" value="confirmer" />
+</form>
+
+<form action="#" method="get">
+	<input type="email" name="nvt_email" value="nouvel email" />
+	<input type="submit" value="confirmer" />
+</form>
+
 <?php
 include("lib/foot.php");
 ?>
