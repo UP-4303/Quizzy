@@ -1,12 +1,14 @@
-var title = document.getElementById("title")
-var under_title = document.getElementById("question")
+var quizz_name = document.getElementById("quizz_name")
+var quizz_question_number = document.getElementById("quizz_question_number")
+var quizz_question = document.getElementById("quizz_question")
 var buttons = [document.getElementById("choix_un"),document.getElementById("choix_deux"),document.getElementById("choix_trois"),document.getElementById("choix_quatre")]
 var index = -1
 
 function next_question(){
 	index++
 	var data = questions[index]
-	title.innerHTML = data.label
+	quizz_question.innerHTML = data.label
+	quizz_question_number.innerHTML = `Question ${index}/${questions.length}`
 	for (var i in data.choices){
 		var choice = data.choices[i]
 		buttons[i].innerHTML = choice.label
