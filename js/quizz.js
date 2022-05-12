@@ -25,9 +25,6 @@ for (var button of buttons){
 }
 
 
-
-
-
 function next_question(){
 	index++
 	if (index == questions.length) return end_quizz()
@@ -36,9 +33,21 @@ function next_question(){
 	quizz_question_number.innerHTML = `Question ${index+1}/${questions.length}`
 	for (var i in data.choices){
 		var choice = data.choices[i]
-		buttons[i].innerHTML = choice.label
+		buttons[i].innerHTML = "<div class=\"answer_name\">" + choice.label + "</div>"
 		buttons[i].value = choice.jauge
 	}
+}
+
+function find_answer(jauges){
+	var maxi = jauges[0]
+	var index = 0
+	for (var i in jauges){
+		if (jauges[i] > maxi){
+			maxi = jauges[i]
+			index = i
+		}
+	}
+	return results.jauges[index]
 }
 
 function end_quizz(){
@@ -46,7 +55,9 @@ function end_quizz(){
 		button.style.visibility = "hidden"
 		button.onclick = null
 	}
-	console.log(jauges)
+	var res = find_answer(jauges)
+	quizz_question_number.innerHTML = res.label
+	quizz_question.style.visibility = "hidden"
 }
 
 
