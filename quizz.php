@@ -20,12 +20,12 @@ if(!isset($_SESSION['id'])){
 	<span id="quizz_question">Blablabla ?</span>
 
 	<div class="answer_wrapper">
-		<button id="choix_un" class="answer">Oui</button>
-		<button id="choix_deux" class="answer">Non</button>
+		<button id="choix_un" class="answer"><span class="answer_name">Oui</span></button>
+		<button id="choix_deux" class="answer"><span class="answer_name">Non</span></button>
 	</div>
 	<div class="answer_wrapper">
-		<button id="choix_trois" class="answer">Peut être</button>
-		<button id="choix_quatre" class="answer">Je sais pas mon reuf</button>
+		<button id="choix_trois" class="answer"><span class="answer_name">Peut être</span></button>
+		<button id="choix_quatre" class="answer"><span class="answer_name">Je sais pas mon reuf</span></button>
 	</div>
 </div>
 
