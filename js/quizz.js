@@ -4,6 +4,12 @@ var quizz_question = document.getElementById("quizz_question")
 var buttons = [document.getElementById("choix_un"),document.getElementById("choix_deux"),document.getElementById("choix_trois"),document.getElementById("choix_quatre")]
 var index = -1
 
+function helloworld(){
+	console.log("helloworld")
+}
+
+buttons[0].onclick = helloworld
+
 function next_question(){
 	index++
 	if (index == questions.length) return end_quizz()
@@ -17,7 +23,10 @@ function next_question(){
 }
 
 function end_quizz(){
-	return null
+	for (var button of buttons){
+		button.style.visibility = "hidden"
+		button.onclick = null
+	}
 }
 
 
