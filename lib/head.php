@@ -55,7 +55,7 @@
 			
 				<form action="#" method="get">
 				<?php
-					if (isset($_SESSION['id'])){
+					if(isset($_SESSION['id'])){
 						include_once("crud/users.crud.php");
 						$user=select_user($conn, $_SESSION['id']);
 						echo "<div id='top_menu_co'><h4>Connecté en tant que : ".$user["nickname"]."</h4>" ;
@@ -74,8 +74,8 @@
 			<div id="menu_bottom_wrapper">
 				<p>
 				<?php
-				if (isset($_SESSION['id'])){
-					echo('<input type="submit" name="action" value="déconnexion">' ;
+				if(isset($_SESSION['id'])){
+					echo '<input type="submit" name="action" value="déconnexion">' ;
 				}
 				?>
 				<a href="https://youtu.be/iik25wqIuFo">contacts</a></p>
