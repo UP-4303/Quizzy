@@ -8,10 +8,10 @@ include("lib/head.php");
 	
 	$all_quizz = select_all_quizz($conn);
 	
-	// print_r($all_quizz);
+	print_r($all_quizz);
 	
 	foreach($all_quizz as $key => $quizz){
-		print_r($key);
+		// print_r($key);
 		/* echo "<li class='quizz'><div class='nomQuizz'>".$quizz[1]."</div></li>" ; */
 	}
 	?>
