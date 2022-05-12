@@ -65,8 +65,8 @@
 						}
 					}else{
 						print("<div id='top_menu_deco'>\n\t<h4>Déconnecté</h4>\n");
-						print('\t<input type="submit" name="action" value="connexion">\n');
-						print('\t<input type="submit" name="action" value="inscription">\n</div>');
+						print("\t<input type='submit' name='action' value='connexion'>\n");
+						print("\t<input type='submit' name='action' value='inscription'>\n</div>");
 					}
 				?>
 				</form>
