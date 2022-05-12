@@ -156,6 +156,7 @@
 }
 
 .answer_name {
+	font-size: 150%;
 	padding: 5%;
 	width: 25vw;
 	height: fit-content;
