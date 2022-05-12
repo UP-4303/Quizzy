@@ -1,5 +1,5 @@
 <?php
-include("lib/head.php");
+//include("lib/head.php");
 
 session_start();
 if(isset($_SESSION['id'])){
