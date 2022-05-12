@@ -3,8 +3,6 @@ var quizz_question_number = document.getElementById("quizz_question_number")
 var quizz_question = document.getElementById("quizz_question")
 var buttons = [document.getElementById("choix_un"),document.getElementById("choix_deux"),document.getElementById("choix_trois"),document.getElementById("choix_quatre")]
 var index = -1
-
-
 var is_quizz = true
 if (is_quizz){
 	var jauges = [0,0,0,0]
@@ -13,10 +11,22 @@ if (is_quizz){
 }
 
 
-function add_jauges(index){
-	jauges[index]++
+function buttonClicked(evt){
+	if (is_quizz){
+		jauges[evt.currentTarget.value]++
+	}else{
+		points = points + evt.currentTarget.value
+	}
 	next_question()
 }
+
+for (var button of buttons){
+	button.addEventListener("click", buttonClicked)
+}
+
+
+
+
 
 function next_question(){
 	index++
@@ -27,7 +37,7 @@ function next_question(){
 	for (var i in data.choices){
 		var choice = data.choices[i]
 		buttons[i].innerHTML = choice.label
-		buttons[i].onclick = `add_jauges(${choice.jauge})`
+		buttons[i].value = choice.jauge
 	}
 }
 
