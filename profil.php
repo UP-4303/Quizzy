@@ -61,18 +61,23 @@ if(isset($_POST["old_passwd"]) and isset($_POST["nvt_passwd_1"]) and isset($_POS
 	 echo "<p>veuillez vous connectez</p>" ;
  }
 ?>
-<div>
+<div id="cont_change">
 	<form action="#" method="post">
-		Nouveau pseudo : <input type="text" name="nvt_pseudo" />
-		<input type="submit" value="confirmer" />
+		<ul>
+			<li>Nouveau pseudo :</li>
+			<li><input type="text" name="nvt_pseudo" /></li>
+			<li><input type="submit" value="confirmer" /></li>
+		</ul>
 	</form>
 	
 	
 	<form action="#" method="post">
-		Ancient mot de passe : <input type="password" name="old_passwd" />
-		Nouveau mot de passe : <input type="password" name="nvt_passwd_1" />
-		Confirmer le nouveau mot de passe : <input type="password" name="nvt_passwd_2" />
-		<input type="submit" value="confirmer" />
+		<ul>
+			<li>Ancient mot de passe : <input type="password" name="old_passwd" /></li>
+			<li>Nouveau mot de passe : <input type="password" name="nvt_passwd_1" /></li>
+			<li>Confirmer le nouveau mot de passe : <input type="password" name="nvt_passwd_2" /></li>
+			<li><input type="submit" value="confirmer" /></li>
+		<ul>
 	</form>
 </div>
 <?php
