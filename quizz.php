@@ -19,7 +19,7 @@ if(!isset($_SESSION['id'])){
 <div id="quizz_wrapper">
 	<span id="quizz_name">Nom du quizz</span>
 	<span id="quizz_question_number">Question n°X/Y</span>
-	<span id="quizz_quesiton">Blablabla ?</span>
+	<span id="quizz_question">Blablabla ?</span>
 
 	<div id="answer_wrapper">
 		<button id="choix_un">Oui</button>
