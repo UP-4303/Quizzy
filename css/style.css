@@ -119,6 +119,9 @@
 	flex-direction: column;
 }
 
+#top_menu_deco>input {
+	margin: 3%
+}
 
 #list_quizz {
 	list-style: none;
