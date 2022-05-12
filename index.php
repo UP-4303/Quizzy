@@ -10,8 +10,8 @@ include("lib/head.php");
 	
 	print_r($all_quizz);
 	
-	foreach($all_quizz as $key => $quizz){
-		/* echo "<li class='quizz'><div class='nomQuizz'>".$quizz["name"]."</div></li>" ; */
+	foreach($all_quizz as $quizz){
+		echo "<li class='quizz'><div class='nomQuizz'>".$quizz["name"]."</div></li>" ;
 	}
 	?>
 	<li class="quizz"><div class="nomQuizz">yz </div></li>
