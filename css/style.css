@@ -212,7 +212,7 @@
 }
 
 .iconeMenu {
-	background-image: url(images/menu.png);
+	background-image: url("../images/menu.png");
 	background-repeat: no-repeat;
 	cursor: pointer;
 	height: 36px;
@@ -220,5 +220,5 @@
 }
 
 .iconeMenu.afficheMenu {
-	background: url('images/close.png') no-repeat;
+	background: url('../images/close.png') no-repeat;
 }
