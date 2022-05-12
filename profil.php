@@ -24,7 +24,7 @@ if(isset($_POST["nvt_pseudo"])) {
 if(isset($_POST["old_passwd"]) and isset($_POST["nvt_passwd_1"]) and isset($_POST["nvt_passwd_2"])) {
 	$user = select_user($conn, $_SESSION["id"]) ;
 	if(md5($_POST["old_passwd"]) == $user["password"]) {
-		if($_POST["nvt_passwd_1"]) == $_POST["nvt_passwd_2"]) {
+		if($_POST["nvt_passwd_1"] == $_POST["nvt_passwd_2"]) {
 			if(strlen($_POST['passwd']) >= 8) {
 				update_passwd($conn, $_SESSION["id"], $_POST["nvt_passwd_2"]) ;
 			} else {
