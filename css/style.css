@@ -121,21 +121,27 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
+	gap: 10px 10px;
 }
 
 #quizz_name {
-
+	font-size: 36px;
 }
 
 #quizz_question_number {
-
+	font-size: 26px;
 }
 
 #quizz_quesiton {
-
+	font-size: 26px;
 }
 
-#answer_wrapper {
+.answer_wrapper {
+	display: flex;
+	justify-content: center;
+}
+
+#answer {
 
 }
 
