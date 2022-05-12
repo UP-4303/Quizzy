@@ -6,8 +6,8 @@ include("lib/head.php");
 include_once("crud/users.crud.php");
 
 if(isset($_POST["nvt_pseudo"])) {
-	update_nickname($conn, $_session["id"], $_POST["nvt_pseudo"]) ;
-	print("hvcvhvbjbvsdjbjbfejhz");
+	update_nickname($conn, $_SESSION["id"], $_POST["nvt_pseudo"]) ;
+	print_r($_POST);
 }
 
  if (isset($_SESSION['id'])){
