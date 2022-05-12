@@ -58,10 +58,10 @@
 					if (isset($_SESSION['id'])){
 						include_once("crud/users.crud.php");
 						$user=select_user($conn, $_SESSION['id']);
-						print("<h4>Connecté en tant que : ".$user["nickname"]."</h4>");
+						print("<div id='top_menu_co'><h4>Connecté en tant que : ".$user["nickname"]."</h4>");
 						print('<input type="submit" name="action" value="déconnexion">');
 						if ($_SESSION['admin']){
-							print("<a href='admin/index.php'>Accéder au dark web</a>");
+							print("<a href='admin/index.php'>Accéder au dark web</a></div>");
 						}
 					}else{
 						print("<div id='top_menu_deco'>\n\t<h4>Déconnecté</h4>\n");

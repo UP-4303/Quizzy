@@ -123,6 +123,14 @@
 	margin: 3%
 }
 
+#top_menu_co {
+	display: flex;
+	flex-direction: column;
+}
+
+#top_menu_co>input {
+	margin: 3%
+
 #list_quizz {
 	list-style: none;
 	display: flex;
