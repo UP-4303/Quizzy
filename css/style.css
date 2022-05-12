@@ -210,3 +210,27 @@
 	margin: 5%;
 	width: 50%;
 }
+
+.iconeMenu {
+	background-image: url(images/menu.png);
+	background-repeat: no-repeat;
+	cursor: pointer;
+	height: 36px;
+	width: 47px;
+}
+
+.iconeMenu.afficheMenu {
+	background: url('images/close.png') no-repeat;
+}
+
+.menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: -2;
+	width: 300px;
+	height: 100vh;
+}

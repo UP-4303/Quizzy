@@ -41,15 +41,11 @@
             <div id="searchbox_wrapper">
                 <input id="searchbox" class="no_padding form-input" 
                 type="text" placeholder="Chercher un quizz" name="search" title="Rechercher">
-                <lord-icon id="searchbox_icon"
-                    src="https://cdn.lordicon.com/msoeawqm.json"
-                    trigger="morph"
-                    stroke="90"
-                    colors="primary:#fc6600,secondary:#000000">
-                </lord-icon>
+                <nav class="iconeMenu"></nav>
             </div>
         </div>
 
+		<nav class="menu">
         <div id="menu_pannel" class="no_margin no_padding">
             <div id="menu_top_wrapper">
 			
@@ -91,5 +87,6 @@
 			</div>
 		
         </div>
+		</nav>
 
     </header>
