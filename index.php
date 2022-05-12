@@ -10,7 +10,13 @@ include("lib/head.php");
 	
 	
 	while ($row = mysqli_fetch_assoc($all_quizz)){
-		echo "<li class='quizz'><div class='nomQuizz'>".$row["name"]."</div></li>" ;
+		if(isset($row["image"])) {
+			$background = "background-image: url('../images/".$row["image"]."');" ;
+		} else {
+			$background = "background-color: ".$row["color"].";";
+		}
+		
+		echo "<li class='quizz' style='".$background."'><div class='nomQuizz'>".$row["name"]."</div></li>" ;
 	}
 	?>
 </ul>
