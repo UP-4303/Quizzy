@@ -58,7 +58,12 @@
 					if(isset($_SESSION['id'])){
 						include_once("crud/users.crud.php");
 						$user=select_user($conn, $_SESSION['id']);
-						echo "<div id='top_menu_co'><h4>Connecté en tant que : ".$user["nickname"]."</h4>" ;
+						if(isset($user["profile_picture"])) {
+							$image = $user["profile_picture"] ;
+						} else {
+							$image = "default-avatar.jpg" ;
+						}
+						echo "<div id='top_menu_co'><img id='profil_pic' src='images/".$image."' alt='profil picture' ><h4>Connecté en tant que : ".$user["nickname"]."</h4>" ;
 						if ($_SESSION['admin']){
 							echo "<a href='admin/index.php'>Accéder au dark web</a></div>" ;
 						}
