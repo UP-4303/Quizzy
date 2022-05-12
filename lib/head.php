@@ -44,7 +44,7 @@
             </div>
         </div>
 
-		<nav class="menu">
+		<nav class="menu menu_non">
         <div id="menu_pannel" class="no_margin no_padding">
             <div id="menu_top_wrapper">
 			
