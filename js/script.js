@@ -1,4 +1,4 @@
-var iconeMenu = document.querySelector("iconeMenu");
+var iconeMenu = document.querySelector(".iconeMenu");
 var menu = "close";
 
 iconeMenu.addEventListener("click", clicMenu);
