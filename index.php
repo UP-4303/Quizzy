@@ -8,11 +8,9 @@ include("lib/head.php");
 	
 	$all_quizz = select_all_quizz($conn);
 	
-	print_r($all_quizz);
 	
-	foreach($all_quizz as $key => $quizz){
-		// print_r($key);
-		/* echo "<li class='quizz'><div class='nomQuizz'>".$quizz[1]."</div></li>" ; */
+	while ($row = mysqli_fetch_assoc($all_quizz)){
+		print_r($row)
 	}
 	?>
 	<li class="quizz"><div class="nomQuizz">yz </div></li>
