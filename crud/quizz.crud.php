@@ -71,7 +71,7 @@ function select_quizz($conn, $id){
 function select_all_quizz($conn){
 	$sql="SELECT * FROM `quizz`";
 	if ($ret=mysqli_query($conn, $sql)){
-		return mysqli_fetch_assoc($ret);
+		return $ret;
 	}
 	return $ret;
 }

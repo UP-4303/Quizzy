@@ -6,13 +6,18 @@ var index = -1
 
 function next_question(){
 	index++
+	if (index == questions.length) return end_quizz()
 	var data = questions[index]
 	quizz_question.innerHTML = data.label
-	quizz_question_number.innerHTML = `Question ${index}/${questions.length}`
+	quizz_question_number.innerHTML = `Question ${index+1}/${questions.length}`
 	for (var i in data.choices){
 		var choice = data.choices[i]
 		buttons[i].innerHTML = choice.label
 	}
+}
+
+function end_quizz(){
+	return null
 }
 
 
@@ -82,6 +87,4 @@ var questions = [
 	}
 ]
 
-for (var q of questions){
-	
-}
+next_question()
