@@ -52,12 +52,12 @@ function find_answer(jauges){
 
 function end_quizz(){
 	for (var button of buttons){
-		button.style.visibility = "hidden"
+		button.style.display = "none"
 		button.onclick = null
 	}
 	var res = find_answer(jauges)
 	quizz_question_number.innerHTML = res.label
-	quizz_question.style.visibility = "hidden"
+	quizz_question.style.display = "none"
 }
 
 
