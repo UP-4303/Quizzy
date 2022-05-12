@@ -115,8 +115,8 @@
 }
 
 #top_menu_deco {
-	display; flex;
-	justify-content: center;
+	display: flex;
+	flex-direction: column;
 }
 
 
