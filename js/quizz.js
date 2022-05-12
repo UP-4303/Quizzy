@@ -1,13 +1,16 @@
 var title = document.getElementById("title")
 var under_title = document.getElementById("question")
-var button1 = document.getElementById("choix_un")
-var button1 = document.getElementById("choix_deux")
-var button1 = document.getElementById("choix_trois")
-var button1 = document.getElementById("choix_quatre")
-var index = 0
+var buttons = [document.getElementById("choix_un"),document.getElementById("choix_deux"),document.getElementById("choix_trois"),document.getElementById("choix_quatre")]
+var index = -1
 
 function next_question(){
 	index++
+	var data = questions[index]
+	title.innerHTML = data.label
+	for (var i in data.choices){
+		var choice = data.choices[i]
+		buttons[i].innerHTML = choice.label
+	}
 }
 
 
