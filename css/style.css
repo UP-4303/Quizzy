@@ -115,10 +115,22 @@
 }
 
 #top_menu_deco {
-	display; flex;
-	justify-content: center;
+	display: flex;
+	flex-direction: column;
 }
 
+#top_menu_deco>input {
+	margin: 3%
+}
+
+#top_menu_co {
+	display: flex;
+	flex-direction: column;
+}
+
+#top_menu_co>input {
+	margin: 3%
+}
 
 #list_quizz {
 	list-style: none;

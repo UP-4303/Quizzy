@@ -55,25 +55,30 @@
 			
 				<form action="#" method="get">
 				<?php
-					if (isset($_SESSION['id'])){
+					if(isset($_SESSION['id'])){
 						include_once("crud/users.crud.php");
 						$user=select_user($conn, $_SESSION['id']);
-						print("<h4>Connecté en tant que : ".$user["nickname"]."</h4>");
-						print('<input type="submit" name="action" value="déconnexion">');
+						echo "<div id='top_menu_co'><h4>Connecté en tant que : ".$user["nickname"]."</h4>" ;
 						if ($_SESSION['admin']){
-							print("<a href='admin/index.php'>Accéder au dark web</a>");
+							echo "<a href='admin/index.php'>Accéder au dark web</a></div>" ;
 						}
 					}else{
-						print("<div id='top_menu_deco'>\n\t<h4>Déconnecté</h4>\n");
-						print("\t<input type='submit' name='action' value='connexion'>\n");
-						print("\t<input type='submit' name='action' value='inscription'>\n</div>");
+						echo "<div id='top_menu_deco'>\n\t<h4>Déconnecté</h4>\n" ;
+						echo "\t<input type='submit' name='action' value='connexion'>\n" ;
+						echo "\t<input type='submit' name='action' value='inscription'>\n</div>" ;
 					}
 				?>
 				</form>
 			</div>
 		
 			<div id="menu_bottom_wrapper">
-					<p><a href="https://youtu.be/iik25wqIuFo">contacts</a></p>
+				<p>
+				<?php
+				if(isset($_SESSION['id'])){
+					echo '<form action="#" method="get"><input type="submit" name="action" value="déconnexion"></form>' ;
+				}
+				?>
+				<a href="https://youtu.be/iik25wqIuFo">contacts</a></p>
 			</div>
 		
         </div>
