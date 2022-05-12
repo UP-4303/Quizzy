@@ -275,10 +275,20 @@
 
 #cont_change {
 	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#cont_psd {
+	display: flex;
 }
 
 #chg_psd {
 	list-style: none;
+}
+
+#cont_mdp {
+	display: flex;
 }
 
 #chg_mdp {
