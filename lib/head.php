@@ -75,7 +75,7 @@
 				<p>
 				<?php
 				if(isset($_SESSION['id'])){
-					echo '<input type="submit" name="action" value="déconnexion">' ;
+					echo '<form action="#" method="get"><input type="submit" name="action" value="déconnexion"></form>' ;
 				}
 				?>
 				<a href="https://youtu.be/iik25wqIuFo">contacts</a></p>
