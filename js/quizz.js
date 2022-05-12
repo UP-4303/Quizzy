@@ -38,12 +38,26 @@ function next_question(){
 	}
 }
 
+function find_answer(jauges){
+	var maxi = jauges[0]
+	var index = 0
+	for (var i in jauges){
+		if (jauges[i] > maxi){
+			maxi = jauges[i]
+			index = i
+		}
+	}
+	return results.jauges[i]
+}
+
 function end_quizz(){
 	for (var button of buttons){
 		button.style.visibility = "hidden"
 		button.onclick = null
 	}
-	console.log(jauges)
+	var res = find_answer(jauges)
+	quizz_question_number.innerHTML = res.label
+	quizz_question.style.visibility = "hidden"
 }
 
 
