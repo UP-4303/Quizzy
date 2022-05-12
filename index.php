@@ -10,10 +10,9 @@ include("lib/head.php");
 	
 	
 	while ($row = mysqli_fetch_assoc($all_quizz)){
-		print_r($row)
+		echo "<li class='quizz'><div class='nomQuizz'>".$row["name"]."</div></li>" ;
 	}
 	?>
-	<li class="quizz"><div class="nomQuizz">yz </div></li>
 </ul>
 
 <a href="profil.php">profil</a>
