@@ -16,7 +16,7 @@ include("lib/head.php");
 			$background = "background-color: ".$row["color"].";";
 		}
 		
-		echo "<li class='quizz' style='".$background."'><div class='nomQuizz'>".$row["name"]."</div></li>" ;
+		echo "<li class='quizz' style='".$background."'><a href='quizz.php?id=".$row["id"]."'><div class='nomQuizz'>".$row["name"]."</div></a></li>" ;
 	}
 	?>
 </ul>
