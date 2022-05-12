@@ -6,7 +6,7 @@ var index = -1
 
 function next_question(){
 	index++
-	if (index == questions.length)
+	if (index == questions.length) return
 	var data = questions[index]
 	quizz_question.innerHTML = data.label
 	quizz_question_number.innerHTML = `Question ${index+1}/${questions.length}`
