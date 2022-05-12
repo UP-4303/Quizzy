@@ -7,6 +7,7 @@ include_once("crud/users.crud.php");
 
 if(isset($_POST["pseudo"])) {
 	update_nickname($conn, $_session["id"], $_POST["pseudo"]) ;
+	print("hvcvhvbjbvsdjbjbfejhz");
 }
 
  if (isset($_SESSION['id'])){
@@ -31,7 +32,7 @@ if(isset($_POST["pseudo"])) {
  }
 ?>
 
-<form action="#" method="get">
+<form action="#" method="post">
 	<input type="text" name="nvt_pseudo" />
 	<input type="submit" value="confirmer" />
 </form>
