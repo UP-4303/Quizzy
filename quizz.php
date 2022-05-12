@@ -1,5 +1,5 @@
 <?php
-#include("lib/head.php");
+//include("lib/head.php");
 include_once("db/db_connect.php") ;
 session_start();
 if(!isset($_SESSION['id'])){
@@ -15,11 +15,15 @@ if(!isset($_SESSION['id'])){
 }
 ?>
 
-<h1>Question X</h1>
-<h2>Blablabla ?</h2>
+<h1 id="title">Titre</h1>
+<h2 id="question">Blablabla ?</h2>
+<h3 id="nombre">Question X</h3>
 
-<button>Oui</button> <button>Non</button><br/>
-<button>Peut être</button> <button>Juif</button>
+<button id="choix_un">Oui</button> <button id="choix_deux">Non</button><br/>
+<button id="choix_trois">Peut être</button> <button id="choix_quatre">Juif</button>
+
+
+<script src="js/quizz.js"></script>
 
 <?php
 	include("db/db_disconnect.php") ;
