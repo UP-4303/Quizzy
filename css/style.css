@@ -114,7 +114,10 @@
 	bottom: 10px;
 }
 
-
+#top_menu_deco {
+	display; flex;
+	justify-content: center;
+}
 
 
 #list_quizz {
