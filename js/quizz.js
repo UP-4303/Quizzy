@@ -47,7 +47,7 @@ function find_answer(jauges){
 			index = i
 		}
 	}
-	return results.jauges[i]
+	return results.jauges[index]
 }
 
 function end_quizz(){
