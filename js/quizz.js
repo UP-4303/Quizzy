@@ -25,9 +25,6 @@ for (var button of buttons){
 }
 
 
-
-
-
 function next_question(){
 	index++
 	if (index == questions.length) return end_quizz()
@@ -36,7 +33,7 @@ function next_question(){
 	quizz_question_number.innerHTML = `Question ${index+1}/${questions.length}`
 	for (var i in data.choices){
 		var choice = data.choices[i]
-		buttons[i].innerHTML = choice.label
+		buttons[i].innerHTML = "<div class=\"answer_name\">" + choice.label + "</div>"
 		buttons[i].value = choice.jauge
 	}
 }
