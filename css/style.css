@@ -246,3 +246,7 @@
 .iconeMenu.afficheMenu {
 	background: url('../images/close.png') no-repeat;
 }
+
+.menu_non {
+	display: none;
+}
