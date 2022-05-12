@@ -72,13 +72,14 @@
 			</div>
 		
 			<div id="menu_bottom_wrapper">
-				<p>
 				<?php
 				if(isset($_SESSION['id'])){
 					echo '<form action="#" method="get"><input type="submit" name="action" value="déconnexion"></form>' ;
 				}
 				?>
-				<a href="https://youtu.be/iik25wqIuFo">contacts</a></p>
+				<p>
+				<a href="https://youtu.be/iik25wqIuFo">contacts</a>
+				</p>
 			</div>
 		
         </div>
