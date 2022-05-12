@@ -9,7 +9,7 @@ include("lib/head.php");
 	$all_quizz = select_all_quizz($conn);
 	
 	foreach($all_quizz as $quizz){
-		print_r($quizz);
+		echo "<li class='quizz'><div class='nomQuizz'>".$quizz[1]."</div></li>" ;
 	}
 	?>
 	<li class="quizz"><div class="nomQuizz">yz </div></li>
