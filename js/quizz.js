@@ -4,6 +4,12 @@ var button1 = document.getElementById("choix_un")
 var button1 = document.getElementById("choix_deux")
 var button1 = document.getElementById("choix_trois")
 var button1 = document.getElementById("choix_quatre")
+var index = 0
+
+function next_question(){
+	index++
+}
+
 
 var questions = [
   {
@@ -71,6 +77,6 @@ var questions = [
 	}
 ]
 
-for (var q in questions){
-	console.log(q)
+for (var q of questions){
+	
 }
