@@ -63,7 +63,7 @@ if(isset($_POST["old_passwd"]) and isset($_POST["nvt_passwd_1"]) and isset($_POS
 ?>
 <div id="cont_change">
 	<form action="#" method="post">
-		<ul>
+		<ul id="chg_psd">
 			<li>Nouveau pseudo :</li>
 			<li><input type="text" name="nvt_pseudo" /></li>
 			<li><input type="submit" value="confirmer" /></li>
@@ -72,7 +72,7 @@ if(isset($_POST["old_passwd"]) and isset($_POST["nvt_passwd_1"]) and isset($_POS
 	
 	
 	<form action="#" method="post">
-		<ul>
+		<ul id="chg_mdp">
 			<li>Ancient mot de passe : <input type="password" name="old_passwd" /></li>
 			<li>Nouveau mot de passe : <input type="password" name="nvt_passwd_1" /></li>
 			<li>Confirmer le nouveau mot de passe : <input type="password" name="nvt_passwd_2" /></li>

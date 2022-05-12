@@ -272,3 +272,15 @@
 .menu_non {
 	display: none;
 }
+
+#cont_change {
+	display: flex;
+}
+
+#chg_psd {
+	list-style: none;
+}
+
+#chg_mdp {
+	list-style: none;
+}
