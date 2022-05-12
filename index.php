@@ -10,7 +10,7 @@ include("lib/head.php");
 	
 	
 	while ($row = mysqli_fetch_assoc($all_quizz)){
-		print_r($row)
+		print_r($row);
 	}
 	?>
 	<li class="quizz"><div class="nomQuizz">yz </div></li>
