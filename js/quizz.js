@@ -5,9 +5,6 @@ var button1 = document.getElementById("choix_deux")
 var button1 = document.getElementById("choix_trois")
 var button1 = document.getElementById("choix_quatre")
 
-
-title.innerHTML = "HELLO WORLD MY BITCHES ASS IS COMING TO GIVE YOU PLEASURE UWU"
-
 var questions = [
   {
 		"label": "Vous voyez un noir, que faites vous?",
@@ -73,3 +70,7 @@ var questions = [
 		]
 	}
 ]
+
+for (var q in questions){
+	console.log(q)
+}
