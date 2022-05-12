@@ -4,11 +4,19 @@ var quizz_question = document.getElementById("quizz_question")
 var buttons = [document.getElementById("choix_un"),document.getElementById("choix_deux"),document.getElementById("choix_trois"),document.getElementById("choix_quatre")]
 var index = -1
 
-function helloworld(){
-	console.log("helloworld")
+
+var is_quizz = true
+if (is_quizz){
+	var jauges = [0,0,0,0]
+}else{
+	var points = 0
 }
 
-buttons[0].onclick = helloworld
+
+function add_jauges(index){
+	jauges[index]++
+	next_question()
+}
 
 function next_question(){
 	index++
@@ -19,6 +27,7 @@ function next_question(){
 	for (var i in data.choices){
 		var choice = data.choices[i]
 		buttons[i].innerHTML = choice.label
+		buttons[i].onclick = `add_jauges(${choice.jauge})`
 	}
 }
 
@@ -27,6 +36,7 @@ function end_quizz(){
 		button.style.visibility = "hidden"
 		button.onclick = null
 	}
+	console.log(jauges)
 }
 
 
@@ -95,5 +105,14 @@ var questions = [
 		]
 	}
 ]
+
+var results = {
+  "jauges":[
+    {"label":"Vous êtes une personne normale aussi, bien joué à vous !", "image":"smile.jpg"},
+    {"label":"Je suis au regret de vous annoncer que vous êtes raciste.", "color":"#000000"},
+    {"label":"Vous êtes fiché S et devez vous rendre immédiatemment dans le commissariat le plus proche afin que les officiers puissent procéder à votre interpelation."},
+    {"label":"Vous êtes un alien, veuillez contacter un scientifique pour lui faire part de vos connaissances et que vous puissiez faire avancer la science (dissection compris) !"}
+  ]
+}
 
 next_question()
