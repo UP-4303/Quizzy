@@ -18,8 +18,8 @@ if(!isset($_SESSION['id'])){
 <h1>Question X</h1>
 <h2>Blablabla ?</h2>
 
-<button>Oui</button> <button>Non</button>
-<button>Peut être</button><button>Juif</button>
+<button>Oui</button> <button>Non</button><br/>
+<button>Peut être</button> <button>Juif</button>
 
 <?php
 	include("db/db_disconnect.php") ;
