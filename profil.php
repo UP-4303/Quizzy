@@ -5,6 +5,10 @@ include("lib/head.php");
 <?php
 include_once("crud/users.crud.php");
 
+if(isset($_POST["pseudo"])) {
+	update_nickname($conn, $_session["id"], $_POST["pseudo"])
+}
+
  if (isset($_SESSION['id'])){
 	$user = select_user($conn, $_SESSION['id']) ;
 	
@@ -25,16 +29,10 @@ include_once("crud/users.crud.php");
  } else {
 	 echo "<p>veuillez vous connectez</p>" ;
  }
-
 ?>
 
 <form action="#" method="get">
-	<input type="text" name="nvt_pseudo" value="nouveau pseudo" />
-	<input type="submit" value="confirmer" />
-</form>
-
-<form action="#" method="get">
-	<input type="email" name="nvt_email" value="nouvel email" />
+	<input type="text" name="nvt_pseudo" />
 	<input type="submit" value="confirmer" />
 </form>
 
