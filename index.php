@@ -6,7 +6,7 @@ include("lib/head.php");
 	<?php
 	include_once("crud/quizz.crud.php");
 	
-	
+	print_r($_POST);
 	if (isset($_POST["search"])){
 		$rSearch = $_POST["search"];
 		unset($_POST["search"]);
