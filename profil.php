@@ -50,7 +50,7 @@ if(isset($_FILES["photo_profil"])) {
 	$extension = strtolower(end($tabExtension));
 	$maxSize = 20000000 ;
 	
-	if($extension == "jpg")) {
+	if($extension == "jpg") {
 		if($size <= $maxSize) {
 			if($error == 0) {
 				$uniqueName = uniqid('', true);
