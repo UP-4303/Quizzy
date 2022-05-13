@@ -41,10 +41,10 @@ if(isset($_POST["old_passwd"]) and isset($_POST["nvt_passwd_1"]) and isset($_POS
 }
 
 if(isset($_FILES["photo_profil"])) {
-	$tmpName = $_FILES['file']['tmp_name'];
-    $name = $_FILES['file']['name'];
-    $size = $_FILES['file']['size'];
-    $error = $_FILES['file']['error'];
+	$tmpName = $_FILES['photo_profil']['tmp_name'];
+    $name = $_FILES['photo_profil']['name'];
+    $size = $_FILES['photo_profil']['size'];
+    $error = $_FILES['photo_profil']['error'];
 	
 	$tabExtension = explode('.', $name);
 	$extension = strtolower(end($tabExtension));
