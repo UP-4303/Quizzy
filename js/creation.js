@@ -15,6 +15,11 @@ function displayContinue(){
 	quizz_input.style.display = "none"
 	quizz_label.style.display = "none"
 	buttoncontinue.style.display = "none"
+
+	var is_quizz = quizz_input.checked
+	if (is_quizz){
+		
+	}
 }
 
 buttoncontinue.onclick = displayContinue
