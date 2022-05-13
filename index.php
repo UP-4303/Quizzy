@@ -24,9 +24,8 @@ include("lib/head.php");
 				$background = 'background-image: url("images/'.$row["image"].'");' ;
 			} else {
 				$background = "background-color: ".$row["color"].";";
-			}
-			
-			echo "<li class='quizz' style='".$background."'><a href='quizz.php?id=".$row["id"]."'><div class='nomQuizz'>".$row["name"]."</div></a></li>" ;
+			}		
+			echo "<a href='quizz.php?id=".$row["id"]."'  class='quizz' style='".$background."'><li><div class='nomQuizz'>".$row["name"]."</div></li></a>" ;
 		}
 	}
 	?>

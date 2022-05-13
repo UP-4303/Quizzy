@@ -25,12 +25,9 @@ function buttonClicked(evt){
 	next_question()
 }
 
-for (var button of buttons){
-	button.addEventListener("click", buttonClicked)
-}
-
 
 function next_question(){
+	for (var button of buttons){button.style.display = "none"; button.onclick = null}
 	index++
 	if (index == questions.length) return end_quizz()
 	var data = questions[index]
@@ -40,6 +37,8 @@ function next_question(){
 		var choice = data.choices[i]
 		buttons[i].innerHTML = "<div class=\"answer_name\">" + choice.label + "</div>"
 		buttons[i].value = choice.jauge
+		buttons[i].style.display = ""
+		buttons[i].addEventListener("click", buttonClicked)
 	}
 }
 
@@ -66,10 +65,6 @@ function find_qcm_answer(points){
 }
 
 function end_quizz(){
-	for (var button of buttons){
-		button.style.display = "none"
-		button.onclick = null
-	}
 	if (is_quizz){
 		var res = find_answer(jauges)
 		quizz_question_number.innerHTML = res.label

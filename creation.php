@@ -11,8 +11,8 @@ if(! isset($_SESSION['id'])){
 
 <form method="POST" action="creation.php">
 	<label id="nametext">Nom : </label><input id="nameinput" type="text" name="nom">
-	<input id="qcminput" type="radio" name="is_quizz" checked><label id="qcmtext">Quizz à points</label>
-	<input id="quizzinput" type="radio" name="is_quizz"><label id="quizztext">Quizz à résultats multiples</label>
+	<input id="qcminput" type="radio" name="is_quizz" checked><label for="qcminput" id="qcmtext">Quizz à points</label>
+	<input id="quizzinput" type="radio" name="is_quizz"><label for="quizzinput" id="quizztext">Quizz à résultats multiples</label>
 </form>
 
 <button id="continue"></button>

@@ -215,6 +215,8 @@
 	font-size: 1.5em;
 	background-size: cover;
 	background-repeat: no-repeat;
+	text-decoration: none;
+	color: black;
 }
 
 .quizz a:link, .quizz a:visited, .quizz a:hover, .quizz a:active {
@@ -226,9 +228,7 @@
 	background-color: rgba(255,255,255,0.5);
 	padding: 5%;
 	width: 25vw;
-	height: fit-content;
 	overflow-wrap: anywhere;
-	flex-shrink: 0.5;
 }
 
 #cont_profil {
