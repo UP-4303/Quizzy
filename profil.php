@@ -40,9 +40,7 @@ if(isset($_POST["old_passwd"]) and isset($_POST["nvt_passwd_1"]) and isset($_POS
 	}
 }
 
-if(isset($_FILE["photo_profil"])) {
-	var_dump($_FILE);
-}
+var_dump($_FILES);
 
  if (isset($_SESSION['id'])){
 	$user = select_user($conn, $_SESSION['id']) ;
