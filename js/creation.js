@@ -17,7 +17,7 @@ function displayAnswers(){
 }
 
 var ansnumber = document.getElementById("ans_number")
-ansnumber.addEventLister("input", displayAnswers)
+ansnumber.addEventListener("input", displayAnswers)
 
 function displayContinue(){
 	initform.style.display = "none"
