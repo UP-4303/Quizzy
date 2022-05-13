@@ -56,7 +56,7 @@ if(isset($_FILES["photo_profil"])) {
 				$uniqueName = uniqid('', true);
 				$file = $uniqueName.".".$extension;
 				
-				move_uploaded_file($tmpName, './l1_info_4/Quizzin/images/'.$file);
+				move_uploaded_file($tmpName, 'http://os-vps418.infomaniak.ch:1180/l1_info_4/Quizzy/images/'.$file);
 				update_profile_picture($conn, $_SESSION["id"], $file) ;
 			} else {
 				echo "<h3>une erreur est suvenue</h3>";
