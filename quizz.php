@@ -5,9 +5,15 @@ if(!isset($_SESSION['id'])){
 	if (isset($_GET["id"])){
 		$id=$_GET['id'];
 		$quizz=select_quizz($conn, $id);
+		if (! $quizz){
+			print("Quizz inconnu/introuvable.");
+			include("db/db_disconnect.php") ;
+			return;
+		}
 		$json=json_encode($quizz);
 	}else{
 		print("Aucun quizz n'a été chargé.");
+		include("db/db_disconnect.php") ;
 		return;
 	}
 }else{
