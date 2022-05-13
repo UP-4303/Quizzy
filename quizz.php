@@ -1,8 +1,11 @@
 <?php
 include("lib/head.php");
+include_once("crud/quizz.crud.php");
 if(!isset($_SESSION['id'])){
 	if (isset($_GET["quizz"])){
 		$id=$_GET['quizz'];
+		$quizz=select_quizz($conn, $id);
+		$json=json_encode($quizz);
 	}else{
 		print("Aucun quizz n'a été chargé.");
 	}
@@ -29,6 +32,11 @@ if(!isset($_SESSION['id'])){
 	</div>
 </div>
 
+<script>
+<?php
+	echo "var quizz_data =".$json.";\n"
+?>
+</script>
 <script src="js/quizz.js"></script>
 
 <?php
