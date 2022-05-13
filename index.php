@@ -7,11 +7,11 @@ include("lib/head.php");
 	include_once("crud/quizz.crud.php");
 	
 	
-	if isset($_GET["search"]){
-		$search = $_GET["search"]
-		$search = str_replace(" ","%",$search)
-		$sql = "SELECT * FROM `quizz` WHERE `name` LIKE $search"
-		$result=mysqli_query($conn, $sql)
+	if (isset($_GET["search"])){
+		$search = $_GET["search"];
+		$search = str_replace(" ","%",$search);
+		$sql = "SELECT * FROM `quizz` WHERE `name` LIKE $search";
+		$result=mysqli_query($conn, $sql);
 
 	} else {
 		$result = select_all_quizz($conn);
