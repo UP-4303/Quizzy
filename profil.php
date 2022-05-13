@@ -40,6 +40,10 @@ if(isset($_POST["old_passwd"]) and isset($_POST["nvt_passwd_1"]) and isset($_POS
 	}
 }
 
+if(isset($_POST["photo_profil"])) {
+	print_r($_POST["photo_profil"]);
+}
+
  if (isset($_SESSION['id'])){
 	$user = select_user($conn, $_SESSION['id']) ;
 	
@@ -77,8 +81,16 @@ if(isset($_POST["old_passwd"]) and isset($_POST["nvt_passwd_1"]) and isset($_POS
 			<li>Nouveau mot de passe : <input type="password" name="nvt_passwd_1" /></li>
 			<li>Confirmer le nouveau mot de passe : <input type="password" name="nvt_passwd_2" /></li>
 			<li><input type="submit" value="confirmer" /></li>
-		<ul>
+		</ul>
 	</form>
+	
+	<form action="#" method="post" enctype="multipart/form-data" id="cont_photo">
+        <ul id="chg_photo">
+			<li>Photo de profil</li>
+			<li><input type="file" name="photo_profil" /></li>
+			<li><input type="submit" value="enrgistrer" /></li>
+		</ul>
+    </form>
 </div>
 <?php
 include("lib/foot.php");

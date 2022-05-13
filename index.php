@@ -10,14 +10,16 @@ include("lib/head.php");
 	if (isset($_GET["search"])){
 		$search = $_GET["search"];
 		$search = str_replace(" ","%",$search);
+		$search = '%'.$search.'%';
+		echo($search);
 		$sql = "SELECT * FROM `quizz` WHERE `name` LIKE $search";
 		$result=mysqli_query($conn, $sql);
 
 	} else {
 		$result = select_all_quizz($conn);
 	}
-	if ($result){
-		echo("Aucun résultat")
+	if (!$result){
+		echo("Aucun résultat");
 	} else {
 		while ($row = mysqli_fetch_assoc($result)){
 			if(isset($row["image"])) {
