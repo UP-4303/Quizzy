@@ -52,7 +52,7 @@
         <div id="menu_pannel" class="no_margin no_padding">
             <div id="menu_top_wrapper">
 			
-				<form action="/" method="get">
+				<form action="#" method="get">
 				<?php
 					if(isset($_SESSION['id'])){
 						include_once("crud/users.crud.php");
