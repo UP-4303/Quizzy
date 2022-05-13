@@ -80,8 +80,8 @@ if(isset($_POST["old_passwd"]) and isset($_POST["nvt_passwd_1"]) and isset($_POS
 		<ul>
 	</form>
 	
-	<form action="#" method="post" enctype="multipart/form-data">
-        <ul id="chg_psd">
+	<form action="#" method="post" enctype="multipart/form-data" id="cont_photo">
+        <ul id="chg_photo">
 			<li>Photo de profil</li>
 			<li><input type="file" name="photo_profil" /></li>
 			<li><input type="submit" value="enrgistrer" /></li>
