@@ -1,10 +1,9 @@
 <?php
 include("lib/head.php");
 include_once("crud/quizz.crud.php");
-print_r($_GET);
-/*if(!isset($_SESSION['id'])){
-	if (isset($_GET["quizz"])){
-		$id=$_GET['quizz'];
+if(!isset($_SESSION['id'])){
+	if (isset($_GET["id"])){
+		$id=$_GET['id'];
 		$quizz=select_quizz($conn, $id);
 		$json=json_encode($quizz);
 	}else{
@@ -15,7 +14,7 @@ print_r($_GET);
 	print("Veuillez vous connecter pour accéder aux quizz.");
 	include("db/db_disconnect.php") ;
 	return;
-}*/
+}
 ?>
 
 
