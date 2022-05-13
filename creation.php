@@ -17,17 +17,17 @@ if(! isset($_SESSION['id'])){
 	</div>
 
 	<div id="questionform" display="none">
-		<p id="question_number">Question</h1>
-		<label>Question : </label><input type="text" name="questiontext">
+		<p id="question_number">Question</h1><br/>
+		<label>Question : </label><input type="text" name="questiontext"><br/>
 		<select id="ans_number" value="2">
 			<option value="2">2 réponses possibles</option>
 			<option value="3">3 réponses possibles</option>
 			<option value="4">4 réponses possibles</option>
-		</select>
-		<label id="reptext1">Réponse 1 : </label><input type="text" name="repinput1" id="repinput1">
-		<label id="reptext2">Réponse 2 : </label><input type="text" name="repinput2" id="repinput2">
-		<label id="reptext3">Réponse 3 : </label><input type="text" name="repinput3" id="repinput3">
-		<label id="reptext4">Réponse 4 : </label><input type="text" name="repinput4" id="repinput4">
+		</select><br/>
+		<label id="reptext1">Réponse 1 : </label><input type="text" name="repinput1" id="repinput1"><br/>
+		<label id="reptext2">Réponse 2 : </label><input type="text" name="repinput2" id="repinput2"><br/>
+		<label id="reptext3">Réponse 3 : </label><input type="text" name="repinput3" id="repinput3"><br/>
+		<label id="reptext4">Réponse 4 : </label><input type="text" name="repinput4" id="repinput4"><br/>
 	</div>
 </form>
 
