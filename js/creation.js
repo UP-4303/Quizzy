@@ -1,7 +1,7 @@
 var quizz_input = document.getElementById("quizzinput")
 var initform = document.getElementById("initform")
 var questionform = document.getElementById("questionform")
-
+var buttoncontinue = document.getElementById("continue")
 var reptext3 = document.getElementById("reptext3")
 var reptext4 = document.getElementById("reptext4")
 var repinput3 = document.getElementById("repinput3")
