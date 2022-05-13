@@ -8,8 +8,8 @@ include("lib/head.php");
 	
 	
 	if (isset($_GET["search"])){
-		$search = $_GET["search"];
-		$search = str_replace(" ","%",$search);
+		$rSearch = $_GET["search"];
+		$search = str_replace(" ","%",$rSearch);
 		$search = '%'.$search.'%';
 		$sql = "SELECT * FROM `quizz` WHERE `name` LIKE '$search'";
 		$result=mysqli_query($conn, $sql);
@@ -17,8 +17,8 @@ include("lib/head.php");
 	} else {
 		$result = select_all_quizz($conn);
 	}
-	if ($result.nb_rows() == 0){
-		echo("Aucun résultat");
+	if (mysqli_num_rows($result) == 0){
+		echo("<div id='quizz_name'>Aucun résultat pour \"$rSearch\"</div>");
 	} else {
 		while ($row = mysqli_fetch_assoc($result)){
 			if(isset($row["image"])) {
