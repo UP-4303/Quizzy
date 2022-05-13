@@ -16,7 +16,7 @@ include("lib/head.php");
 	} else {
 		$result = select_all_quizz($conn);
 	}
-	if ($result){
+	if (!$result){
 		echo("Aucun résultat");
 	} else {
 		while ($row = mysqli_fetch_assoc($result)){
