@@ -8,6 +8,7 @@ var repinput3 = document.getElementById("repinput3")
 var repinput4 = document.getElementById("repinput4")
 
 function displayAnswers(){
+	console.log("yo")
 	var nb = parseInt(ansnumber.value)
 	reptext3.style.display = nb>2?"":"none"
 	repinput3.style.display = nb>2?"":"none"
@@ -16,7 +17,7 @@ function displayAnswers(){
 }
 
 var ansnumber = document.getElementById("ans_number")
-ansnumber.addEventLister("input", displayAnswers)
+ansnumber.addEventListener("input", displayAnswers)
 
 function displayContinue(){
 	initform.style.display = "none"
