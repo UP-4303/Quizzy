@@ -84,11 +84,12 @@ if(isset($_FILES["photo_profil"])) {
 	} else {
 		$image = "default-avatar.jpg" ;
 	}
-
 	echo "<div id='cont_pic'><img class='profil_pic' src='images/".$image."' alt='profil picture' ></div></div>" ;
- } else {
-	 echo "<p>veuillez vous connectez</p>" ;
- }
+} else {
+	echo "<p>veuillez vous connectez</p>" ;
+}
+ 
+
 ?>
 <div id="cont_change">
 	<form action="#" method="post" id="cont_psd">
