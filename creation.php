@@ -19,7 +19,7 @@ if(! isset($_SESSION['id'])){
 	<div id="questionform" display="none">
 		<p id="question_number">Question</h1>
 		<label>Question : </label><input type="text" name="questiontext">
-		<select id="ans_number">
+		<select id="ans_number" value="2">
 			<option value="2">2 réponses possibles</option>
 			<option value="3">3 réponses possibles</option>
 			<option value="4">4 réponses possibles</option>
