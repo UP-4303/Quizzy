@@ -17,7 +17,7 @@ if(! isset($_SESSION['id'])){
 	</div>
 
 	<div id="questionform" display="none">
-		<p id="question_number">Question</h1><br/>
+		<label id="question_number">Question</label><br/>
 		<label>Question : </label><input type="text" name="questiontext"><br/>
 		<select id="ans_number" value="2">
 			<option value="2">2 réponses possibles</option>
