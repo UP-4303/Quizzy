@@ -16,15 +16,17 @@ include("lib/head.php");
 	} else {
 		$result = select_all_quizz($conn);
 	}
-
-	while ($row = mysqli_fetch_assoc($result)){
-		if(isset($row["image"])) {
-			$background = 'background-image: url("images/'.$row["image"].'");' ;
-		} else {
-			$background = "background-color: ".$row["color"].";";
+	if ($result){
+		echo("Aucun résultat")
+	} else {
+		while ($row = mysqli_fetch_assoc($result)){
+			if(isset($row["image"])) {
+				$background = 'background-image: url("images/'.$row["image"].'");' ;
+			} else {
+				$background = "background-color: ".$row["color"].";";
+			}		
+			echo "<a href='quizz.php?id=".$row["id"]."'  class='quizz' style='".$background."'><li><div class='nomQuizz'>".$row["name"]."</div></li></a>" ;
 		}
-		
-		echo "<a href='quizz.php?id=".$row["id"]."'  class='quizz' style='".$background."'><li><div class='nomQuizz'>".$row["name"]."</div></li></a>" ;
 	}
 	?>
 </ul>
