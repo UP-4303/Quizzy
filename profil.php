@@ -77,7 +77,7 @@ if(isset($_POST["old_passwd"]) and isset($_POST["nvt_passwd_1"]) and isset($_POS
 			<li>Nouveau mot de passe : <input type="password" name="nvt_passwd_1" /></li>
 			<li>Confirmer le nouveau mot de passe : <input type="password" name="nvt_passwd_2" /></li>
 			<li><input type="submit" value="confirmer" /></li>
-		<ul>
+		</ul>
 	</form>
 	
 	<form action="#" method="post" enctype="multipart/form-data" id="cont_photo">
