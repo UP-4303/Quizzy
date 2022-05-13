@@ -26,6 +26,7 @@
     include_once("db/db_connect.php") ;
     ?>
     <header id="header">
+    <form action="#" method="get">
     <svg id="top_svg" class="no_margin no_padding" viewBox="0 0 1000 200" preserveAspectRatio="none"><path fill="#fc6600" fill-opacity="1" d="M 0 0 L 1000 0 L 1000 150 L 400 150 C 200 150 300 200 100 200 L 0 200 Z"></path><path fill="#000000" fill-opacity="1" d="M 0 200 L 100 200 C 300 200 200 150 400 150 L 1000 150 L 1000 145 L 400 145 C 200 145 300 195 100 195 L 0 195 Z"></path></svg>
         <div id="top_container">
             <div id="logo_wrapper">
@@ -35,20 +36,23 @@
             <div id="searchbox_wrapper">
                 <input id="searchbox" class="no_padding form-input" 
                 type="text" placeholder="Chercher un quizz" name="search" title="Rechercher">
-                <lord-icon id="searchbox_icon"
-                    src="https://cdn.lordicon.com/msoeawqm.json"
-                    trigger="morph"
-                    stroke="90"
-                    colors="primary:#fc6600,secondary:#000000">
-                </lord-icon>
+                <input type="submit" id="searchbox_icon">
+                    <lord-icon id="searchbox_icon"
+                        src="https://cdn.lordicon.com/msoeawqm.json"
+                        trigger="morph"
+                        stroke="90"
+                        colors="primary:#fc6600,secondary:#000000">
+                    </lord-icon>
+                </input>
             </div>
         </div>
+    </form>
 
 		<nav class="menu menu_non">
         <div id="menu_pannel" class="no_margin no_padding">
             <div id="menu_top_wrapper">
 			
-				<form action="#" method="get">
+				<form action="/" method="get">
 				<?php
 					if(isset($_SESSION['id'])){
 						include_once("crud/users.crud.php");

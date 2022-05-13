@@ -6,10 +6,18 @@ include("lib/head.php");
 	<?php
 	include_once("crud/quizz.crud.php");
 	
-	$all_quizz = select_all_quizz($conn);
 	
-	
-	while ($row = mysqli_fetch_assoc($all_quizz)){
+	if isset($_GET["search"]){
+		$search = $_GET["search"]
+		$search = str_replace(" ","%",$search)
+		$sql = "SELECT * FROM `quizz` WHERE `name` LIKE $search"
+		$result=mysqli_query($conn, $sql)
+
+	} else {
+		$result = select_all_quizz($conn);
+	}
+
+	while ($row = mysqli_fetch_assoc($result)){
 		if(isset($row["image"])) {
 			$background = 'background-image: url("images/'.$row["image"].'");' ;
 		} else {
