@@ -32,6 +32,12 @@ function update_nickname($conn, $id, $nickname){
 	return $ret;
 }
 
+function update_profile_picture($conn, $id, $profile_picture){
+	$sql="UPDATE `users` set `profile_picture`='$profile_picture' WHERE `id`=$id";
+	$ret=mysqli_query($conn, $sql);
+	return $ret;
+}
+
 /*
 	D 
 */
