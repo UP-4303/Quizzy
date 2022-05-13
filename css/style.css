@@ -286,26 +286,15 @@
 	align-items: center;
 }
 
-#cont_psd {
+#cont_psd,#cont_mdp,#cont_photo {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	margin: 5%;
-	width: 50%;
+	width: 33%;
 }
 
-#chg_psd {
+#chg_psd,#chg_mdp,#chg_photo {
 	list-style: none;
 }
 
-#cont_mdp {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	margin: 5%;
-	width: 50%;
-}
-
-#chg_mdp {
-	list-style: none;
-}
