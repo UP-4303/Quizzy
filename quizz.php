@@ -1,7 +1,8 @@
 <?php
 include("lib/head.php");
 include_once("crud/quizz.crud.php");
-if(!isset($_SESSION['id'])){
+print_r($_GET);
+/*if(!isset($_SESSION['id'])){
 	if (isset($_GET["quizz"])){
 		$id=$_GET['quizz'];
 		$quizz=select_quizz($conn, $id);
@@ -14,7 +15,7 @@ if(!isset($_SESSION['id'])){
 	print("Veuillez vous connecter pour accéder aux quizz.");
 	include("db/db_disconnect.php") ;
 	return;
-}
+}*/
 ?>
 
 
@@ -35,7 +36,7 @@ if(!isset($_SESSION['id'])){
 
 <script>
 <?php
-	echo "var quizz_data =".$json.";\n";
+	//echo "var quizz_data =".$json.";\n";
 ?>
 </script>
 <script src="js/quizz.js"></script>
