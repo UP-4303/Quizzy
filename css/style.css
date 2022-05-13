@@ -157,13 +157,15 @@
 }
 
 .answer_name {
-	font-size: 150%;
 	padding: 0.5vw;
 	max-width: 19vw;
 	min-width: 18vw;
 	height: fit-content;
 	overflow-wrap: anywhere;
 }
+
+
+
 
 #top_menu_deco {
 	display: flex;
@@ -215,8 +217,12 @@
 	background-repeat: no-repeat;
 }
 
+.quizz a:link, .quizz a:visited, .quizz a:hover, .quizz a:active {
+	text-decoration: none;
+}
+
 .nomQuizz {
-	background-color: white;
+	background-color: rgba(255,255,255,0.5);
 	padding: 5%;
 	width: 25vw;
 	height: fit-content;
