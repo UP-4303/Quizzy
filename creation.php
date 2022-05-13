@@ -24,10 +24,10 @@ if(! isset($_SESSION['id'])){
 			<option value="3">3 réponses possibles</option>
 			<option value="4">4 réponses possibles</option>
 		</select>
-		<label id="reptext1">Réponse 1 : </label><input type="text" name="repinput1">
-		<label id="reptext2">Réponse 2 : </label><input type="text" name="repinput2">
-		<label id="reptext3">Réponse 3 : </label><input type="text" name="repinput3">
-		<label id="reptext4">Réponse 4 : </label><input type="text" name="repinput4">
+		<label id="reptext1">Réponse 1 : </label><input type="text" name="repinput1" id="repinput1">
+		<label id="reptext2">Réponse 2 : </label><input type="text" name="repinput2" id="repinput2">
+		<label id="reptext3">Réponse 3 : </label><input type="text" name="repinput3" id="repinput3">
+		<label id="reptext4">Réponse 4 : </label><input type="text" name="repinput4" id="repinput4">
 	</div>
 </form>
 
