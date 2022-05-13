@@ -35,7 +35,7 @@ if(!isset($_SESSION['id'])){
 
 <script>
 <?php
-	//echo "var quizz_data =".$json.";\n";
+	echo "var quizz_data =".$json.";\n";
 ?>
 </script>
 <script src="js/quizz.js"></script>
