@@ -8,6 +8,7 @@ if(!isset($_SESSION['id'])){
 		$json=json_encode($quizz);
 	}else{
 		print("Aucun quizz n'a été chargé.");
+		return;
 	}
 }else{
 	print("Veuillez vous connecter pour accéder aux quizz.");
@@ -34,7 +35,7 @@ if(!isset($_SESSION['id'])){
 
 <script>
 <?php
-	echo "var quizz_data =".$json.";\n"
+	echo "var quizz_data =".$json.";\n";
 ?>
 </script>
 <script src="js/quizz.js"></script>
