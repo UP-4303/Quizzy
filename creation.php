@@ -13,10 +13,9 @@ if(! isset($_SESSION['id'])){
 	<label id="nametext">Nom : </label><input id="nameinput" type="text" name="nom">
 	<input id="qcminput" type="radio" name="is_quizz" checked><label id="qcmtext">Quizz à points</label>
 	<input id="quizzinput" type="radio" name="is_quizz"><label id="quizztext">Quizz à résultats multiples</label>
-
-	<button id="continue"></button>
 </form>
 
+<button id="continue"></button>
 
 <script src="creation.js"></script>
 
