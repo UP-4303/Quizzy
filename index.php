@@ -17,7 +17,7 @@ include("lib/head.php");
 		$result = select_all_quizz($conn);
 	}
 	if ($result){
-		echo("Aucun résultat")
+		echo("Aucun résultat");
 	} else {
 		while ($row = mysqli_fetch_assoc($result)){
 			if(isset($row["image"])) {
