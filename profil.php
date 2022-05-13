@@ -41,7 +41,7 @@ if(isset($_POST["old_passwd"]) and isset($_POST["nvt_passwd_1"]) and isset($_POS
 }
 
 if(isset($_POST["photo_profil"])) {
-	print($_POST["photo_profil"]);
+	var_dump($_POST);
 }
 
  if (isset($_SESSION['id'])){
