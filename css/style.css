@@ -216,6 +216,7 @@
 	background-size: cover;
 	background-repeat: no-repeat;
 	text-decoration: none;
+	color: black;
 }
 
 .quizz a:link, .quizz a:visited, .quizz a:hover, .quizz a:active {
