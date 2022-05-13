@@ -9,7 +9,7 @@ include("lib/head.php");
 	
 	if (isset($_POST["search"])){
 		$rSearch = $_POST["search"];
-		unset($_POST);
+		unset($_POST["search"]);
 		$search = str_replace(" ","%",$rSearch);
 		$search = '%'.$search.'%';
 		$sql = "SELECT * FROM `quizz` WHERE `name` LIKE '$search'";
