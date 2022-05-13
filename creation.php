@@ -16,8 +16,8 @@ if(! isset($_SESSION['id'])){
 		<input id="quizzinput" type="radio" name="is_quizz"><label for="quizzinput" id="quizztext">Quizz à résultats multiples</label>
 	</div>
 
-	<div id="questionform" display="none">
-		<p id="question_number">Question</h1><br/>
+	<div id="questionform" style="display: none;">
+		<label id="question_number">Question</label><br/>
 		<label>Question : </label><input type="text" name="questiontext"><br/>
 		<select id="ans_number" value="2">
 			<option value="2">2 réponses possibles</option>
