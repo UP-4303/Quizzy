@@ -17,7 +17,7 @@ if(! isset($_SESSION['id'])){
 
 <button id="continue"></button>
 
-<script src="creation.js"></script>
+<script src="js/creation.js"></script>
 
 <?php
 	include("db/db_disconnect.php") ;
