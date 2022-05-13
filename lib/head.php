@@ -26,7 +26,7 @@
     include_once("db/db_connect.php") ;
     ?>
     <header id="header">
-    <form action="/l1_info_4/Quizzy/index.php" method="get">
+    <form action="/l1_info_4/Quizzy/index.php" method="post">
         <svg id="top_svg" class="no_margin no_padding" viewBox="0 0 1000 200" preserveAspectRatio="none"><path fill="#fc6600" fill-opacity="1" d="M 0 0 L 1000 0 L 1000 150 L 400 150 C 200 150 300 200 100 200 L 0 200 Z"></path><path fill="#000000" fill-opacity="1" d="M 0 200 L 100 200 C 300 200 200 150 400 150 L 1000 150 L 1000 145 L 400 145 C 200 145 300 195 100 195 L 0 195 Z"></path></svg>
         <div id="top_container">
             <div id="logo_wrapper">
