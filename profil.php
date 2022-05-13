@@ -28,7 +28,7 @@ if(isset($_POST["old_passwd"]) and isset($_POST["nvt_passwd_1"]) and isset($_POS
 		if($_POST["nvt_passwd_1"] == $_POST["nvt_passwd_2"]) {
 			if(strlen($_POST['passwd']) >= 8) {
 				update_passwd($conn, $_SESSION["id"], $_POST["nvt_passwd_2"]) ;
-				echo "<h3>Votre mot de passe à été changé</h3>" ;
+				echo "<h3>Votre mot de passe à été changé.</h3>" ;
 			} else {
 				echo "<h3>Mot de passe doit faire au moins 8 caractères.</h3>" ;
 			}
@@ -36,12 +36,37 @@ if(isset($_POST["old_passwd"]) and isset($_POST["nvt_passwd_1"]) and isset($_POS
 			echo "<h3>Le mot de passe et sa confirmation sont différentes !</h3>" ;
 		}
 	} else {
-		echo "<h3>Le mot de passe est incorrect</h3>" ;
+		echo "<h3>Le mot de passe est incorrect.</h3>" ;
 	}
 }
 
 if(isset($_FILES["photo_profil"])) {
-	print_r($_FILES["photo_profil"]) ;
+	$tmpName = $_FILES['photo_profil']['tmp_name'];
+    $name = $_FILES['photo_profil']['name'];
+    $size = $_FILES['photo_profil']['size'];
+    $error = $_FILES['photo_profil']['error'];
+	
+	$tabExtension = explode('.', $name);
+	$extension = strtolower(end($tabExtension));
+	$maxSize = 20000000 ;
+	
+	if($extension == "jpg") {
+		if($size <= $maxSize) {
+			if($error == 0) {
+				$uniqueName = uniqid('', true);
+				$file = $uniqueName.".".$extension;
+				
+				move_uploaded_file($tmpName, './l1_info_4/Quizzin/images/'.$file);
+				update_profile_picture($conn, $_SESSION["id"], $file) ;
+			} else {
+				echo "<h3>une erreur est suvenue</h3>";
+			}
+		} else {
+			echo "<h3>l'image ne dois pas faire plus de 8mo</h3>";
+		}
+	} else {
+		echo "<h3>il ne s'agit pas d'une image jpg</h3>";
+	}
 }
 
  if (isset($_SESSION['id'])){
@@ -59,11 +84,12 @@ if(isset($_FILES["photo_profil"])) {
 	} else {
 		$image = "default-avatar.jpg" ;
 	}
-
 	echo "<div id='cont_pic'><img class='profil_pic' src='images/".$image."' alt='profil picture' ></div></div>" ;
- } else {
-	 echo "<p>veuillez vous connectez</p>" ;
- }
+} else {
+	echo "<p>veuillez vous connectez</p>" ;
+}
+ 
+
 ?>
 <div id="cont_change">
 	<form action="#" method="post" id="cont_psd">
