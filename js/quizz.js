@@ -55,13 +55,29 @@ function find_answer(jauges){
 	return results.jauges[index]
 }
 
+function find_qcm_answer(points){
+	var maxi = 0
+	for (var q of questions){
+		if (q.points > 0){
+			maxi=maxi+q.points
+		}
+	}
+	return [points, maxi, results.required_points<=points]
+}
+
 function end_quizz(){
 	for (var button of buttons){
 		button.style.display = "none"
 		button.onclick = null
 	}
-	var res = find_answer(jauges)
-	quizz_question_number.innerHTML = res.label
+	if (is_quizz){
+		var res = find_answer(jauges)
+		quizz_question_number.innerHTML = res.label
+	}else{
+		var res = find_qcm_answer(points)
+		quizz_question_number.innerHTML = res[2]?"Test passé !":"Test raté !" + " " + `${res[0]}/${res[1]}`
+		quizz_question.innerHTML = `Note minimale requise : ${results.required_points}/${maxi}`
+	}
 	quizz_question.style.display = "none"
 }
 
