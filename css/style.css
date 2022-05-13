@@ -219,6 +219,7 @@
 
 .quizz a:link, .quizz a:visited, .quizz a:hover, .quizz a:active {
 	text-decoration: none;
+	color: black;
 }
 
 .nomQuizz {
