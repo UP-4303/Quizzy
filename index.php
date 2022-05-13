@@ -12,7 +12,7 @@ include("lib/head.php");
 		$search = str_replace(" ","%",$search);
 		$search = '%'.$search.'%';
 		echo($search);
-		$sql = 'SELECT * FROM `quizz` WHERE `name` LIKE `'.$search.'`';
+		$sql = "SELECT * FROM `quizz` WHERE `name` LIKE $search";
 		$result=mysqli_query($conn, $sql);
 
 	} else {
