@@ -7,7 +7,7 @@ include("lib/head.php");
 	include_once("crud/quizz.crud.php");
 	
 	if (isset($_GET["q"])){
-		$rSearch = $_GET["q"];0
+		$rSearch = $_GET["q"];
 		$search = str_replace(" ","%",$rSearch);
 		$search = '%'.$search.'%';
 		$sql = "SELECT * FROM `quizz` WHERE `name` LIKE '$search'";
