@@ -4,18 +4,24 @@ var menu = "close";
 
 iconeMenu.addEventListener("click", clicMenu);
 
-function clicMenu() {
-	if (menu == "close") {
-		iconeMenu.style.backgroundImage = "#";
-		iconeMenu.style.backgroundImage = "url('/l1_info_4/Quizzy/images/menu.gif')";
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
 
+async function clicMenu() {
+	if (menu == "close") {
 		menu_col.className = "menu menu_oui";
 		menu = "open";
-	} else {
-		iconeMenu.style.backgroundImage = "#";
-		iconeMenu.style.backgroundImage = "url('/l1_info_4/Quizzy/images/menu_reverse.gif')";
+		iconeMenu.style.backgroundImage = "url('/l1_info_4/Quizzy/images/menu.gif')";
+		iconeMenu.style.backgroundImage = "url('/l1_info_4/Quizzy/images/menu_reverse.jpg')";
+		await sleep(63);
 
+	} else {
 		menu_col.className = "menu menu_non";
 		menu = "close";
+
+		iconeMenu.style.backgroundImage = "url('/l1_info_4/Quizzy/images/menu_reverse.gif')";
+		await sleep(63);
+		iconeMenu.style.backgroundImage = "url('/l1_info_4/Quizzy/images/menu.jpg')";
 	}
 }
