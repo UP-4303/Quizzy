@@ -74,6 +74,7 @@
 	font-size: 24px;
 	border: 1px solid #ccc;
 	border-right: 0px;
+	outline: none;
 }
 
 #searchbox_icon {
@@ -82,6 +83,11 @@
 	background-color: white;
 	border: 1px solid #ccc;
 	border-left: 0px;
+	background-image: url("/Quizzy/images/search_icon.png");
+}
+
+#searchbox_icon:hover {
+	background-image: url("/Quizzy/images/search_icon.gif");
 }
 
 #menu_pannel {

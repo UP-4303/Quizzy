@@ -3,7 +3,7 @@ var menu_col = document.querySelector(".menu");
 var menu = "close";
 
 iconeMenu.addEventListener("click", clicMenu);
-	
+
 function clicMenu() {
 	if (menu == "close") {
 		iconeMenu.className = "iconeMenu afficheMenu";

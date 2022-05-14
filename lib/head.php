@@ -5,6 +5,7 @@
     <title>Quizzy</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
+    <script src="js/script.js"></script>
 </head>
 <body class="no_margin no_padding">
  
@@ -36,14 +37,7 @@
             <div id="searchbox_wrapper">
                 <input id="searchbox" class="no_padding form-input" 
                 type="search" placeholder="Chercher un quizz" name="q" title="Rechercher">
-                <input type="submit" id="searchbox_icon">
-                    <lord-icon id="searchbox_icon"
-                        src="https://cdn.lordicon.com/msoeawqm.json"
-                        trigger="morph"
-                        stroke="90"
-                        colors="primary:#fc6600,secondary:#000000">
-                    </lord-icon>
-                </input>
+                <input type="submit" id="searchbox_icon" value="">
             </div>
         </div>
     </form>
@@ -94,4 +88,3 @@
 		
 
     </header>
-    <script src="js/script.js"></script>
