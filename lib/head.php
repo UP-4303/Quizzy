@@ -35,7 +35,7 @@
             </div>
             <div id="searchbox_wrapper">
                 <input id="searchbox" class="no_padding form-input" 
-                type="text" placeholder="Chercher un quizz" name="search" title="Rechercher">
+                type="search" placeholder="Chercher un quizz" name="q" title="Rechercher">
                 <input type="submit" id="searchbox_icon">
                     <lord-icon id="searchbox_icon"
                         src="https://cdn.lordicon.com/msoeawqm.json"
