@@ -14,14 +14,14 @@ async function clicMenu() {
 		menu = "open";
 		iconeMenu.style.backgroundImage = "url('/l1_info_4/Quizzy/images/menu.gif')";
 		iconeMenu.style.backgroundImage = "url('/l1_info_4/Quizzy/images/menu_reverse.jpg')";
-		await sleep(630);
+		await sleep(627);
 
 	} else {
 		menu_col.className = "menu menu_non";
 		menu = "close";
 
 		iconeMenu.style.backgroundImage = "url('/l1_info_4/Quizzy/images/menu_reverse.gif')";
-		await sleep(630);
+		await sleep(627);
 		iconeMenu.style.backgroundImage = "url('/l1_info_4/Quizzy/images/menu.jpg')";
 	}
 }
