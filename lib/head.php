@@ -4,8 +4,6 @@
     <meta charset="utf-8">
     <title>Quizzy</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.lordicon.com/xdjxvujz.js"></script>
-    <script src="js/script.js"></script>
 </head>
 <body class="no_margin no_padding">
  
@@ -88,3 +86,4 @@
 		
 
     </header>
+    <script src="js/script.js"></script>
