@@ -79,8 +79,7 @@
 
 #searchbox_icon {
 	height: 30px;
-	width: auto;
-	background-color: white;
+	width: 30px;
 	border: 1px solid #ccc;
 	border-left: 0px;
 	background-image: url("/Quizzy/images/search_icon.png");
