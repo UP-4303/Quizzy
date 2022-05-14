@@ -270,16 +270,12 @@
 }
 
 .iconeMenu {
-	background-image: url("/l1_info_4/Quizzy/images/menu.gif");
+	background-image: url("/l1_info_4/Quizzy/images/menu.png");
 	background-size: 50px;
 	cursor: pointer;
 	height: 50px;
 	width: 50px;
 	margin-left: 5%;
-}
-
-.iconeMenu.afficheMenu {
-	background-image: url('/l1_info_4/Quizzy/images/menu_reverse.gif')
 }
 
 .menu_non {

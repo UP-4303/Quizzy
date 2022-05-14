@@ -6,11 +6,15 @@ iconeMenu.addEventListener("click", clicMenu);
 
 function clicMenu() {
 	if (menu == "close") {
-		iconeMenu.className = "iconeMenu afficheMenu";
+		iconeMenu.style.backgroundImage = "";
+		iconeMenu.style.backgroundImage = "url('/l1_info_4/Quizzy/images/menu.gif')";
+
 		menu_col.className = "menu menu_oui";
 		menu = "open";
 	} else {
-		iconeMenu.className = "iconeMenu";
+		iconeMenu.style.backgroundImage = "";
+		iconeMenu.style.backgroundImage = "url('/l1_info_4/Quizzy/images/menu_reverse.gif')";
+
 		menu_col.className = "menu menu_non";
 		menu = "close";
 	}
