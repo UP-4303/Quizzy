@@ -13,7 +13,7 @@ async function clicMenu() {
 		menu_col.className = "menu menu_oui";
 		menu = "open";
 		iconeMenu.style.backgroundImage = "url('/l1_info_4/Quizzy/images/menu.gif')";
-		await sleep(626);
+		await sleep(600);
 		iconeMenu.style.backgroundImage = "url('/l1_info_4/Quizzy/images/menu_reverse.jpg')";
 
 	} else {
@@ -21,7 +21,7 @@ async function clicMenu() {
 		menu = "close";
 
 		iconeMenu.style.backgroundImage = "url('/l1_info_4/Quizzy/images/menu_reverse.gif')";
-		await sleep(626);
+		await sleep(600);
 		iconeMenu.style.backgroundImage = "url('/l1_info_4/Quizzy/images/menu.jpg')";
 	}
 }
