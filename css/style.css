@@ -82,11 +82,12 @@
 	width: 30px;
 	border: 1px solid #ccc;
 	border-left: 0px;
+	background-size: 30px;
 	background-image: url("/l1_info_4/Quizzy/images/search_icon.png");
 }
 
 #searchbox_icon:hover {
-	background-image: url("l1_info_4/Quizzy/images/search_icon.gif");
+	background-image: url("/l1_info_4/Quizzy/images/search_icon.gif");
 }
 
 #menu_pannel {
