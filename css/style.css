@@ -125,6 +125,7 @@
 	position: absolute;
 	display: flex;
 	align-items: center;
+	flex-direction: column;
 	top: 210px;
 }
 
@@ -184,11 +185,11 @@
 }
 
 #menu_pannel a:link, #menu_pannel a:visited, #menu_pannel a:hover{
-
+	padding: 2px;
 	text-decoration: none;
 	color: black;
 	background-color: #fc6600;
-	border: 1px solid black;
+	border: 2px solid black;
 	border-radius: 10px;
 }
 
