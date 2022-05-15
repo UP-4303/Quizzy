@@ -6,23 +6,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="no_margin no_padding">
- 
     <?php
-    session_start();
-    if (isset($_GET['action'])){
-        $act=$_GET['action'];
-        if ($act == "déconnexion"){
-            unset($_SESSION["id"]);
-            unset($_SESSION["session"]);
-            unset($_SESSION["admin"]);
-        }else if ($act == "connexion"){
-            header("Location: user_connect.php");
-        }else if ($act == "inscription"){
-            header("Location: user_signup.php");
-        }
-        unset($_GET['action']);
-    }
-    include_once("db/db_connect.php") ;
+        include_once("db/db_connect.php") ;
     ?>
     <header id="header">
     <form action="/l1_info_4/Quizzy/index.php" method="get">
@@ -40,48 +25,45 @@
         </div>
     </form>
 
-    <form action="#" method="get">
-        <div id="menu_pannel" class="no_margin">
-            <div id="menu_top_wrapper">				
-				<?php
-					if(isset($_SESSION['id'])){
-						include_once("crud/users.crud.php");
-						$user=select_user($conn, $_SESSION['id']);
-						if(isset($user["profile_picture"])) {
-							$image = $user["profile_picture"] ;
-						} else {
-							$image = "default-avatar.jpg" ;
-						}
-						echo "<div id='cont_pic_menu'><img class='profil_pic' src='images/".$image."' alt='profil picture' ></div><h4>Connecté en tant que : ".$user["nickname"]."</h4>" ;
-						echo "<a href='profil.php'>profil</a>" ;
-						echo "<a href='#'>Collection</a>" ;
-						echo "<a href='#'>Mes créations</a>" ;
-						echo "<a href='#'>Mes derniers Quizz</a>" ;
-						if ($_SESSION['admin']){
-							echo "<a href='admin/index.php'>Accéder au dark web</a>";
-						}
-					}else{
-						echo "<h4>Déconnecté</h4>" ;
-						echo "<input type='submit' name='action' value='connexion'>" ;
-						echo "<input type='submit' name='action' value='inscription'>" ;
-					}
-				?>
-			</div>
-		
-			<div id="menu_bottom_wrapper">
-				<?php
+    <div id="menu_pannel" class="no_margin">
+        <div id="menu_top_wrapper">				
+			<?php
 				if(isset($_SESSION['id'])){
-					echo '<form action="#" method="get"><input type="submit" name="action" value="déconnexion"></form>' ;
+					include_once('crud/users.crud.php');
+					$user=select_user($conn, $_SESSION['id']);
+					if(isset($user['profile_picture'])) {
+						$image = $user['profile_picture'];
+					} else {
+						$image = 'default-avatar.jpg';
+					}
+					echo '<div id="cont_pic_menu"><img class="profil_pic" src="images/'.$image.'" alt="profil picture" ></div><h4>Connecté en tant que : '.$user['nickname'].'</h4>';
+					echo '<a href="profil.php">profil</a>';
+					echo '<a href="#">Collection</a>';
+					echo '<a href="#">Mes créations</a>';
+					echo '<a href="#">Mes derniers Quizz</a>';
+					if ($_SESSION['admin']){
+						echo '<a href="admin/index.php">Accéder au dark web</a>';
+					}
+				}else{
+					echo '<h4>Déconnecté</h4>';
+					echo '<a href="user_connect.php">Connexion</a>';
+					echo '<a href="user_signup.php">Inscription</a>';
 				}
-				?>
-				<p>
-				<a href="https://youtu.be/iik25wqIuFo">contacts</a>
-				</p>
-			</div>
-		
-        </div>
-    </form>
-		
+			?>
+		</div>
+	
+		<div id="menu_bottom_wrapper">
+			<?php
+			if(isset($_SESSION['id'])){
+				echo '<a href="user_disconnect.php">Déconnexion</a>' ;
+			}
+			?>
+			<p>
+			<a href="https://youtu.be/iik25wqIuFo">contacts</a>
+			</p>
+		</div>
+	
+    </div>
 
     </header>
     <script src="js/script.js"></script>

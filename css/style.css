@@ -181,7 +181,7 @@
 	overflow-wrap: anywhere;
 }
 
-.menu_top_wrapper a {
+.menu_top_wrapper a, .menu_bottom_wrapper a {
 	text-decoration: none;
 	color: black;
 	background-color: #fc6600;
