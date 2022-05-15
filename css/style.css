@@ -126,6 +126,7 @@
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	gap: 2px 2px;
 	top: 210px;
 }
 
@@ -133,6 +134,7 @@
 	position: absolute;
 	bottom: 10px;
 	display: flex;
+	gap: 2px 2px;
 	align-items: center;
 }
 
@@ -185,7 +187,7 @@
 }
 
 #menu_pannel a:link, #menu_pannel a:visited, #menu_pannel a:hover{
-	padding: 2px;
+	padding: 3px;
 	text-decoration: none;
 	color: black;
 	background-color: #fc6600;
@@ -196,6 +198,10 @@
 #menu_pannel a:active {
 	transform: translate(2px, 2px);
 	background-color: #eb5500;
+}
+
+#cont_pic_menu {
+	background-size: auto auto;
 }
 
 
@@ -226,13 +232,6 @@
 	flex-wrap: wrap;
 	padding-left: 0;
 	justify-content: center;
-}
-
-#cont_pic_menu {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
 }
 
 .quizz {
