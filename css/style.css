@@ -170,7 +170,7 @@
 
 .answer:active {
 	transform: translate(5px,5px);
-	background-color: #ee5500;
+	background-color: #eb5500;
 }
 
 .answer_name {
@@ -181,12 +181,18 @@
 	overflow-wrap: anywhere;
 }
 
-.menu_top_wrapper a, .menu_bottom_wrapper a {
+.menu_pannel a:link, .menu_pannel a:visited, .menu_pannel a:hover{
+
 	text-decoration: none;
 	color: black;
 	background-color: #fc6600;
 	border: 5px solid black;
 	border-radius: 10px;
+}
+
+.menu_pannel a:active {
+	transform: translate(2px, 2px);
+	background-color: #eb5500;
 }
 
 
