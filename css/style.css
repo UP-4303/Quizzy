@@ -99,9 +99,9 @@
 	left: -26vw;
 
 	padding-top: 205px;
-	padding-left: 1vw;
-	padding-right: 0px;
-	padding-bottom: 0px;
+	padding-left: .5vw;
+	padding-right: .5vw;
+	padding-bottom: .5vh;
 
 	z-index: -5;
 
