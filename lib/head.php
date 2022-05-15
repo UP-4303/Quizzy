@@ -40,10 +40,9 @@
         </div>
     </form>
 
+    <form action="#" method="get">
         <div id="menu_pannel" class="no_margin">
-            <div id="menu_top_wrapper">
-			
-				<form action="#" method="get">
+            <div id="menu_top_wrapper">				
 				<?php
 					if(isset($_SESSION['id'])){
 						include_once("crud/users.crud.php");
@@ -67,7 +66,6 @@
 						echo "<input type='submit' name='action' value='inscription'>" ;
 					}
 				?>
-				</form>
 			</div>
 		
 			<div id="menu_bottom_wrapper">
@@ -82,6 +80,7 @@
 			</div>
 		
         </div>
+    </form>
 		
 
     </header>
