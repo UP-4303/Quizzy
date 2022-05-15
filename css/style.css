@@ -123,6 +123,8 @@
 
 #menu_top_wrapper {
 	position: absolute;
+	display: flex;
+	align-items: center;
 	top: 210px;
 }
 
@@ -186,7 +188,7 @@
 	text-decoration: none;
 	color: black;
 	background-color: #fc6600;
-	border: 5px solid black;
+	border: 1px solid black;
 	border-radius: 10px;
 }
 
