@@ -202,6 +202,8 @@
 
 #cont_pic_menu {
 	background-size: auto auto;
+	max-width: 30px;
+	max-height: 30px;
 }
 
 
