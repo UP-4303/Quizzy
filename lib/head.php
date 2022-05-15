@@ -40,8 +40,7 @@
         </div>
     </form>
 
-		<nav class="menu menu_non">
-        <div id="menu_pannel" class="no_margin no_padding">
+        <div id="menu_pannel" class="no_margin">
             <div id="menu_top_wrapper">
 			
 				<form action="#" method="get">
@@ -60,7 +59,7 @@
 						echo "<a href='#'>Mes créations</a>" ;
 						echo "<a href='#'>Mes derniers Quizz</a>" ;
 						if ($_SESSION['admin']){
-							echo "<a href='admin/index.php'>Accéder au dark web</a></div>" ;
+							echo "<a href='admin/index.php'>Accéder au dark web</a></div>";
 						}
 					}else{
 						echo "<div id='top_menu_deco'>\n\t<h4>Déconnecté</h4>\n" ;
