@@ -181,7 +181,7 @@
 	overflow-wrap: anywhere;
 }
 
-.menu_pannel a:link, .menu_pannel a:visited, .menu_pannel a:hover{
+#menu_pannel a:link, #menu_pannel a:visited, #menu_pannel a:hover{
 
 	text-decoration: none;
 	color: black;
@@ -190,7 +190,7 @@
 	border-radius: 10px;
 }
 
-.menu_pannel a:active {
+#menu_pannel a:active {
 	transform: translate(2px, 2px);
 	background-color: #eb5500;
 }
