@@ -53,18 +53,18 @@
 						} else {
 							$image = "default-avatar.jpg" ;
 						}
-						echo "<div id='top_menu_co'><div id='cont_pic_menu'><img class='profil_pic' src='images/".$image."' alt='profil picture' ></div><h4>Connecté en tant que : ".$user["nickname"]."</h4>" ;
+						echo "<div id='cont_pic_menu'><img class='profil_pic' src='images/".$image."' alt='profil picture' ></div><h4>Connecté en tant que : ".$user["nickname"]."</h4>" ;
 						echo "<a href='profil.php'>profil</a>" ;
 						echo "<a href='#'>Collection</a>" ;
 						echo "<a href='#'>Mes créations</a>" ;
 						echo "<a href='#'>Mes derniers Quizz</a>" ;
 						if ($_SESSION['admin']){
-							echo "<a href='admin/index.php'>Accéder au dark web</a></div>";
+							echo "<a href='admin/index.php'>Accéder au dark web</a>";
 						}
 					}else{
-						echo "<div id='top_menu_deco'>\n\t<h4>Déconnecté</h4>\n" ;
-						echo "\t<input type='submit' name='action' value='connexion'>\n" ;
-						echo "\t<input type='submit' name='action' value='inscription'>\n</div>" ;
+						echo "<h4>Déconnecté</h4>" ;
+						echo "<input type='submit' name='action' value='connexion'>" ;
+						echo "<input type='submit' name='action' value='inscription'>" ;
 					}
 				?>
 				</form>
