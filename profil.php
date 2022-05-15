@@ -33,7 +33,7 @@ if(isset($_POST["old_passwd"]) and isset($_POST["nvt_passwd_1"]) and isset($_POS
 				echo "<h3>Mot de passe doit faire au moins 8 caractères.</h3>" ;
 			}
 		} else {
-			echo "<h3>Le mot de passe et sa confirmation sont différentes !</h3>" ;
+			echo "<h3>Le mot de passe et sa confirmation sont différents !</h3>" ;
 		}
 	} else {
 		echo "<h3>Le mot de passe est incorrect.</h3>" ;
