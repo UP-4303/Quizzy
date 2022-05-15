@@ -201,11 +201,11 @@
 }
 
 #cont_pic_menu {
-	background-size: auto auto;
-	max-width: 30px;
-	max-height: 30px;
+	max-width: 500px;
+	max-height: 500px;
 	width: 5vw;
 	height: 5vw;
+	background-size: auto;
 }
 
 
