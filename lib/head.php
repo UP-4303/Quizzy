@@ -7,7 +7,8 @@
 </head>
 <body class="no_margin no_padding">
     <?php
-        include_once("db/db_connect.php") ;
+        include_once('db/db_connect.php');
+        session_start()
     ?>
     <header id="header">
     <form action="/l1_info_4/Quizzy/index.php" method="get">
