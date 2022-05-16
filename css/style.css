@@ -8,6 +8,10 @@
 	font-family: "Code New Roman", sans-serif, monospace, system-ui;
 }
 
+#content {
+	margin-top: 200px;
+}
+
 .no_margin {
 	margin: 0px;
 }

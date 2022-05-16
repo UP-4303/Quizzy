@@ -67,4 +67,5 @@
     </div>
 
     </header>
+    <div id="content">
     <script src="js/script.js"></script>
