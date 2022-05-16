@@ -1,4 +1,3 @@
-console.log("Hello world")
 var next = document.getElementById("continue")
 var qform = document.getElementById("qform1")
 var qwrapper = document.getElementById("qwrapper")
@@ -20,10 +19,17 @@ function remove(button){
 function updateLabels(){
 	var nb = 1
 	for (var div of qwrapper.childNodes){
+		div.getElementsByClassName("ansnumber")[0].addEventListener("input", displayAnswers)
 		div.getElementsByClassName("qnumber")[0].textContent = `Question ${nb}`
 		nb++
 	}
 }
+
+function displayAnswers(evt){
+	console.log(evt.currentTarget)
+}
+
+
 
 /*var quizz_input = document.getElementById("quizzinput")
 var qnumberhtml = document.getElementById("question_number")

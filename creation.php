@@ -5,14 +5,13 @@
 
 
 <div id="initform">
-	<label id="nametext">Nom : </label><input id="nameinput" type="text" name="nom">
 	<input id="qcminput" type="radio" name="is_quizz" checked><label for="qcminput" id="qcmtext">Quizz à points</label>
 	<input id="quizzinput" type="radio" name="is_quizz"><label for="quizzinput" id="quizztext">Quizz à résultats multiples</label>
 </div>
 <div id="qwrapper"><div class="qform" id="qform1">
 		<label class="qnumber">Question 1</label><br/>
 		<label>Question : </label><input type="text" name="questiontext"><br/>
-		<select>
+		<select class="ansnumber">
 			<option value="2">2 réponses possibles</option>
 			<option value="3">3 réponses possibles</option>
 			<option value="4">4 réponses possibles</option>
