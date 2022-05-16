@@ -48,16 +48,15 @@ if(isset($_FILES["photo_profil"])) {
 	
 	$tabExtension = explode('.', $name);
 	$extension = strtolower(end($tabExtension));
-	$maxSize = 20000000 ;
+	$maxSize = 80000000 ;
+	$extentions = ["jpg", "png"]
 	
-	if($extension == "jpg") {
+	if(in_array($extension, $extentions)) {
 		if($size <= $maxSize) {
 			if($error == 0) {
 				$uniqueName = uniqid('', true);
 				$file = $uniqueName.".".$extension;
-				
-				print($tmpName) ;
-				
+
 				if (move_uploaded_file($tmpName, 'images/'.$file)) {
 					update_profile_picture($conn, $_SESSION["id"], $file) ;
 					echo "<h3>le changement d'image de profil a réussi</h3>";
