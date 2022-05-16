@@ -11,6 +11,12 @@ function addmore(button){
 	updateLabels()
 }
 
+function remove(button){
+	var div = button.parentElement
+	div.parentElement.removeChild(div)
+	updateLabels()
+}
+
 function updateLabels(){
 	var nb = 1
 	for (var div of qwrapper.childNodes){

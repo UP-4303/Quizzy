@@ -22,6 +22,7 @@
 		<label>Réponse 3 : </label><input type="text" name="repinput3" ><br/>
 		<label>Réponse 4 : </label><input type="text" name="repinput4" ><br/>
 		<button onclick="addmore(this)">Ajouter une question</button>
+		<button onclick="remove(this)">Retirer cette question</button>
 		<br/>
 </div></div>
 
