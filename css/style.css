@@ -17,11 +17,15 @@
 }
 
 #header {
-	position: sticky;
-	top: 0;
+	z-index: -5;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
 }
 
 #top_container {
+	z-index: 2;
 	display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -103,9 +107,9 @@
 	padding-right: .5vw;
 	padding-bottom: .5vh;
 
-	z-index: -5;
+	z-index: 1;
 
-	height: -webkit-fill-available;
+	height: 100%;
 	width: 25vw;
 	min-width: 200px;
 	border-right: 2px solid black;
@@ -269,7 +273,7 @@
 
 .nomQuizz {
 	background-color: rgba(255,255,255,0.5);
-	padding: 5%;
+	padding: inherit;
 	width: 25vw;
 	overflow-wrap: anywhere;
 }
@@ -300,6 +304,7 @@
 }
 
 #cont_pic:before {
+	content: "";
 	float: left;
 	padding-top: 100%;
 }
