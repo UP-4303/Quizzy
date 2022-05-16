@@ -8,6 +8,7 @@ var is_quizz = false
 function isquizz(){
 	console.log("update")
 	is_quizz = quizz_input.checked
+	updateLabels()
 }
 
 initform.addEventListener("click", isquizz)
