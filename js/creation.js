@@ -1,7 +1,7 @@
 console.log("Hello world")
 var next = document.getElementById("continue")
 var qform = document.getElementById("qform1")
-var qwrapper = document.getElementById("questions")
+var qwrapper = document.getElementById("qwrapper")
 var nb = 1
 
 function addmore(){

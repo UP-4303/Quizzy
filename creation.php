@@ -9,7 +9,7 @@ include_once("crud/quizz.crud.php");
 	<input id="qcminput" type="radio" name="is_quizz" checked><label for="qcminput" id="qcmtext">Quizz à points</label>
 	<input id="quizzinput" type="radio" name="is_quizz"><label for="quizzinput" id="quizztext">Quizz à résultats multiples</label>
 </div>
-<div class="questions">
+<div id="qwrapper">
 	<div id="qform1">
 		<label class="qnumber">Question 1</label><br/>
 		<label>Question : </label><input type="text" name="questiontext"><br/>
