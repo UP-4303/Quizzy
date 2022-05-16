@@ -10,8 +10,9 @@ if (isset($_POST)){
 <div class="form_wrapper">
 	<form method="POST" action="creation.php">
 		<div id="initform">
-			<input id="qcminput" type="radio" name="is_quizz" checked><label for="qcminput" id="qcmtext">Quizz à points</label>
-			<input id="quizzinput" type="radio" name="is_quizz"><label for="quizzinput" id="quizztext">Quizz à résultats multiples</label>
+			<label>Nom du quizz : </label><input type="text" name="name">
+			<input id="qcminput" type="radio" name="is_quizz" value="0" checked><label for="qcminput" id="qcmtext">Quizz à points</label>
+			<input id="quizzinput" type="radio" name="is_quizz" value="1"><label for="quizzinput" id="quizztext">Quizz à résultats multiples</label>
 		</div>
 		<div id="qcmform">
 			<label>Nombre de points minimum pour réussir le test : </label><input type="number" name="minpoints">
@@ -25,7 +26,7 @@ if (isset($_POST)){
 		<div id="qwrapper">
 			<div class="qform" id="qform1">
 				<label class="qnumber">Question 1</label><br/>
-				<label>Question : </label><input type="text" name="questiontext"><br/>
+				<label>Question : </label><input type="text" name="qlabel1"><br/>
 				<select class="ansnumber">
 					<option value="2">2 réponses possibles</option>
 					<option value="3">3 réponses possibles</option>
