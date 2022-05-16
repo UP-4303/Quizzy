@@ -56,6 +56,8 @@ if(isset($_FILES["photo_profil"])) {
 				$uniqueName = uniqid('', true);
 				$file = $uniqueName.".".$extension;
 				
+				print($tmpName) ;
+				
 				move_uploaded_file($tmpName, './l1_info_4/Quizzy/images/'.$file);
 				update_profile_picture($conn, $_SESSION["id"], $file) ;
 			} else {
