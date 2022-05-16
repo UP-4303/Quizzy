@@ -9,8 +9,7 @@
 	<input id="qcminput" type="radio" name="is_quizz" checked><label for="qcminput" id="qcmtext">Quizz à points</label>
 	<input id="quizzinput" type="radio" name="is_quizz"><label for="quizzinput" id="quizztext">Quizz à résultats multiples</label>
 </div>
-<div id="qwrapper">
-	<div id="qform1">
+<div id="qwrapper"><div class="qform" id="qform1">
 		<label class="qnumber">Question 1</label><br/>
 		<label>Question : </label><input type="text" name="questiontext"><br/>
 		<select>
@@ -24,8 +23,7 @@
 		<label>Réponse 4 : </label><input type="text" name="repinput4" ><br/>
 		<button onclick="addmore(this)">Ajouter une question</button>
 		<br/>
-	</div>
-</div>
+</div></div>
 
 <button id="continue">Suivant</button>
 

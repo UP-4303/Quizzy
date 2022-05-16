@@ -2,16 +2,22 @@ console.log("Hello world")
 var next = document.getElementById("continue")
 var qform = document.getElementById("qform1")
 var qwrapper = document.getElementById("qwrapper")
-var nb = 1
+
 
 function addmore(button){
 	var clone = qform.cloneNode(true)
 	nb++
-	clone.id = "qform" + nb
+	clone.id = ""
 	button.parentElement.after(clone)
-	var tmp = document.getElementById("qform"+nb)
-	var label = tmp.getElementsByClassName("qnumber")[0]
-	label.textContent = `Question ${nb}`
+	updateLabels()
+}
+
+function updateLabels(){
+	var nb = 1
+	for (var div of qwrapper.childNodes){
+		div.getElementsByClassName("qnumber")[0].textContent = `Question ${nb}`
+		nb++
+	}
 }
 
 /*var quizz_input = document.getElementById("quizzinput")
