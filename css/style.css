@@ -229,6 +229,7 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 }
 
 .form_label {
@@ -247,6 +248,12 @@
 
 .form_title {
 	font-size: xx-large;
+}
+
+.form_button {
+	background-color: #fc6600;
+	border: 2px solid black;
+	border-radius: 10px;
 }
 
 
