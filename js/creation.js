@@ -4,7 +4,8 @@ var qform = document.getElementById("qform1")
 var qwrapper = document.getElementById("qwrapper")
 var nb = 1
 
-function addmore(){
+function addmore(luu){
+	console.log(luu)
 	var clone = qform.cloneNode(true)
 	nb++
 	clone.id = "qform" + nb
