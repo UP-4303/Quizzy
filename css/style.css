@@ -107,7 +107,6 @@
 	top: 0;
 	left: -26vw;
 
-	padding-top: 205px;
 	padding-left: .5vw;
 	padding-right: .5vw;
 	padding-bottom: .5vh;
@@ -141,7 +140,7 @@
 
 #menu_bottom_wrapper {
 	position: absolute;
-	bottom: 10px;
+	top: 95%;
 	display: flex;
 	gap: 2px 2px;
 	align-items: center;
