@@ -4,7 +4,23 @@ var quizz_input = document.getElementById("quizzinput")
 var initform = document.getElementById("initform")
 var qcmform = document.getElementById("qcmform")
 var quizzform = document.getElementById("quizzform")
+var formulaire = document.getElementById("formulaire")
 var is_quizz = false
+
+function sendForm(){
+	var questions = []
+	var results = {}
+
+	if (is_quizz){
+		results["jauges"] = []
+		for (var i of document.getElementsByClassName("jaugelabel")){
+			results["jauges"].push({"label":i.value})
+		}
+	}else{
+		results["required_points"] = document.getElementById("minpoints").value
+	}
+	console.log(results)
+}
 
 function isquizz(){
 	is_quizz = quizz_input.checked
