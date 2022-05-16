@@ -22,7 +22,7 @@ include_once("crud/quizz.crud.php");
 	<label id="reptext2">Réponse 2 : </label><input type="text" name="repinput2" id="repinput2"><br/>
 	<label id="reptext3" style="display: none;">Réponse 3 : </label><input type="text" name="repinput3" id="repinput3" style="display: none;"><br/>
 	<label id="reptext4" style="display: none;">Réponse 4 : </label><input type="text" name="repinput4" id="repinput4" style="display: none;"><br/>
-	<button class="addmore">Ajouter une question</button>
+	<button onclick="addmore" class="addmore">Ajouter une question</button>
 </div>
 
 <button id="continue">Suivant</button>
