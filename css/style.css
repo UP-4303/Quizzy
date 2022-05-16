@@ -238,7 +238,7 @@
 	margin: 3%
 }
 
-#list_quizz {
+.list_quizz {
 	list-style: none;
 	display: flex;
 	flex-wrap: wrap;

@@ -39,7 +39,7 @@
 					}
 					echo '<div id="cont_pic_menu" style="background-image: url(\'/l1_info_4/Quizzy/images/'.$image.'\');"></div><h4>Connecté en tant que : '.$user['nickname'].'</h4>';
 					echo '<a href="profil.php">profil</a>';
-					echo '<a href="#">Collection</a>';
+					echo '<a href="#">Favoris</a>';
 					echo '<a href="#">Mes créations</a>';
 					echo '<a href="#">Mes derniers Quizz</a>';
 					if ($_SESSION['admin']){

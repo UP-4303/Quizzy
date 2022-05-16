@@ -6,18 +6,12 @@ include("lib/head.php");
 	<?php
 	include_once("crud/quizz.crud.php");
 	
-	if (isset($_GET["q"])){
-		$rSearch = $_GET["q"];
-		$search = str_replace(" ","%",$rSearch);
-		$search = '%'.$search.'%';
-		$sql = "SELECT * FROM `quizz` WHERE `name` LIKE '$search'";
-		$result=mysqli_query($conn, $sql);
-
-	} else {
-		$result = select_all_quizz($conn);
-	}
-	if (mysqli_num_rows($result) == 0){
-		echo("<div id='quizz_name'>Aucun résultat pour \"$rSearch\"</div>");
+	$user = select_user($conn, $_SESSION["id"])
+	
+	$favoris = $user["favoris"]
+	
+	if (mysqli_num_rows($favoris) == 0){
+		echo("<div id='quizz_name'>aucun favoris</div>");
 	} else {
 		while ($row = mysqli_fetch_assoc($result)){
 			if(isset($row["image"])) {
