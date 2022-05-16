@@ -23,6 +23,13 @@
 		<div class="ansinput"><label>Réponse 4 : </label><input type="text" name="repinput4" ><br/></div>
 		<button onclick="addmore(this)">Ajouter une question</button>
 		<button onclick="remove(this)">Retirer cette question</button>
+		<select class="jauges" style="display: none;">
+			<option value="A">Jauge A</option>
+			<option value="B">Jauge B</option>
+			<option value="C">Jauge C</option>
+			<option value="D">Jauge D</option>
+		</select>
+		<input type="number" min="-2" max="2" name="points" class="points">
 		<br/>
 </div></div>
 
