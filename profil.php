@@ -48,16 +48,20 @@ if(isset($_FILES["photo_profil"])) {
 	
 	$tabExtension = explode('.', $name);
 	$extension = strtolower(end($tabExtension));
-	$maxSize = 20000000 ;
+	$maxSize = 80000000 ;
+	$extentions = ["jpg", "png"] ;
 	
-	if($extension == "jpg") {
+	if(in_array($extension, $extentions)) {
 		if($size <= $maxSize) {
 			if($error == 0) {
 				$uniqueName = uniqid('', true);
 				$file = $uniqueName.".".$extension;
+
+				if (move_uploaded_file($tmpName, 'images/'.$file)) {
+					update_profile_picture($conn, $_SESSION["id"], $file) ;
+					echo "<h3>le changement d'image de profil a réussi</h3>";
+				}
 				
-				move_uploaded_file($tmpName, './l1_info_4/Quizzy/images/'.$file);
-				update_profile_picture($conn, $_SESSION["id"], $file) ;
 			} else {
 				echo "<h3>une erreur est suvenue</h3>";
 			}
@@ -84,7 +88,7 @@ if(isset($_FILES["photo_profil"])) {
 	} else {
 		$image = "default-avatar.jpg" ;
 	}
-	echo "<div id='cont_pic'><img class='profil_pic' src='images/".$image."' alt='profil picture' ></div></div>" ;
+	echo '<div id="cont_pic" style="background-image: url(\'/l1_info_4/Quizzy/images/'.$image.'\');"></div></div>' ;
 } else {
 	echo "<p>veuillez vous connectez</p>" ;
 }
