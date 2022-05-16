@@ -4,7 +4,7 @@ include_once("crud/quizz.crud.php");
 ?>
 
 <div class="form_wrapper">
-	<form method="POST" action="creation.php"></form>
+	<form method="POST" action="creation.php">
 		<div id="initform">
 			<input id="qcminput" type="radio" name="is_quizz" checked><label for="qcminput" id="qcmtext">Quizz à points</label>
 			<input id="quizzinput" type="radio" name="is_quizz"><label for="quizzinput" id="quizztext">Quizz à résultats multiples</label>
