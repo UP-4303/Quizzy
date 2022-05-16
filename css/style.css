@@ -21,9 +21,11 @@
     top: 0;
     height: 100%;
     width: 100%;
+    pointer-events: none;
 }
 
 #top_container {
+	pointer-events: all;
 	display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -93,6 +95,7 @@
 }
 
 #menu_pannel {
+	pointer-events: all;
 	display: flex;
 	justify-content: center;
 	
@@ -105,9 +108,9 @@
 	padding-right: .5vw;
 	padding-bottom: .5vh;
 
-	z-index: -5;
+	z-index: -1;
 
-	height: -webkit-fill-available;
+	height: 100%;
 	width: 25vw;
 	min-width: 200px;
 	border-right: 2px solid black;

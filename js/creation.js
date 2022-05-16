@@ -4,11 +4,11 @@ var qform = document.getElementById("qform1")
 var qwrapper = document.getElementById("qwrapper")
 var nb = 1
 
-function addmore(){
+function addmore(button){
 	var clone = qform.cloneNode(true)
 	nb++
 	clone.id = "qform" + nb
-	qwrapper.appendChild(clone)
+	button.parentElement.after(clone)
 	var tmp = document.getElementById("qform"+nb)
 	var label = tmp.getElementsByClassName("qnumber")[0]
 	label.textContent = `Question ${nb}`
