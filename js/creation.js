@@ -8,7 +8,7 @@ function addmore(button){
 	var clone = qform.cloneNode(true)
 	nb++
 	clone.id = "qform" + nb
-	button.after(clone)
+	button.parentElement.after(clone)
 	var tmp = document.getElementById("qform"+nb)
 	var label = tmp.getElementsByClassName("qnumber")[0]
 	label.textContent = `Question ${nb}`
