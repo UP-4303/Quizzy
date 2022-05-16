@@ -1,11 +1,6 @@
 <?php
 include("lib/head.php");
 include_once("crud/quizz.crud.php");
-if(! isset($_SESSION['id'])){
-	print("Veuillez vous connecter pour accéder aux quizz.");
-	include("db/db_disconnect.php") ;
-	return;
-}
 ?>
 
 
@@ -14,11 +9,8 @@ if(! isset($_SESSION['id'])){
 	<input id="qcminput" type="radio" name="is_quizz" checked><label for="qcminput" id="qcmtext">Quizz à points</label>
 	<input id="quizzinput" type="radio" name="is_quizz"><label for="quizzinput" id="quizztext">Quizz à résultats multiples</label>
 </div>
-<!--<div id="resultsform" style="display: none;">
-	<label>Configuration des résultats</label>
-	<input type="number" min="0" max="20" name="">
-</div> -->
-<div id="qform1" style="display: none;">
+
+<div id="qform1">
 	<label id="question_number">Question</label><br/>
 	<label>Question : </label><input type="text" name="questiontext"><br/>
 	<select id="ans_number">
@@ -30,7 +22,7 @@ if(! isset($_SESSION['id'])){
 	<label id="reptext2">Réponse 2 : </label><input type="text" name="repinput2" id="repinput2"><br/>
 	<label id="reptext3" style="display: none;">Réponse 3 : </label><input type="text" name="repinput3" id="repinput3" style="display: none;"><br/>
 	<label id="reptext4" style="display: none;">Réponse 4 : </label><input type="text" name="repinput4" id="repinput4" style="display: none;"><br/>
-	<button class="addmore">Ajouter une question</button>
+	<button onclick="addmore" class="addmore">Ajouter une question</button>
 </div>
 
 <button id="continue">Suivant</button>
