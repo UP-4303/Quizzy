@@ -1,10 +1,19 @@
 var next = document.getElementById("continue")
 var qform = document.getElementById("qform1")
 var qwrapper = document.getElementById("qwrapper")
+var quizz_input = document.getElementById("quizzinput")
+var initform = document.getElementById("initform")
+var is_quizz = false
 
+function isquizz(){
+	console.log("update")
+	var is_quizz = quizz_input.checked
+}
+
+initform.addEventListener("click", isquizz)
 
 function addmore(button){
-	var clone = qform.cloneNode(true)
+	var clone = button.parentElement.cloneNode(true)
 	clone.id = ""
 	button.parentElement.after(clone)
 	updateLabels()
@@ -12,7 +21,7 @@ function addmore(button){
 
 function remove(button){
 	var div = button.parentElement
-	div.parentElement.removeChild(div)
+	if (qwrapper.childNodes.length > 1) div.parentElement.removeChild(div)
 	updateLabels()
 }
 
@@ -21,6 +30,13 @@ function updateLabels(){
 	for (var div of qwrapper.childNodes){
 		div.getElementsByClassName("ansnumber")[0].addEventListener("input", displayAnswers)
 		div.getElementsByClassName("qnumber")[0].textContent = `Question ${nb}`
+		if (is_quizz){
+			div.getElementsByClassName("jauges")[0].style.display = ""
+			div.getElementsByClassName("points")[0];style.display = "none"
+		}else{
+			div.getElementsByClassName("jauges")[0].style.display = "none"
+			div.getElementsByClassName("points")[0].style.display = ""
+		}
 		nb++
 	}
 }
