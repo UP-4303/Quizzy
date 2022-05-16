@@ -29,6 +29,7 @@ function remove(button){
 function updateLabels(){
 	var nb = 1
 	for (var div of qwrapper.childNodes){
+		if (div.nodeType != 1) continue
 		div.getElementsByClassName("ansnumber")[0].addEventListener("input", displayAnswers)
 		div.getElementsByClassName("qnumber")[0].textContent = `Question ${nb}`
 		for (var e of div.getElementsByClassName("jauges")){
