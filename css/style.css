@@ -233,7 +233,8 @@
 }
 
 .form_label {
-	font-size: large;
+	font-size: x-large;
+	margin-top: 5px;
 }
 
 .form_input {
@@ -251,6 +252,8 @@
 }
 
 .form_button {
+	margin-top: 5px;
+	font-size: large;
 	background-color: #fc6600;
 	border: 2px solid black;
 	border-radius: 10px;
