@@ -1,3 +1,4 @@
+console.log("Hello world")
 var next = document.getElementById("continue")
 var qform = document.getElementById("qform1")
 
