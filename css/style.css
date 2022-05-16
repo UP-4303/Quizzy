@@ -105,7 +105,7 @@
 
 	z-index: -5;
 
-	height: 80vh;
+	height: -webkit-fill-available;
 	width: 25vw;
 	min-width: 200px;
 	border-right: 2px solid black;
