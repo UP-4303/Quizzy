@@ -58,8 +58,9 @@ if(isset($_FILES["photo_profil"])) {
 				
 				print($tmpName) ;
 				
-				if (move_uploaded_file($tmpName, './l1_info_4/Quizzy/images/'.$file)) {
+				if (move_uploaded_file($tmpName, 'images/'.$file)) {
 					update_profile_picture($conn, $_SESSION["id"], $file) ;
+					echo "<h3>le changement d'image de profil a réussi</h3>";
 				}
 				
 			} else {
