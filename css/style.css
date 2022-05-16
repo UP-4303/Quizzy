@@ -226,6 +226,29 @@
 	background-size: 30vw;
 }
 
+.form_wrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.form_label {
+	font-size: large;
+}
+
+.form_input {
+	background-color: #fc6600;
+	border: 2px solid black;
+	border-radius: 10px;
+}
+
+.form_input:active {
+	background-color: #eb5500;
+}
+
+.form_title {
+	font-size: xx-large;
+}
+
 
 
 

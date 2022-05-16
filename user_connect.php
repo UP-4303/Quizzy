@@ -15,16 +15,15 @@ if (isset($_SESSION['id'])){
 }
 ?>
 
-<h2 class="titre">Connexion</h2>
-
-<div id="auth">
 <form method="POST" action="user_connect.php">
-	Pseudo ou email: <input type="text" name="login">
-	Password: <input type="password" name="passwd">
-	<input type="submit" value="Connexion">
+	<div id="form_wrapper">
+		<h2 class="form_title">Connexion</h2>
+		<div class="form_label">Pseudo ou email:</div><input class="form_input" type="text" name="login">
+		<div class="form_label">Password:</div><input class="form_input" type="password" name="passwd">
+		<input class="form_button" type="submit" value="Connexion">
+	</div>
 </form>
 
-</div>
 
 <?php
 include("lib/foot.php");
