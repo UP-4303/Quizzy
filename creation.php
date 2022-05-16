@@ -1,6 +1,10 @@
 <?php
 include("lib/head.php");
 include_once("crud/quizz.crud.php");
+
+if (isset($_POST)){
+	print_r($_POST);
+}
 ?>
 
 <div class="form_wrapper">
