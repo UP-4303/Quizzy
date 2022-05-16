@@ -6,7 +6,6 @@ var qwrapper = document.getElementById("qwrapper")
 
 function addmore(button){
 	var clone = qform.cloneNode(true)
-	nb++
 	clone.id = ""
 	button.parentElement.after(clone)
 	updateLabels()
