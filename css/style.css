@@ -143,20 +143,23 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
-	max-width: 75vw;
 	gap: 10px 10px;
+	width: -webkit-fill-available;
 }
 
 #quizz_name {
-	font-size: 40px;
+	font-size: xx-large;
+	overflow: hidden;
 }
 
 #quizz_question_number {
-	font-size: 30px;
+	font-size: x-large;
+	overflow: hidden;
 }
 
 #quizz_question {
-	font-size: 30px;
+	font-size: x-large;
+	overflow: hidden;
 }
 
 .answer_wrapper {
