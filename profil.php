@@ -88,7 +88,7 @@ if(isset($_FILES["photo_profil"])) {
 	} else {
 		$image = "default-avatar.jpg" ;
 	}
-	echo "<div id='cont_pic'><img class='profil_pic' src='images/".$image."' alt='profil picture' ></div></div>" ;
+	echo '<div id="cont_pic_menu" style="background-image: url(\'/l1_info_4/Quizzy/images/'.$image.'\');"></div></div>' ;
 } else {
 	echo "<p>veuillez vous connectez</p>" ;
 }
