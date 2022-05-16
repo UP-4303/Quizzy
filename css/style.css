@@ -149,16 +149,19 @@
 
 #quizz_name {
 	font-size: xx-large;
+	max-width: -webkit-fill-avaible;
 	overflow: hidden;
 }
 
 #quizz_question_number {
 	font-size: x-large;
+	max-width: -webkit-fill-avaible;
 	overflow: hidden;
 }
 
 #quizz_question {
 	font-size: x-large;
+	max-width: -webkit-fill-avaible;
 	overflow: hidden;
 }
 
