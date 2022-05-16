@@ -38,8 +38,8 @@ function updateLabels(){
 		}
 		nb++
 	}
-	qwrapper.getElementsByClassName("qcmform").style.display = is_quizz?"none":""
-	qwrapper.getElementsByClassName("quizzform").style.display = is_quizz?"":"none"
+	qwrapper.getElementsByClassName("qcmform")[0].style.display = is_quizz?"none":""
+	qwrapper.getElementsByClassName("quizzform")[0].style.display = is_quizz?"":"none"
 }
 
 function displayAnswers(evt){
