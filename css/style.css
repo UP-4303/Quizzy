@@ -218,6 +218,17 @@
 	background-color: #eb5500;
 }
 
+
+#quizz_image {
+	background-color: rgba(0,0,0,0);
+	width: 10vw;
+	height: 10vw;
+	background-size: 10vw;
+}
+
+
+
+
 #cont_pic_menu {
 	width: 10vw;
 	height: 10vw;
