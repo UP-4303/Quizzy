@@ -3,6 +3,8 @@ var qform = document.getElementById("qform1")
 var qwrapper = document.getElementById("qwrapper")
 var quizz_input = document.getElementById("quizzinput")
 var initform = document.getElementById("initform")
+var qcmform = document.getElementById("qcmform")
+var quizzform = document.getElementById("quizzform")
 var is_quizz = false
 
 function isquizz(){
@@ -38,8 +40,8 @@ function updateLabels(){
 		}
 		nb++
 	}
-	qwrapper.getElementsByClassName("qcmform")[0].style.display = is_quizz?"none":""
-	qwrapper.getElementsByClassName("quizzform")[0].style.display = is_quizz?"":"none"
+	qcmform.style.display = is_quizz?"none":""
+	quizzform.style.display = is_quizz?"":"none"
 }
 
 function displayAnswers(evt){

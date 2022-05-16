@@ -8,10 +8,10 @@
 	<input id="qcminput" type="radio" name="is_quizz" checked><label for="qcminput" id="qcmtext">Quizz à points</label>
 	<input id="quizzinput" type="radio" name="is_quizz"><label for="quizzinput" id="quizztext">Quizz à résultats multiples</label>
 </div>
-<div class="qcmform">
+<div id="qcmform">
 	<label>Nombre de points minimum pour réussir le test : </label><input type="number" name="minpoints">
 </div>
-<div class="quizzform" style="display: none;">
+<div id="quizzform" style="display: none;">
 	<label>Nom de la jauge A : </label><input type="text" name="A">
 	<label>Nom de la jauge B : </label><input type="text" name="B">
 	<label>Nom de la jauge C : </label><input type="text" name="C">
