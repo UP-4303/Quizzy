@@ -4,8 +4,8 @@ include_once("crud/quizz.crud.php");
 
 if (isset($_POST)){
 	print_r($_POST);
-	$is_quizz=boolval($_POST["is_quizz"])
-	$name=$_POST['name']
+	$is_quizz=boolval($_POST["is_quizz"]);
+	$name=$_POST['name'];
 }
 ?>
 
