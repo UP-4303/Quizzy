@@ -7,7 +7,7 @@ var is_quizz = false
 
 function isquizz(){
 	console.log("update")
-	var is_quizz = quizz_input.checked
+	is_quizz = quizz_input.checked
 }
 
 initform.addEventListener("click", isquizz)
@@ -32,7 +32,7 @@ function updateLabels(){
 		div.getElementsByClassName("qnumber")[0].textContent = `Question ${nb}`
 		if (is_quizz){
 			div.getElementsByClassName("jauges")[0].style.display = ""
-			div.getElementsByClassName("points")[0];style.display = "none"
+			div.getElementsByClassName("points")[0].style.display = "none"
 		}else{
 			div.getElementsByClassName("jauges")[0].style.display = "none"
 			div.getElementsByClassName("points")[0].style.display = ""
