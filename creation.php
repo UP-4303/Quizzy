@@ -72,8 +72,8 @@ include_once("crud/quizz.crud.php");
 					</select>
 					<input type="number" min="-2" max="2" value="0" name="points" class="points"><br/>
 				</div>
-				<button onclick="addmore(this)">Ajouter une question</button>
-				<button onclick="remove(this)">Retirer cette question</button>
+				<button type="button" onclick="addmore(this)">Ajouter une question</button>
+				<button type="button" onclick="remove(this)">Retirer cette question</button>
 				<br/>
 			</div>
 		</div>
