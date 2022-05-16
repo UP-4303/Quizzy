@@ -31,12 +31,11 @@ function updateLabels(){
 	for (var div of qwrapper.childNodes){
 		div.getElementsByClassName("ansnumber")[0].addEventListener("input", displayAnswers)
 		div.getElementsByClassName("qnumber")[0].textContent = `Question ${nb}`
-		if (is_quizz){
-			div.getElementsByClassName("jauges")[0].style.display = ""
-			div.getElementsByClassName("points")[0].style.display = "none"
-		}else{
-			div.getElementsByClassName("jauges")[0].style.display = "none"
-			div.getElementsByClassName("points")[0].style.display = ""
+		for (var e of div.getElementsByClassName("jauges")){
+			e.style.display = is_quizz?"":"none"
+		}
+		for (var e of div.getElementsByClassName("points")){
+			e.style.display = is_quizz?"none":""
 		}
 		nb++
 	}
