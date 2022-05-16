@@ -49,7 +49,7 @@ if(isset($_FILES["photo_profil"])) {
 	$tabExtension = explode('.', $name);
 	$extension = strtolower(end($tabExtension));
 	$maxSize = 80000000 ;
-	$extentions = ["jpg", "png"]
+	$extentions = ["jpg", "png"] ;
 	
 	if(in_array($extension, $extentions)) {
 		if($size <= $maxSize) {
