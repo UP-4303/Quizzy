@@ -26,7 +26,14 @@ function updateLabels(){
 }
 
 function displayAnswers(evt){
-	console.log(evt.currentTarget)
+	var select = evt.currentTarget
+	var ansinput = select.parentElement.getElementsByClassName("ansinput")
+	var nb = parseInt(select.value)
+	var c = 0
+	for (var i of ansinput){
+		i.style.display = c>=nb?"none":""
+		c++
+	}
 }
 
 

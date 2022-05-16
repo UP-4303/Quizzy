@@ -16,10 +16,11 @@
 			<option value="3">3 réponses possibles</option>
 			<option value="4">4 réponses possibles</option>
 		</select><br/>
-		<label>Réponse 1 : </label><input type="text" name="repinput1" ><br/>
-		<label>Réponse 2 : </label><input type="text" name="repinput2" ><br/>
-		<label>Réponse 3 : </label><input type="text" name="repinput3" ><br/>
-		<label>Réponse 4 : </label><input type="text" name="repinput4" ><br/>
+		
+		<div class="ansinput"><label>Réponse 1 : </label><input type="text" name="repinput1" ><br/></div>
+		<div class="ansinput"><label>Réponse 2 : </label><input type="text" name="repinput2" ><br/></div>
+		<div class="ansinput"><label>Réponse 3 : </label><input type="text" name="repinput3" ><br/></div>
+		<div class="ansinput"><label>Réponse 4 : </label><input type="text" name="repinput4" ><br/></div>
 		<button onclick="addmore(this)">Ajouter une question</button>
 		<button onclick="remove(this)">Retirer cette question</button>
 		<br/>
