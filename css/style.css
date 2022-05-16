@@ -220,10 +220,10 @@
 
 
 #quizz_image {
-	background-color: rgba(0,0,0,0);
-	width: 10vw;
-	height: 10vw;
-	background-size: 10vw;
+	background-color: rgba(0,0,0,1);
+	width: 30vw;
+	height: 30vw;
+	background-size: 30vw;
 }
 
 
