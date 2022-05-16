@@ -6,7 +6,6 @@ var initform = document.getElementById("initform")
 var is_quizz = false
 
 function isquizz(){
-	console.log("update")
 	is_quizz = quizz_input.checked
 	updateLabels()
 }
@@ -39,6 +38,8 @@ function updateLabels(){
 		}
 		nb++
 	}
+	qwrapper.getElementsByClassName("qcmform").style.display = is_quizz?"none":""
+	qwrapper.getElementsByClassName("quizzform").style.display = is_quizz?"":"none"
 }
 
 function displayAnswers(evt){
