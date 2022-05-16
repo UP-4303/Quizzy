@@ -8,9 +8,10 @@ function addmore(){
 	var clone = qform.cloneNode(true)
 	nb++
 	clone.id = "qform" + nb
-	var label = clone.getElementByClassName("qnumber")[0]
-	label.textContent = `Question ${nb}`
 	qwrapper.appendChild(clone)
+	var tmp = document.getElementById("qform"+nb)
+	var label = tmp.getElementByClassName("qnumber")[0]
+	label.textContent = `Question ${nb}`
 }
 
 /*var quizz_input = document.getElementById("quizzinput")
