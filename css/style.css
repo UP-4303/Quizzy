@@ -300,6 +300,7 @@
 }
 
 #cont_pic:before {
+	content: "";
 	float: left;
 	padding-top: 100%;
 }
