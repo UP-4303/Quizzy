@@ -25,6 +25,7 @@
 }
 
 #top_container {
+	pointer-events: all;
 	display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -94,6 +95,7 @@
 }
 
 #menu_pannel {
+	pointer-events: all;
 	display: flex;
 	justify-content: center;
 	
