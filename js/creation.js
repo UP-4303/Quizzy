@@ -1,17 +1,14 @@
 console.log("Hello world")
 var next = document.getElementById("continue")
 var qform = document.getElementById("qform1")
+var qwrapper = document.getElementById("qwrapper")
+var nb = 1
 
 function addmore(){
 	var clone = qform.cloneNode(true)
-	document.body.appendChild(clone)
-}
-
-function onclickUpdateButtons(){
-	var buttons = document.querySelectorAll('.addmore')
-	for (var b of buttons){
-		b.addEventListener('click', addmore)
-	}
+	nb++
+	clone.id = "qform" + nb
+	qwrapper.appendChild(clone)
 }
 
 /*var quizz_input = document.getElementById("quizzinput")
