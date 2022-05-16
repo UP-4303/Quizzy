@@ -1,4 +1,19 @@
-var quizz_input = document.getElementById("quizzinput")
+var next = document.getElementById("continue")
+var qform = document.getElementById("qform1")
+
+function addmore(){
+	var clone = qform.cloneNode(true)
+	document.body.appendChild(clone)
+}
+
+function onclickUpdateButtons(){
+	var buttons = document.querySelectorAll('.addmore')
+	for (var b of buttons){
+		b.addEventListener('click', addmore)
+	}
+}
+
+/*var quizz_input = document.getElementById("quizzinput")
 var qnumberhtml = document.getElementById("question_number")
 var initform = document.getElementById("initform")
 var questionform = document.getElementById("questionform")
@@ -30,4 +45,4 @@ function displayContinue(){
 	var is_quizz = quizz_input.checked
 }
 
-buttoncontinue.onclick = displayContinue
+buttoncontinue.onclick = displayContinue*/
