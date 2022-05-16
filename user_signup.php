@@ -24,18 +24,16 @@ if (isset($_SESSION['id'])){
 }
 ?>
 
-<h2 class="titre">Inscription</h2>
-
-<div id="auth">
 <form method="POST" action="user_signup.php">
-	Pseudo: <input type="text" name="nickname">
-	Mail: <input type="email" name="email">
-	Password: <input type="password" name="passwd">
-	Confirm Password: <input type="password" name="passwd_confirm">
-	<input type="submit" value="Créer">
+	<div class="form_wrapper">
+		<div class="form_title">Inscription</div>
+		<div class="form_label">Pseudo:</div><input class="form_input" type="text" name="nickname">
+		<div class="form_label">Mail:</div><input class="form_input" type="email" name="email">
+		<div class="form_label">Password:</div><input class="form_input" type="password" name="passwd">
+		<div class="form_label">Confirm Password:</div><input class="form_input" type="password" name="passwd_confirm">
+		<input class="form_button" type="submit" value="Créer">
+	</div>
 </form>
-
-</div>
 
 <?php
 include("lib/foot.php");

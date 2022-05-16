@@ -17,9 +17,9 @@ if (isset($_SESSION['id'])){
 
 <form method="POST" action="user_connect.php">
 	<div class="form_wrapper">
-		<h2 class="form_title">Connexion</h2>
+		<div class="form_title">Connexion</div>
 		<div class="form_label">Pseudo ou email:</div><input class="form_input" type="text" name="login">
-		<div class="form_label">Password:</div><input class="form_input" type="password" name="passwd">
+		<div class="form_label">Mot de passe :</div><input class="form_input" type="password" name="passwd">
 		<input class="form_button" type="submit" value="Connexion">
 	</div>
 </form>
