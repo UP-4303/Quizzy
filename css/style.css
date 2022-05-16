@@ -299,6 +299,11 @@
 	background-size: cover;
 }
 
+#cont_pic:before {
+	float: left;
+	padding-top: 100%;
+}
+
 #cont_info {
 	display: flex;
 	justify-content: center;
