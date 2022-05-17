@@ -9,8 +9,8 @@ if(isset($_SESSION['id'])){
 		$id=$_SESSION["id"];
 		$q=$_POST["questions"];
 		$r=$_POST["results"];
-		create_quizz($conn, $name, $is_quizz, $id, $q, $r)
-		print("<h1>Quizz créé !</h1>")
+		create_quizz($conn, $name, $is_quizz, $id, $q, $r);
+		print("<h1>Quizz créé !</h1>");
 		include("db/db_disconnect.php") ;
 		return;
 	}
