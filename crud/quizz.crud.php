@@ -8,9 +8,7 @@ CRUD: Gestion de l'entité quizz
 	CR: créé un nouvel enregistrement  
 	suppose un id auto-incrementé
 */
-function create_quizz($conn, $name, $is_quizz, $ownerID, $data){
-	$questions=$data["questions"];
-	$results=$data["results"];
+function create_quizz($conn, $name, $is_quizz, $ownerID, $questions, $results){
 	$sql="INSERT INTO `quizz`(`name`, `is_quizz`, `owner`, `questions`, `results`) values ('$name', '$is_quizz', '$ownerID', '$questions', '$results')";
 	$ret=mysqli_query($conn, $sql) ;
 	return $ret ;

@@ -32,8 +32,15 @@ function sendForm(){
 			}
 		}
 	}
-	console.log(questions)
-	console.log(results)
+	var quest = document.createElement("input")
+	quest.setAttribute("type", "text")
+	quest.setAttribute("value", JSON.stringify(questions))
+	formulaire.appendChild(quest)
+	var resp = document.createElement("input")
+	resp.setAttribute("type", "text")
+	resp.setAttribute("value", JSON.stringify(results))
+	formulaire.appendChild(resp)
+	formulaire.submit()
 }
 
 function isquizz(){
