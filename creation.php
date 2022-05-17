@@ -2,11 +2,25 @@
 include("lib/head.php");
 include_once("crud/quizz.crud.php");
 
-if (isset($_POST)){
-	print_r($_POST);
-	$is_quizz=boolval($_POST["is_quizz"]);
-	$name=$_POST['name'];
+if(isset($_SESSION['id'])){
+	if (isset($_POST)){
+		$is_quizz=boolval($_POST["is_quizz"]);
+		$name=$_POST['name'];
+		$id=$_SESSION["id"];
+		$q=$_POST["questions"];
+		$r=$_POST["results"];
+		create_quizz($conn, $name, $is_quizz, $id, $q, $r)
+		print("<h1>Quizz créé !</h1>")
+		include("db/db_disconnect.php") ;
+		return;
+	}
+}else{
+	print("Veuillez vous connecter pour créer aux quizz.");
+	include("db/db_disconnect.php") ;
+	return;
 }
+
+
 ?>
 
 <div class="form_wrapper">
