@@ -8,7 +8,7 @@ include("lib/head.php");
 	
 	$sql = "SELECT * FROM `quizz` WHERE `owner`=".$_SESSION['id'] ;
 	if($result=mysqli_query($conn, $sql)){
-		$result=mysqli_fetch_assoc($ret);
+		$result=mysqli_fetch_assoc($result);
 	}
 
 	if (mysqli_num_rows($result) == 0){
