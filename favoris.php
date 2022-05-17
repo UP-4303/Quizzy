@@ -8,9 +8,9 @@ include("lib/head.php");
 	
 	$user = select_user($conn, $_SESSION["id"]) ;
 	
-	$favoris = $user["favoris"] ;
+	$favoris = explode('.', $user["favoris"]) ;
 	
-	if (!empty($favoris) == 0){
+	if (count($favoris) == 0){
 		echo("<div id='quizz_name'>aucun favoris</div>");
 	} else {
 		foreach($favoris as $fav_id) {
