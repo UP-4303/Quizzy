@@ -4,7 +4,7 @@ include_once("crud/quizz.crud.php");
 
 if(isset($_SESSION['id'])){
 	if (isset($_POST["questions"])){
-		$is_quizz=boolval($_POST["is_quizz"]);
+		$is_quizz=$_POST['is_quizz']
 		$name=$_POST['name'];
 		$id=$_SESSION["id"];
 		$q=$_POST["questions"];
@@ -13,10 +13,6 @@ if(isset($_SESSION['id'])){
 		unset($_POST['questions']);
 		unset($_POST['results']);
 		print_r($is_quizz);
-		print_r($name);
-		print_r($id);
-		print_r($q);
-		print_r($r);
 		create_quizz($conn, $name, $is_quizz, $id, $q, $r);
 		print("<h1>Quizz créé !</h1>");
 		include("db/db_disconnect.php") ;
