@@ -17,7 +17,7 @@ if (isset($_POST)){
 			<input id="quizzinput" type="radio" name="is_quizz" value="1"><label for="quizzinput" id="quizztext">Quizz à résultats multiples</label>
 		</div>
 		<div id="qcmform">
-			<label>Nombre de points minimum pour réussir le test : </label><input type="number" name="minpoints" id="minpoints">
+			<label>Nombre de points minimum pour réussir le test : </label><input type="number" name="minpoints" id="minpoints" value="5">
 		</div>
 		<div id="quizzform" style="display: none;">
 			<label>Nom de la jauge A : </label><input type="text" name="A" class="jaugelabel"><br/>
@@ -28,7 +28,7 @@ if (isset($_POST)){
 		<div id="qwrapper">
 			<div class="qform" id="qform1">
 				<label class="qnumber">Question 1</label><br/>
-				<label>Question : </label><input type="text" name="questiontext"><br/>
+				<label>Question : </label><input type="text" name="questiontext" class="questiontext"><br/>
 				<select class="ansnumber">
 					<option value="2">2 réponses possibles</option>
 					<option value="3">3 réponses possibles</option>
@@ -37,7 +37,7 @@ if (isset($_POST)){
 				
 				<div class="ansinput">
 					<label>Réponse 1 : </label>
-					<input type="text" name="repinput1" >
+					<input type="text" name="repinput1" class="anslabel">
 					<select class="jauges" style="display: none;">
 						<option value="A">Jauge A</option>
 						<option value="B">Jauge B</option>
@@ -48,7 +48,7 @@ if (isset($_POST)){
 				</div>
 				<div class="ansinput">
 					<label>Réponse 2 : </label>
-					<input type="text" name="repinput2" >
+					<input type="text" name="repinput2" class="anslabel">
 					<select class="jauges" style="display: none;">
 						<option value="A">Jauge A</option>
 						<option value="B">Jauge B</option>
@@ -59,7 +59,7 @@ if (isset($_POST)){
 				</div>
 				<div class="ansinput" style="display: none;">
 					<label>Réponse 3 : </label>
-					<input type="text" name="repinput3" >
+					<input type="text" name="repinput3" class="anslabel">
 					<select class="jauges" style="display: none;">
 						<option value="A">Jauge A</option>
 						<option value="B">Jauge B</option>
@@ -70,7 +70,7 @@ if (isset($_POST)){
 				</div>
 				<div class="ansinput" style="display: none;">
 					<label>Réponse 4 : </label>
-					<input type="text" name="repinput4" >
+					<input type="text" name="repinput4" class="anslabel">
 					<select class="jauges" style="display: none;">
 						<option value="A">Jauge A</option>
 						<option value="B">Jauge B</option>

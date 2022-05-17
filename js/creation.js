@@ -17,8 +17,22 @@ function sendForm(){
 			results["jauges"].push({"label":i.value})
 		}
 	}else{
-		results["required_points"] = document.getElementById("minpoints").value
+		results["required_points"] = document.getElementById("minpoints").valueAsNumber
 	}
+
+	for (var q of qwrapper.childNodes){
+		if (q.nodeType != 1) continue
+		questions.push({"label":q.getElementsByClassName("questiontext")[0].value, "choices":[]})
+		for (var c of q.getElementsByClassName("ansinput")){
+			if (c.style.display != "") continue
+			if (is_quizz){
+				questions["choices"].push( {"label":c.getElementsByClassName("anslabel")[0].value, "jauge":c.getElementsByClassName("jauges")[0].value} )
+			}else{
+				questions["choices"].push( {"label":c.getElementsByClassName("anslabel")[0].value, "points":c.getElementsByClassName("points")[0].valueAsNumber} )
+			}
+		}
+	}
+	console.log(questions)
 	console.log(results)
 }
 
