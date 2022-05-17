@@ -19,14 +19,14 @@ function sendForm(){
 	}else{
 		results["required_points"] = document.getElementById("minpoints").valueAsNumber
 	}
-
+	var j = ["A", "B", "C", "D"]
 	for (var q of qwrapper.childNodes){
 		if (q.nodeType != 1) continue
 		questions.push({"label":q.getElementsByClassName("questiontext")[0].value, "choices":[]})
 		for (var c of q.getElementsByClassName("ansinput")){
 			if (c.style.display != "") continue
 			if (is_quizz){
-				questions[questions.length-1]["choices"].push( {"label":c.getElementsByClassName("anslabel")[0].value, "jauge":c.getElementsByClassName("jauges")[0].value} )
+				questions[questions.length-1]["choices"].push( {"label":c.getElementsByClassName("anslabel")[0].value, "jauge":j.indexOf(c.getElementsByClassName("jauges")[0].value)} )
 			}else{
 				questions[questions.length-1]["choices"].push( {"label":c.getElementsByClassName("anslabel")[0].value, "points":c.getElementsByClassName("points")[0].valueAsNumber} )
 			}
