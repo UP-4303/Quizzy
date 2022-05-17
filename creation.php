@@ -12,6 +12,11 @@ if(isset($_SESSION['id'])){
 		unset($_POST['name']);
 		unset($_POST['questions']);
 		unset($_POST['results']);
+		print_r($is_quizz);
+		print_r($name);
+		print_r($id);
+		print_r($q);
+		print_r($r);
 		create_quizz($conn, $name, $is_quizz, $id, $q, $r);
 		print("<h1>Quizz créé !</h1>");
 		include("db/db_disconnect.php") ;
