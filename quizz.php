@@ -1,6 +1,7 @@
 <?php
 include("lib/head.php");
 include_once("crud/quizz.crud.php");
+include_once("crud/user.crud.php");
 if(isset($_SESSION['id'])){
 	if (isset($_GET["id"])){
 		$id=$_GET['id'];
@@ -11,7 +12,8 @@ if(isset($_SESSION['id'])){
 			return;
 		}
 		$json=json_encode($quizz);
-		$user = select_quizz($conn, $_SESSION['id']) ;
+		
+		$user = select_user($conn, $_SESSION['id']) ;
 		$played = explode('.', $user["quizz_done"]) ;
 		if(!in_array($id, $played)) {
 			update_quizz_done($conn, $_SESSION['id'], "'.'.$id") ;
