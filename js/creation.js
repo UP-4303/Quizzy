@@ -7,7 +7,7 @@ var quizzform = document.getElementById("quizzform")
 var formulaire = document.getElementById("formulaire")
 var is_quizz = false
 
-function sendForm(){
+async function sendForm(){
 	var questions = []
 	var results = {}
 
@@ -35,12 +35,12 @@ function sendForm(){
 	var quest = document.createElement("input")
 	quest.setAttribute("type", "text")
 	quest.setAttribute("value", JSON.stringify(questions))
-	formulaire.appendChild(quest)
+	await formulaire.appendChild(quest)
 	var resp = document.createElement("input")
 	resp.setAttribute("type", "text")
 	resp.setAttribute("value", JSON.stringify(results))
-	formulaire.appendChild(resp)
-	//formulaire.submit()
+	await formulaire.appendChild(resp)
+	formulaire.submit()
 }
 
 function isquizz(){
