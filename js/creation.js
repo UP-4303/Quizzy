@@ -26,9 +26,9 @@ function sendForm(){
 		for (var c of q.getElementsByClassName("ansinput")){
 			if (c.style.display != "") continue
 			if (is_quizz){
-				questions["choices"].push( {"label":c.getElementsByClassName("anslabel")[0].value, "jauge":c.getElementsByClassName("jauges")[0].value} )
+				questions[questions.length-1]["choices"].push( {"label":c.getElementsByClassName("anslabel")[0].value, "jauge":c.getElementsByClassName("jauges")[0].value} )
 			}else{
-				questions["choices"].push( {"label":c.getElementsByClassName("anslabel")[0].value, "points":c.getElementsByClassName("points")[0].valueAsNumber} )
+				questions[questions.length-1]["choices"].push( {"label":c.getElementsByClassName("anslabel")[0].value, "points":c.getElementsByClassName("points")[0].valueAsNumber} )
 			}
 		}
 	}
