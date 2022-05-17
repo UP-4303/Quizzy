@@ -6,7 +6,7 @@ include("lib/head.php");
 	<?php
 	include_once("crud/quizz.crud.php");
 	
-	$sql = "SELECT * FROM `quizz` WHERE `owner`=$_SESSION['id']" ;
+	$sql = "SELECT * FROM `quizz` WHERE `owner`=".$_SESSION['id'] ;
 	if($result=mysqli_query($conn, $sql)){
 		$result=mysqli_fetch_assoc($ret);
 	}
