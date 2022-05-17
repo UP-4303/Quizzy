@@ -54,7 +54,7 @@ if(isset($_FILES["photo_profil"])) {
 	if(in_array($extension, $extentions)) {
 		if($size <= $maxSize) {
 			if($error == 0) {
-				$uniqueName = uniqid('', true);
+				$uniqueName = md5($_SESSION['id']) ;
 				$file = $uniqueName.".".$extension;
 
 				if (move_uploaded_file($tmpName, 'images/'.$file)) {
