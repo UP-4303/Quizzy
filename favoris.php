@@ -13,13 +13,14 @@ include("lib/head.php");
 	if (mysqli_num_rows($favoris) == 0){
 		echo("<div id='quizz_name'>aucun favoris</div>");
 	} else {
-		while ($row = mysqli_fetch_assoc($result)){
-			if(isset($row["image"])) {
-				$background = 'background-image: url("images/'.$row["image"].'");' ;
+		foreach($favoris as $fav_id) {
+			$qizz = select_quizz($conn, $fav_id)
+			if(isset($qizz["image"])) {
+				$background = 'background-image: url("images/'.$qizz["image"].'");' ;
 			} else {
-				$background = "background-color: ".$row["color"].";";
-			}		
-			echo "<a href='quizz.php?id=".$row["id"]."'  class='quizz' style='".$background."'><li><div class='nomQuizz'>".$row["name"]."</div></li></a>" ;
+				$background = "background-color: ".$qizz["color"].";";
+			}
+			echo "<a href='quizz.php?id=".$qizz["id"]."'  class='quizz' style='".$background."'><li><div class='nomQuizz'>".$qizz["name"]."</div></li></a>" ;
 		}
 	}
 	?>
