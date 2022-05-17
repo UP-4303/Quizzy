@@ -40,7 +40,7 @@ function sendForm(){
 	resp.setAttribute("type", "text")
 	resp.setAttribute("value", JSON.stringify(results))
 	formulaire.appendChild(resp)
-	formulaire.submit()
+	//formulaire.submit()
 }
 
 function isquizz(){
