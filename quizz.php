@@ -14,10 +14,13 @@ if(isset($_SESSION['id'])){
 		$json=json_encode($quizz);
 		
 		$user = select_user($conn, $_SESSION['id']) ;
-		$played = explode('.', $user["quizz_done"]) ;
+		$done = $user["quizz_done"] ;
+		$played = explode('.', $done) ;
 		print_r($played) ;
 		if(!in_array($id, $played)) {
-			update_quizz_done($conn, $_SESSION['id'], "'.'.$id") ;
+			$up_done = $done.'.'.$id ;
+			print($up_done) ;
+			update_quizz_done($conn, $_SESSION['id'], $up_done) ;
 			print("up !") ;
 		}
 	}else{
