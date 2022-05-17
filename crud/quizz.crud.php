@@ -9,12 +9,8 @@ CRUD: Gestion de l'entité quizz
 	suppose un id auto-incrementé
 */
 function create_quizz($conn, $name, $is_quizz, $ownerID, $questions, $results){
-	print_r($name);
-	print_r($is_quizz);
-	print_r($ownerID);
-	print_r($questions);
-	print_r($results);
 	$sql="INSERT INTO `quizz`(`name`, `is_quizz`, `owner`, `questions`, `results`) values ('$name', '$is_quizz', '$ownerID', '$questions', '$results')";
+	print_r($sql)
 	$ret=mysqli_query($conn, $sql) ;
 	return $ret ;
 }
