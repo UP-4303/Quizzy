@@ -1,7 +1,7 @@
 <?php
 include("lib/head.php");
 include_once("crud/quizz.crud.php");
-include_once("crud/user.crud.php");
+include_once("crud/users.crud.php");
 if(isset($_SESSION['id'])){
 	if (isset($_GET["id"])){
 		$id=$_GET['id'];
