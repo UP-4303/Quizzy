@@ -25,7 +25,7 @@ include("lib/head.php");
 			} else {
 				$background = "background-color: ".$row["color"].";";
 			}		
-			echo "<a href='quizz.php?id=".$row["id"]."'  class='quizz' style='".$background."'><li><div class='nomQuizz'>".$row["name"]."</div></li></a>" ;
+			echo "<a href='quizz.php?id=".$row["id"]."'  class='quizz' style='".$background."'><li><div class='nomQuizz'>".$row["name"]."</div></li><img src='images/fav_empty.png' class='icone_fav'></a>" ;
 		}
 	}
 	?>

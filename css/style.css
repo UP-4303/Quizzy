@@ -313,6 +313,8 @@
 	background-repeat: no-repeat;
 	text-decoration: none;
 	color: black;
+	position: relative;
+	z-index: -1;
 }
 
 .quizz a:link, .quizz a:visited, .quizz a:hover, .quizz a:active {
@@ -393,3 +395,9 @@
 	list-style: none;
 }
 
+.icone_fav {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	scale: 50%;
+}
