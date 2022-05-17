@@ -38,6 +38,12 @@ function update_profile_picture($conn, $id, $profile_picture){
 	return $ret;
 }
 
+function update_quizz_done($conn, $id, $quizz_done){
+	$sql="UPDATE `users` set `quizz_done`='$quizz_done' WHERE `id`=$id";
+	$ret=mysqli_query($conn, $sql);
+	return $ret;
+}
+
 /*
 	D 
 */

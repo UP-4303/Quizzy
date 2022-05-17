@@ -11,6 +11,11 @@ if(isset($_SESSION['id'])){
 			return;
 		}
 		$json=json_encode($quizz);
+		$user = select_quizz($conn, $_SESSION['id']) ;
+		$played = explode('.', $user["quizz_done"]) ;
+		if(!in_array($id, $played)) {
+			update_quizz_done($conn, $_SESSION['id'], "'.'.$id") ;
+		}
 	}else{
 		print("Aucun quizz n'a été chargé.");
 		include("db/db_disconnect.php") ;
