@@ -15,8 +15,10 @@ if(isset($_SESSION['id'])){
 		
 		$user = select_user($conn, $_SESSION['id']) ;
 		$played = explode('.', $user["quizz_done"]) ;
+		print($played) ;
 		if(!in_array($id, $played)) {
 			update_quizz_done($conn, $_SESSION['id'], "'.'.$id") ;
+			print("up !") ;
 		}
 	}else{
 		print("Aucun quizz n'a été chargé.");
