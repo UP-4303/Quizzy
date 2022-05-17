@@ -10,7 +10,7 @@ include("lib/head.php");
 	
 	$favoris = $user["favoris"] ;
 	
-	if (mysqli_num_rows($favoris) == 0){
+	if (count($favoris) == 0){
 		echo("<div id='quizz_name'>aucun favoris</div>");
 	} else {
 		foreach($favoris as $fav_id) {
