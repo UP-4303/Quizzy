@@ -41,7 +41,7 @@
 					echo '<a href="profil.php">profil</a>';
 					echo '<a href="favoris.php">Favoris</a>';
 					echo '<a href="mes_creation.php">Mes créations</a>';
-					echo '<a href="#">Mes derniers Quizz</a>';
+					echo '<a href="quizz_played.php">Mes derniers Quizz</a>';
 					echo '<a href="creation.php">créer un quizz</a>';
 					if ($_SESSION['admin']){
 						echo '<a href="admin/index.php">Accéder au dark web</a>';
