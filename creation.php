@@ -4,7 +4,7 @@ include_once("crud/quizz.crud.php");
 
 if(isset($_SESSION['id'])){
 	if (isset($_POST["questions"])){
-		$is_quizz=$_POST['is_quizz']
+		$is_quizz=$_POST['is_quizz'];
 		$name=$_POST['name'];
 		$id=$_SESSION["id"];
 		$q=$_POST["questions"];
