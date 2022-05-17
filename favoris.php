@@ -14,7 +14,7 @@ include("lib/head.php");
 		echo("<div id='quizz_name'>aucun favoris</div>");
 	} else {
 		foreach($favoris as $fav_id) {
-			$qizz = select_quizz($conn, $fav_id) ;
+			$qizz = select_quizz($conn, int($fav_id)) ;
 			if(isset($qizz["image"])) {
 				$background = 'background-image: url("images/'.$qizz["image"].'");' ;
 			} else {
