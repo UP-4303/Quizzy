@@ -238,13 +238,13 @@
 }
 
 .form_input {
-	background-color: #fc6600;
+	background-color: #e8fef0;
 	border: 2px solid black;
 	border-radius: 10px;
 }
 
 .form_input:active {
-	background-color: #eb5500;
+	background-color: #e8fef0;
 }
 
 .form_title {

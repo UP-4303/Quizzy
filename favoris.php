@@ -12,7 +12,7 @@ include("lib/head.php");
 		$favoris = explode('.', $user["favoris"]) ;
 		
 		if (count($favoris) < 2){
-			echo("<div id='quizz_name'>vous n'avez aucun favoris</div>");
+			echo("<div id='quizz_name'>Vous n'avez aucun favoris</div>");
 		} else {
 			foreach($favoris as $fav_id) {
 				if($fav_id != '') {
