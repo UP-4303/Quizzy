@@ -84,12 +84,6 @@ if(isset($user["profile_picture"])) {
 } else {
 	$image = "default-avatar.jpg" ;
 }
-
-$info = "<div id='cont_profil'><div id='cont_info'><ul id='profil_info'>\n" ;
-$info .= "\t<li>pseudo : ".$user["nickname"]."</li>\n" ;
-$info .= "\t<li>email : ".$user["email"]."</li>\n" ;
-$info .= "</ul></div>\n" ;
-
 ?>
 <form action="#" method="post">
 	<div class="form_wrapper">
