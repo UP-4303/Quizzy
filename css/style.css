@@ -266,12 +266,10 @@
 	border-radius: 10px;
 }
 
-.cont_pic {
+.compte_pic {
 	width: 10vw;
 	height: 10vw;
 	background-size: 10vw;
-	background-repeat: no-repeat;
-	background-position: center;
 }
 
 

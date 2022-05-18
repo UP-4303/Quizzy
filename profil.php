@@ -96,7 +96,7 @@ if(isset($user["profile_picture"])) {
 				?>
 			</div>
 			<?php
-			echo '<div class="cont_pic" style="background-image: url(\'/l1_info_4/Quizzy/images/'.$image.'\');"></div>'
+			echo '<div class="compte_pic" style="background-image: url(\'/l1_info_4/Quizzy/images/'.$image.'\');"></div>'
 			?>
 		</div>
 		<div class="form_title">Modifier vos informations</div>

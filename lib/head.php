@@ -37,7 +37,7 @@
 					} else {
 						$image = 'default-avatar.jpg';
 					}
-					echo '<div class="cont_pic" style="background-image: url(\'/l1_info_4/Quizzy/images/'.$image.'\');"></div><h4>Connecté en tant que : '.$user['nickname'].'</h4>';
+					echo '<div class="compte_pic" style="background-image: url(\'/l1_info_4/Quizzy/images/'.$image.'\');"></div><h4>Connecté en tant que : '.$user['nickname'].'</h4>';
 					echo '<a href="profil.php">Profil</a>';
 					echo '<a href="favoris.php">Favoris</a>';
 					echo '<a href="mes_creation.php">Mes créations</a>';
