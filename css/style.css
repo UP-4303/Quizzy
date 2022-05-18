@@ -270,6 +270,8 @@
 	width: 10vw;
 	height: 10vw;
 	background-size: 10vw;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
 
