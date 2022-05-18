@@ -5,7 +5,7 @@ include('lib/head.php');
 <?php
 include_once('crud/users.crud.php');
 
-print_r($_FILES['photo_profil'])
+print_r($_FILES['photo_profil']);
 
 if (! isset($_SESSION['id'])){
 	header('location: index.php');
