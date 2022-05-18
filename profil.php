@@ -30,7 +30,7 @@ if(isset($_POST['old_passwd']) and isset($_POST['nvt_passwd_1']) and isset($_POS
 	$user = select_user($conn, $_SESSION['id']) ;
 	if(md5($_POST['old_passwd']) == $user['password']) {
 		if($_POST['nvt_passwd_1'] == $_POST['nvt_passwd_2']) {
-			if(strlen($_POST['passwd']) >= 8) {
+			if(strlen($_POST['nvt_passwd']) >= 8) {
 				update_passwd($conn, $_SESSION['id'], $_POST['nvt_passwd_2']) ;
 				echo '<h3>Votre mot de passe à été changé.</h3>' ;
 			} else {
