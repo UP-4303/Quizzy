@@ -5,11 +5,13 @@ include('lib/head.php');
 <?php
 include_once('crud/users.crud.php');
 
+print_r($_FILES['photo_profil'])
+
 if (! isset($_SESSION['id'])){
 	header('location: index.php');
 }
 
-if(isset($_POST['nvt_pseudo'])) {
+if(isset($_POST['nvt_pseudo']) and $_POST['nvt_pseudo'] !== '') {
 	if(strlen($_POST['nvt_pseudo']) >= 5) {
 		if(! filter_var($_POST['nvt_pseudo'], FILTER_VALIDATE_EMAIL)) {
 			if(! nickname_exist($conn, $_POST['nvt_pseudo'])) {
@@ -26,7 +28,7 @@ if(isset($_POST['nvt_pseudo'])) {
 	}
 }
 
-if(isset($_POST['old_passwd']) and isset($_POST['nvt_passwd_1']) and isset($_POST['nvt_passwd_2'])) {
+if(isset($_POST['old_passwd']) and isset($_POST['nvt_passwd_1']) and isset($_POST['nvt_passwd_2']) and $_POST['old_passwd'] !== '' and $_POST['nvt_passwd_1'] !== '' and $_POST['nvt_passwd_2'] !== '') {
 	$user = select_user($conn, $_SESSION['id']) ;
 	if(md5($_POST['old_passwd']) == $user['password']) {
 		if($_POST['nvt_passwd_1'] == $_POST['nvt_passwd_2']) {
@@ -44,7 +46,7 @@ if(isset($_POST['old_passwd']) and isset($_POST['nvt_passwd_1']) and isset($_POS
 	}
 }
 
-if(isset($_FILES["photo_profil"])) {
+if(isset($_FILES['photo_profil']) and $_FILES['photo_profil'] !== '') {
 	$tmpName = $_FILES['photo_profil']['tmp_name'];
     $name = $_FILES['photo_profil']['name'];
     $size = $_FILES['photo_profil']['size'];
@@ -85,7 +87,7 @@ if(isset($user["profile_picture"])) {
 	$image = "default-avatar.jpg" ;
 }
 ?>
-<form action="#" method="post">
+<form action="#" method="post" enctype="multipart/form-data">
 	<div class="form_wrapper">
 		<div class="form_title">Profil</div>
 		<div class="form_row_wrapper">
