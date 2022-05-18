@@ -5,8 +5,6 @@ include('lib/head.php');
 <?php
 include_once('crud/users.crud.php');
 
-print_r($_FILES['photo_profil']);
-
 if (! isset($_SESSION['id'])){
 	header('location: index.php');
 }
@@ -46,7 +44,7 @@ if(isset($_POST['old_passwd']) and isset($_POST['nvt_passwd_1']) and isset($_POS
 	}
 }
 
-if(isset($_FILES['photo_profil']) and $_FILES['photo_profil'] !== '') {
+if(isset($_FILES['photo_profil']) and $_FILES['photo_profil']['size'] != 0) {
 	$tmpName = $_FILES['photo_profil']['tmp_name'];
     $name = $_FILES['photo_profil']['name'];
     $size = $_FILES['photo_profil']['size'];
