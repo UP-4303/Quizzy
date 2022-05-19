@@ -48,7 +48,7 @@ if (isset($_GET['id'])){
 	</div>
 	<form method="post" action="index.php" style="display:none;" id="like">
 		<?php
-		echo('<input type="submit" class="icone_fav" name="not_added" value='.$id.'>');
+		echo('<a href="index.php?fav='.$id.'" class="icone_fav" >');
 		?>
 	</form>
 </div>
