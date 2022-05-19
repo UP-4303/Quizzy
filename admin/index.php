@@ -12,13 +12,17 @@ if(isset($_POST["ban_user"]) and $_POST["ban_user"] !== "") {
 	if(filter_var($_POST["ban_user"], FILTER_VALIDATE_EMAIL)){
 		$sql = "DELETE FROM `users` WHERE `email`='".$_POST['ban_user']."'" ;
 		$req = "SELECT * FROM `users` WHERE `email`='".$_POST['ban_user']."'" ;
-		$ban_user = mysqli_query($conn, $req) ;
+		if($ban_user = mysqli_query($conn, $req)) {
+			$ban_user = mysqli_fetch_assoc($ban_user) ;
+		}
 		mysqli_query($conn, $sql) ;
 		echo "<h3>L'utilisateur qui a pour email ".$_POST["ban_user"]." a été suprimmé</h3>" ;
 	} else {
 		$sql = "DELETE FROM `users` WHERE `nickname`='".$_POST['ban_user']."'" ;
 		$req = "SELECT * FROM `users` WHERE `nickname`='".$_POST['ban_user']."'" ;
-		$ban_user = mysqli_query($conn, $req) ;
+		if($ban_user = mysqli_query($conn, $req)) {
+			$ban_user = mysqli_fetch_assoc($ban_user) ;
+		}
 		mysqli_query($conn, $sql) ;
 		echo "<h3>L'utilisateur nomé ".$_POST["ban_user"]." a été suprimmé</h3>" ;
 	}
