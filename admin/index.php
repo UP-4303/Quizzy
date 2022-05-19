@@ -36,7 +36,7 @@ if(isset($_POST["del_user"])) {
 }
 
 if(isset($_POST["del_quizz"])) {
-	delete_quizz($conn, $_POST["del_quizz"]){
+	delete_quizz($conn, $_POST["del_quizz"]) ;
 }
 
 ?>
