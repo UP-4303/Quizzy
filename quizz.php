@@ -37,17 +37,14 @@ if(isset($_SESSION['id'])){
 	include("db/db_disconnect.php") ;
 	return;
 }
-?>
 
-<form method="post">
-<?php
 if ($is_favoris) {
-	echo('<input type="submit" class="icone_fav added" name="added" value="remove">');
+	echo('<div class="icone_fav added"></div>');
 } else {
-	echo('<input type="submit" class="icone_fav" name="not_added" value="add">');
+	echo('<div class="icone_fav"></div>');
 }
+
 ?>
-</form>
 
 <div id="quizz_wrapper">
 	<span id="quizz_name">Nom du quizz</span>
