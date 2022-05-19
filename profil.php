@@ -116,7 +116,7 @@ if(isset($user["profile_picture"])) {
 			</div>
 			<div class="form_wrapper">
 				<div class="form_title">Changer la photo de profil</div>
-				<input id="file" class="form_input" type="file" name="photo_profil">
+				<input id="file" type="file" name="photo_profil">
 				<label for="file" class="form_button">Parcourir</label>
 			</div>
 		</div>
