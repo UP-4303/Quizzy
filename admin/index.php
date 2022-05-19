@@ -23,7 +23,7 @@ if(isset($_POST["ban_user"]) and $_POST["ban_user"] !== "") {
 		echo "<h3>L'utilisateur nomé ".$_POST["ban_user"]." a été suprimmé</h3>" ;
 	}
 	
-	$sql = "DELETE FROM `quizz` WHERE `owner`=".$ban_user["id"] ;
+	$sql2 = "DELETE FROM `quizz` WHERE `owner`=".$ban_user["id"] ;
 	$ret = mysqli_query($conn, $sql) ;
 }
 
