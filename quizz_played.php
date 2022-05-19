@@ -9,6 +9,7 @@ include("lib/head.php");
 		
 		$user = select_user($conn, $_SESSION["id"]) ;
 		
+		$done = "" ;
 		$played = explode('.', $user["quizz_done"]) ;
 		$played = array_reverse($played) ;
 		
@@ -17,15 +18,18 @@ include("lib/head.php");
 		} else {
 			foreach($played as $played_id) {
 				if($played_id != '') {
-					$qizz = select_quizz($conn, intval($played_id)) ;
-					if(isset($qizz["image"])) {
-						$background = 'background-image: url("images/'.$qizz["image"].'");' ;
-					} else {
-						$background = "background-color: ".$qizz["color"].";";
+					if($qizz = select_quizz($conn, intval($played_id))) {
+						$done .= ".".$played_id ;
+						if(isset($qizz["image"])) {
+							$background = 'background-image: url("images/'.$qizz["image"].'");' ;
+						} else {
+							$background = "background-color: ".$qizz["color"].";";
+						}
+						echo "<a href='quizz.php?id=".$qizz["id"]."'  class='quizz' style='".$background."'><li><div class='nomQuizz'>".$qizz["name"]."</div></li></a>" ;
 					}
-					echo "<a href='quizz.php?id=".$qizz["id"]."'  class='quizz' style='".$background."'><li><div class='nomQuizz'>".$qizz["name"]."</div></li></a>" ;
 				}
 			}
+			update_quizz_done($conn, $_SESSION["id"], $done) ;
 		}
 	}  else {
 		echo "<h3>Veuillez vous connecter pour accéder aux quizz réalisés</h3>" ;

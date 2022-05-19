@@ -44,6 +44,12 @@ function update_quizz_done($conn, $id, $quizz_done){
 	return $ret;
 }
 
+function update_quizz_favoris($conn, $id, $quizz_favoris){
+	$sql="UPDATE `users` set `favoris`='$quizz_favoris' WHERE `id`=$id";
+	$ret=mysqli_query($conn, $sql);
+	return $ret;
+}
+
 /*
 	D 
 */

@@ -5,7 +5,7 @@ var buttons = [document.getElementById("choix_un"),document.getElementById("choi
 var index = -1
 
 quizz_name.innerHTML = quizz_data.name
-var is_quizz = quizz_data.is_quizz
+var is_quizz = quizz_data.is_quizz=="1"?true:false
 var questions = JSON.parse(quizz_data.questions)
 var results = JSON.parse(quizz_data.results)
 
@@ -20,7 +20,7 @@ function buttonClicked(evt){
 	if (is_quizz){
 		jauges[evt.currentTarget.value]++
 	}else{
-		points = points + evt.currentTarget.value
+		points = points + parseInt(evt.currentTarget.value)
 	}
 	next_question()
 }
@@ -36,7 +36,8 @@ function next_question(){
 	for (var i in data.choices){
 		var choice = data.choices[i]
 		buttons[i].innerHTML = "<div class=\"answer_name\">" + choice.label + "</div>"
-		buttons[i].value = choice.jauge
+		if (is_quizz) buttons[i].value = choice.jauge
+		else buttons[i].value = choice.points
 		buttons[i].style.display = ""
 		buttons[i].addEventListener("click", buttonClicked)
 	}
@@ -57,9 +58,13 @@ function find_answer(jauges){
 function find_qcm_answer(points){
 	var maxi = 0
 	for (var q of questions){
-		if (q.points > 0){
-			maxi=maxi+q.points
+		var p = 0
+		for (var c of q.choices){
+			if (parseInt(c.points) > p){
+				p=parseInt(c.points)
+			}
 		}
+		maxi=maxi+p
 	}
 	return [points, maxi, results.required_points<=points]
 }
@@ -68,12 +73,12 @@ function end_quizz(){
 	if (is_quizz){
 		var res = find_answer(jauges)
 		quizz_question_number.innerHTML = res.label
+		quizz_question.style.display = "none"
 	}else{
 		var res = find_qcm_answer(points)
-		quizz_question_number.innerHTML = res[2]?"Test passé !":"Test raté !" + " " + `${res[0]}/${res[1]}`
-		quizz_question.innerHTML = `Note minimale requise : ${results.required_points}/${maxi}`
+		quizz_question_number.innerHTML = `${res[2]?"Test passé !":"Test raté !"} ${res[0]}/${res[1]}`
+		quizz_question.innerHTML = `Note minimale requise : ${results.required_points}/${res[1]}`
 	}
-	quizz_question.style.display = "none"
 }
 
 next_question()
