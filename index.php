@@ -30,7 +30,7 @@ include("lib/head.php");
 			} else {
 				$background = "background-color: ".$quizz["color"].";";
 			}		
-			echo "<a href='quizz.php?id=".$quizz["id"]."'  class='quizz' style='".$background."'><li><div class='nomQuizz'>".$quizz["name"]."</div></li><div class='icone_fav'></div></a>" ;
+			echo "<a href='quizz.php?id=".$quizz["id"]."'  class='quizz' style='".$background."'><li><div class='nomQuizz'>".$quizz["name"]."</div></li></a>" ;
 		}
 	}
 	?>

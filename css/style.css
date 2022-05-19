@@ -282,15 +282,15 @@
 }
 
 .icone_fav {
-	position: absolute;
+	position: fixed;
 	background-image: url("images/fav_empty.png");
 	width: 2vw;
 	height: 3vw;
 	background-size: 3vw;
 	background-repeat: no-repeat;
 	background-position: center;
-	bottom: 0;
-	right: 0;
+	top: 200px;
+	right: 1vw;
 }
 
 
