@@ -27,7 +27,7 @@ if(isset($_SESSION['id'])){
 
 ?>
 <form method="POST" action="creation.php" id="formulaire">
-	<h1 id="error"></h1>
+	<div class="form_title" id="error"></div>
 	<div class="form_wrapper">
 		<div class="form_title">Création de Quizz</div>
 		<div class="form_wrapper" id="initform">
