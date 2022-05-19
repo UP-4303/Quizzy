@@ -13,7 +13,6 @@ if(isset($_SESSION['id'])){
 		unset($_POST['questions']);
 		unset($_POST['results']);
 		$a=create_quizz($conn, $name, $is_quizz, $id, $q, $r);
-		print_r($a);
 		print("<h1>Quizz créé !</h1>");
 		include("db/db_disconnect.php") ;
 		return;
