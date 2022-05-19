@@ -11,7 +11,6 @@ include("lib/head.php");
 		
 		$fav = "" ;
 		$favoris = explode('.', $user["favoris"]) ;
-		$favoris = array_reverse($favoris) ;
 		
 		if (count($favoris) < 2){
 			echo("<div id='quizz_name'>Vous n'avez aucun favoris</div>");
