@@ -17,6 +17,7 @@ if (is_quizz){
 
 
 function buttonClicked(evt){
+	console.log(points)
 	if (is_quizz){
 		jauges[evt.currentTarget.value]++
 	}else{
@@ -57,11 +58,11 @@ function find_answer(jauges){
 function find_qcm_answer(points){
 	var maxi = 0
 	for (var q of questions){
-		if (q.points > 0){
-			maxi=maxi+q.points
+		if (parseInt(q.points) > 0){
+			maxi=maxi+parseInt(q.points)
 		}
 	}
-	return [points, maxi, results.required_points<=points]
+	return [points, maxi, parseInt(results.required_points)<=points]
 }
 
 function end_quizz(){
@@ -71,7 +72,7 @@ function end_quizz(){
 	}else{
 		var res = find_qcm_answer(points)
 		quizz_question_number.innerHTML = res[2]?"Test passé !":"Test raté !" + " " + `${res[0]}/${res[1]}`
-		quizz_question.innerHTML = `Note minimale requise : ${results.required_points}/${maxi}`
+		quizz_question.innerHTML = `Note minimale requise : ${parseInt(results.required_points)}/${maxi}`
 	}
 	quizz_question.style.display = "none"
 }
