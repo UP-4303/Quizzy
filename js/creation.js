@@ -6,6 +6,7 @@ var qcmform = document.getElementById("qcmform")
 var quizzform = document.getElementById("quizzform")
 var formulaire = document.getElementById("formulaire")
 var is_quizz = false
+var quizzname = document.getElementById("quizzname")
 
 function sendForm(){
 	var questions = []
@@ -35,19 +36,20 @@ function sendForm(){
 	var quest = document.createElement("input")
 	quest.setAttribute("type", "text")
 	quest.setAttribute("name", "questions")
-	quest.setAttribute("value", JSON.stringify(questions).replace(/'/g, "\\'"))
+	quest.setAttribute("value", makeSafer(JSON.stringify(questions)))
 	formulaire.appendChild(quest)
 	var res = document.createElement("input")
 	res.setAttribute("type", "text")
 	res.setAttribute("name", "results")
-	res.setAttribute("value", JSON.stringify(results).replace(/'/g, "\\'"))
+	res.setAttribute("value", makeSafer(JSON.stringify(results)))
+	quizzname.value = makeSafer(quizzname.value)
 	formulaire.appendChild(res)
 	formulaire.submit()
 }
 
-function makeJsonSafe(json){
+function makeSafer(text){
 	//On met des antislash devant les caractères bizarres
-	return json.replace(/'/g, "\\'").replace(/`/g, "\\`").replace(/</g, "&lt;")
+	return text.replace(/'/g, "\\'").replace(/`/g, "\\`").replace(/</g, "&lt;")
 }
 
 function isquizz(){
