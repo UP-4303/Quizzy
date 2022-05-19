@@ -17,13 +17,14 @@ include("lib/head.php");
 		} else {
 			foreach($played as $played_id) {
 				if($played_id != '') {
-					$qizz = select_quizz($conn, intval($played_id)) ;
-					if(isset($qizz["image"])) {
-						$background = 'background-image: url("images/'.$qizz["image"].'");' ;
-					} else {
-						$background = "background-color: ".$qizz["color"].";";
+					if($qizz = select_quizz($conn, intval($played_id))) {
+						if(isset($qizz["image"])) {
+							$background = 'background-image: url("images/'.$qizz["image"].'");' ;
+						} else {
+							$background = "background-color: ".$qizz["color"].";";
+						}
+						echo "<a href='quizz.php?id=".$qizz["id"]."'  class='quizz' style='".$background."'><li><div class='nomQuizz'>".$qizz["name"]."</div></li></a>" ;
 					}
-					echo "<a href='quizz.php?id=".$qizz["id"]."'  class='quizz' style='".$background."'><li><div class='nomQuizz'>".$qizz["name"]."</div></li></a>" ;
 				}
 			}
 		}
