@@ -21,7 +21,7 @@ include("lib/head.php");
 	if (mysqli_num_rows($result) == 0){
 		echo("<div id='quizz_name'>Aucun résultat pour \"$rSearch\"</div>");
 	} else {
-		$result = array_reverse(mysqli_fetch_assoc($result, true)) ;
+		$result = array_reverse(mysqli_fetch_assoc($result), true) ;
 		foreach($result as $row){
 			if(isset($row["image"])) {
 				$background = 'background-image: url("images/'.$row["image"].'");' ;
