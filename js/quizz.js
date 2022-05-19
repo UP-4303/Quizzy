@@ -81,6 +81,7 @@ function end_quizz(){
 	}
 	var like = document.getElementById("like")
 	like.style.display = ""
+	console.log(can_like) ;
 }
 
 next_question()
