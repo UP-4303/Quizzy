@@ -44,7 +44,7 @@ if(isset($_SESSION['id'])){
 			<label class="form_label">Nom de la jauge D : </label><input type="text" name="D" class="jaugelabel form_input" pattern="[a-zA-Z0-9:]{6-30}" value="Jauge D">
 		</div>
 		<div class="form_wrapper" id="qwrapper">
-			<div class="qform form_wrapper" id="qform1">
+			<div class="qform form_wrapper">
 				<label class="qnumber form_label">Question 1</label><br/>
 				<label>Question : </label><input type="text" pattern="[a-zA-Z0-9:]{6-30}" name="questiontext" class="questiontext form_input"><br/>
 				<select class="ansnumber form_input">

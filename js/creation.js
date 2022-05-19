@@ -1,4 +1,3 @@
-var qform = document.getElementById("qform1")
 var qwrapper = document.getElementById("qwrapper")
 var quizz_input = document.getElementById("quizzinput")
 var initform = document.getElementById("initform")
@@ -65,17 +64,26 @@ function isquizz(){
 initform.addEventListener("click", isquizz)
 
 function addmore(button){
-	if (qwrapper..getElementsByClassName("qform").length > 20) return
-	var clone = button.parentElement.cloneNode(true)
-	clone.id = ""
-	button.parentElement.after(clone)
-	updateLabels()
+	if (qwrapper..getElementsByClassName("qform").length > 20){
+		errorbalise.innerHTML = "Quizz limité à 20 questions."
+	}else{
+		var clone = button.parentElement.cloneNode(true)
+		clone.id = ""
+		button.parentElement.after(clone)
+		updateLabels()
+	}
+	
 }
 
 function remove(button){
 	var div = button.parentElement
-	if (qwrapper.getElementsByClassName("qform") > 1) div.parentElement.removeChild(div)
-	updateLabels()
+	if (qwrapper.getElementsByClassName("qform") > 1){
+		div.parentElement.removeChild(div)
+		updateLabels()
+	}else{
+		errorbalise.innerHTML = "Quizz limité à 20 questions."
+	}
+	
 }
 
 function updateLabels(){
