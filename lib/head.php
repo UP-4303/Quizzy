@@ -44,7 +44,7 @@
 					echo '<a href="quizz_played.php">Mes derniers Quizz</a>';
 					echo '<a href="creation.php">Créer un quizz</a>';
 					if ($_SESSION['admin']){
-						echo '<a href="admin/index.php">Accéder au dark web</a>';
+						echo '<a href="admin/index.php">Accéder à l\'interface administrateur</a>';
 					}
 				}else{
 					echo '<h4>Déconnecté</h4>';
