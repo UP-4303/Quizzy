@@ -43,7 +43,9 @@ if(isset($_POST["del_quizz"])) {
 	echo "<h3>Le quizz a été supprimée</h3>" ;
 }
 
-var_dump($_POST)
+var_dump($_POST) ;
+unset($_POST) ;
+var_dump($_POST) ;
 ?>
 
 <!doctype html>
