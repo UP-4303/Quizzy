@@ -80,7 +80,7 @@ if(isset($_POST["del_quizz"])) {
 </form>
 
 <?php
-include("db/db_disconnect.php") ;
+include("../db/db_disconnect.php") ;
 ?>
 
  </body>
