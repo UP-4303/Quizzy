@@ -117,12 +117,14 @@ if(isset($user["profile_picture"])) {
 			<div class="form_wrapper">
 				<div class="form_title">Changer la photo de profil</div>
 				<input id="file" type="file" name="photo_profil">
-				<label for="file" class="form_button">Parcourir</label>
+				<label for="file" class="form_file">Parcourir...</label>
 			</div>
 		</div>
 		<input class="form_button" type="submit" value="Valider">
 	</div>
 </form>
+
+<script src="js/profil.js"></script>
 
 <?php
 include("lib/foot.php");
