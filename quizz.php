@@ -21,7 +21,7 @@ if(isset($_SESSION['id'])){
 			update_quizz_done($conn, $_SESSION['id'], $up_done) ;
 		}
 		$fav = $user["favoris"] ;
-		$favoris = explode('.', $done) ;
+		$favoris = explode('.', $fav) ;
 		if(in_array($id, $favoris) and $id != "") {
 			$is_favoris = true ;
 		} else {
