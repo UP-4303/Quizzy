@@ -56,7 +56,7 @@ function sendForm(){
 }
 
 function makeSafer(text){
-	//On met des antislash devant les caractères bizarres
+	//On met des antislash devant les caractères bizarres et on empêche bêtement la balise html de fonctionner si il y en a.
 	return text.replace(/'/g, "\\'").replace(/`/g, "\\`").replace(/</g, "&lt;")
 }
 

@@ -2,17 +2,18 @@
 include("lib/head.php");
 include_once("crud/quizz.crud.php");
 include_once("crud/users.crud.php");
-if(isset($_SESSION['id'])){
-	if (isset($_GET['id'])){
-		$id=$_GET['id'];
-		$quizz=select_quizz($conn, $id);
-		if (! $quizz){
-			print("Quizz inconnu/introuvable.");
-			include("db/db_disconnect.php") ;
-			return;
-		}
-		$json=json_encode($quizz);
-		
+
+if (isset($_GET['id'])){
+	$can_like = true;
+	$id=$_GET['id'];
+	$quizz=select_quizz($conn, $id);
+	if (! $quizz){
+		print("Quizz inconnu/introuvable.");
+		include("db/db_disconnect.php") ;
+		return;
+	}
+	$json=json_encode($quizz);
+	if (isset($_SESSION["id"])){
 		$user = select_user($conn, $_SESSION['id']) ;
 		$done = $user["quizz_done"] ;
 		$played = explode('.', $done) ;
@@ -22,32 +23,16 @@ if(isset($_SESSION['id'])){
 		}
 		$fav = $user["favoris"] ;
 		$favoris = explode('.', $fav) ;
-		if(in_array($id, $favoris) and $id != "") {
-			$is_favoris = true ;
-		} else {
-			$is_favoris = false ;
+		if(! in_array($id, $favoris) ) {
+			$can_like = false ;
 		}
-	}else{
-		print("Aucun quizz n'a été chargé.");
-		include("db/db_disconnect.php") ;
-		return;
 	}
 }else{
-	print("Veuillez vous connecter pour accéder aux quizz.");
+	print("Aucun quizz n'a été chargé.");
 	include("db/db_disconnect.php") ;
 	return;
 }
 ?>
-
-<form method="post">
-<?php
-if ($is_favoris) {
-	echo('<input type="submit" class="icone_fav added" name="added" value="remove">');
-} else {
-	echo('<input type="submit" class="icone_fav" name="not_added" value="add">');
-}
-?>
-</form>
 
 <div id="quizz_wrapper">
 	<span id="quizz_name">Nom du quizz</span>
@@ -61,12 +46,18 @@ if ($is_favoris) {
 		<button id="choix_trois" class="answer"><div class="answer_name">Peut être</div></button>
 		<button id="choix_quatre" class="answer"><div class="answer_name">Je sais pas mon reuf</div></button>
 	</div>
+	<form method="post" action="index.php" style="display:none;" id="like">
+		<?php
+		echo('<input type="submit" class="icone_fav" name="not_added" value='.$id.'>');
+		?>
+	</form>
 </div>
 
 <script src="js/favoris.js"></script>
 <script>
 <?php
 	echo "var quizz_data =".$json.";\n";
+	echo "var can_like =".$can_like.";\n";
 ?>
 </script>
 <script src="js/quizz.js"></script>
