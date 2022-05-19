@@ -46,11 +46,9 @@ if (isset($_GET['id'])){
 		<button id="choix_trois" class="answer"><div class="answer_name">Peut être</div></button>
 		<button id="choix_quatre" class="answer"><div class="answer_name">Je sais pas mon reuf</div></button>
 	</div>
-	<form method="post" action="index.php" style="display:none;" id="like">
-		<?php
+	<?php
 		echo('<a href="index.php?fav='.$id.'" class="icone_fav" >');
-		?>
-	</form>
+	?>
 </div>
 
 <script src="js/favoris.js"></script>
