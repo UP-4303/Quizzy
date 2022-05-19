@@ -61,7 +61,7 @@ if(isset($_FILES['photo_profil']) and $_FILES['photo_profil']['size'] != 0) {
 				$uniqueName = md5($_SESSION['id']) ;
 
 				if (move_uploaded_file($tmpName, 'images/'.$uniqueName)) {
-					update_profile_picture($conn, $_SESSION['id'], $file) ;
+					update_profile_picture($conn, $_SESSION['id'], $uniqueName) ;
 					echo '<h3>le changement d\'image de profil a réussi</h3>';
 				}
 				
