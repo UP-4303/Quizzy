@@ -284,7 +284,7 @@
 .icone_fav {
 	position: absolute;
 	background-image: url("images/fav_empty.png");
-	width: 2vw;
+	width: 3vw;
 	height: 3vw;
 	background-size: 3vw;
 	background-repeat: no-repeat;
