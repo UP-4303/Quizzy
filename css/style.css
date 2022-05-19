@@ -19,7 +19,7 @@
   width: 1px;
 }
 
-[type="file"] + .form_file{
+[type="file"] + .form_button{
   background-color: #000;
   border-radius: 4rem;
   color: #fff;
