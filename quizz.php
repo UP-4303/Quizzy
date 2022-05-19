@@ -39,9 +39,9 @@ if(isset($_SESSION['id'])){
 }
 
 if ($is_favoris) {
-	echo("<div class='icone_fav added'></div>");
+	echo('<div class="icone_fav added"></div>');
 } else {
-	echo("<div class='icone_fav'></div>");
+	echo('<div class="icone_fav"></div>');
 }
 
 <div id="quizz_wrapper">
