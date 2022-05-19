@@ -102,11 +102,10 @@ if(isset($_SESSION['id'])){
 				<br/>
 			</div>
 		</div>
+	<div class="form_title" id="error"></div>
 	<button class="form_button" type="button" onclick="sendForm()">Valider et créer</button>
 	</div>
 </form>
-<div class="form_title" id="error"></div>
-
 
 <script src="js/creation.js"></script>
 
