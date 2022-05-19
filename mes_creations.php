@@ -13,14 +13,17 @@ include("lib/head.php");
 		if (mysqli_num_rows($result) == 0){
 			echo("<div id='quizz_name'>vous n'avez créé aucun quizz</div>");
 		} else {
-			$result = array_reverse(mysqli_fetch_assoc($result)) ;
-			foreach($result as $row){
+			while ($row = mysqli_fetch_assoc($result)){
+				$quizzs[] = $row ;
+			}
+			$quizzs = array_reverse($quizzs ,true);
+			foreach($quizzs as $quizz) {
 				if(isset($row["image"])) {
-					$background = 'background-image: url("images/'.$row["image"].'");' ;
+					$background = 'background-image: url("images/'.$quizz["image"].'");' ;
 				} else {
-					$background = "background-color: ".$row["color"].";";
+					$background = "background-color: ".$quizz["color"].";";
 				}		
-				echo "<a href='quizz.php?id=".$row["id"]."'  class='quizz' style='".$background."'><li><div class='nomQuizz'>".$row["name"]."</div></li></a>" ;
+				echo "<a href='quizz.php?id=".$quizz["id"]."'  class='quizz' style='".$background."'><li><div class='nomQuizz'>".$quizz["name"]."</div></li></a>" ;
 			}
 		}
 	}  else {
