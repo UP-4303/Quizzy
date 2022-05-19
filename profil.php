@@ -62,17 +62,17 @@ if(isset($_FILES['photo_profil']) and $_FILES['photo_profil']['size'] != 0) {
 
 				if (move_uploaded_file($tmpName, 'images/'.$uniqueName)) {
 					update_profile_picture($conn, $_SESSION['id'], $uniqueName) ;
-					echo '<h3>le changement d\'image de profil a réussi</h3>';
+					echo '<h3>Le changement d\'image de profil a réussi</h3>';
 				}
 				
 			} else {
-				echo '<h3>une erreur est suvenue</h3>';
+				echo '<h3>Une erreur est suvenue</h3>';
 			}
 		} else {
-			echo '<h3>l\'image ne dois pas faire plus de 8mo</h3>';
+			echo '<h3>L\'image ne dois pas faire plus de 8mo</h3>';
 		}
 	} else {
-		echo '<h3>il ne s\'agit pas d\'une image jpg</h3>';
+		echo '<h3>Il ne s\'agit pas d\'une image jpg ou png</h3>';
 	}
 }
 
@@ -116,7 +116,7 @@ if(isset($user["profile_picture"])) {
 			</div>
 			<div class="form_wrapper">
 				<div class="form_title">Changer la photo de profil</div>
-				<input id="file" type="file" name="photo_profil">
+				<input id="file" type="file" name="photo_profil" accept="image/png, image/jpeg">
 				<label for="file" class="form_file">Parcourir...</label>
 			</div>
 		</div>
