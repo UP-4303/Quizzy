@@ -80,8 +80,13 @@ function end_quizz(){
 		quizz_question.innerHTML = `Note minimale requise : ${results.required_points}/${res[1]}`
 	}
 	var like = document.getElementById("like")
+	var icone_fav = document.querySelector(".icone_fav");
 	like.style.display = ""
-	console.log(can_like) ;
+	if(can_like) {
+		icone_fav.style.backgroundImage = "url('/l1_info_4/Quizzy/images/fav_full.png')";
+	} else {
+		icone_fav.style.backgroundImage = "url('/l1_info_4/Quizzy/images/fav_empty.png')";
+	}
 }
 
 next_question()
