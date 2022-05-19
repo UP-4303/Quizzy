@@ -45,6 +45,11 @@ function sendForm(){
 	formulaire.submit()
 }
 
+function makeJsonSafe(json){
+	//On met des antislash devant les caractères bizarres
+	return json.replace(/'/g, "\\'").replace(/`/g, "\\`").replace(/</g, "&lt;")
+}
+
 function isquizz(){
 	is_quizz = quizz_input.checked
 	updateLabels()
