@@ -8,16 +8,16 @@ include_once("../db/db_connect.php") ;
 include_once("../crud/users.crud.php") ;
 include_once("../crud/quizz.crud.php") ;
 
-if(isset($_POST["ban_user"])) {
+if(isset($_POST["ban_user"]) and $_POST["ban_user"] !== "") {
 	if(filter_var($_POST["ban_user"], FILTER_VALIDATE_EMAIL)){
-		$sql = "DELETE FROM `users` WHERE `email`=".$_POST['ban_user'] ;
-		$req = "SELECT * FROM `users` WHERE `email`=".$_POST['ban_user'] ;
+		$sql = "DELETE FROM `users` WHERE `email`='".$_POST['ban_user']."'" ;
+		$req = "SELECT * FROM `users` WHERE `email`='".$_POST['ban_user']."'" ;
 		$ban_user = mysqli_query($conn, $req) ;
 		mysqli_query($conn, $sql) ;
 		echo "<h3>L'utilisateur qui a pour email ".$_POST["ban_user"]." et tous ses quizzs on été suprimmé</h3>" ;
 	} else {
-		$sql = "DELETE FROM `users` WHERE `nickname`=".$_POST['ban_user'] ;
-		$req = "SELECT * FROM `users` WHERE `nickname`=".$_POST['ban_user'];
+		$sql = "DELETE FROM `users` WHERE `nickname`='".$_POST['ban_user']."'" ;
+		$req = "SELECT * FROM `users` WHERE `nickname`='".$_POST['ban_user']."'" ;
 		$ban_user = mysqli_query($conn, $req) ;
 		mysqli_query($conn, $sql) ;
 		echo "<h3>L'utilisateur nomé ".$_POST["ban_user"]." et tous ses quizzs on été suprimmé</h3>" ;
@@ -26,19 +26,19 @@ if(isset($_POST["ban_user"])) {
 	$ret = mysqli_query($conn, $sql) ;
 }
 
-if(isset($_POST["del_user"])) {
+if(isset($_POST["del_user"]) and $_POST["del_user"] !== "") {
 	if(filter_var($_POST["del_user"], FILTER_VALIDATE_EMAIL)){
-		$sql = "DELETE FROM `users` WHERE `email`=".$_POST['del_user'] ;
+		$sql = "DELETE FROM `users` WHERE `email`='".$_POST['del_user']."'" ;
 		mysqli_query($conn, $sql) ;
 		echo "<h3>L'utilisateur qui a pour email ".$_POST["del_user"]." a été supprimé</h3>" ;
 	} else {
-		$sql = "DELETE FROM `users` WHERE `nickname`=".$_POST['del_user'] ;
+		$sql = "DELETE FROM `users` WHERE `nickname`='".$_POST['del_user']."'" ;
 		mysqli_query($conn, $sql) ;
 		echo "<h3>L'utilisateur nomé ".$_POST["del_user"]." a été supprimé</h3>" ;
 	}
 }
 
-if(isset($_POST["del_quizz"])) {
+if(isset($_POST["del_quizz"]) and $_POST["del_quizz"] !== "") {
 	delete_quizz($conn, $_POST["del_quizz"]) ;
 	echo "<h3>Le quizz a été supprimée</h3>" ;
 }
