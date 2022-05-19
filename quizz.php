@@ -4,7 +4,7 @@ include_once("crud/quizz.crud.php");
 include_once("crud/users.crud.php");
 
 if (isset($_GET['id'])){
-	$can_like = true;
+	$can_like = "true";
 	$id=$_GET['id'];
 	$quizz=select_quizz($conn, $id);
 	if (! $quizz){
@@ -24,7 +24,7 @@ if (isset($_GET['id'])){
 		$fav = $user["favoris"] ;
 		$favoris = explode('.', $fav) ;
 		if(! in_array($id, $favoris) ) {
-			$can_like = false ;
+			$can_like = "false" ;
 		}
 	}
 }else{
