@@ -11,12 +11,12 @@ include_once("../crud/quizz.crud.php") ;
 if(isset($_POST["ban_user"])) {
 	if(filter_var($_POST["ban_user"], FILTER_VALIDATE_EMAIL)){
 		$sql="DELETE FROM `users` WHERE `email`=$_POST['ban_user']" ;
-		req = "SELECT * FROM `users` WHERE `email`=$_POST['ban_user']";
+		$req = "SELECT * FROM `users` WHERE `email`=$_POST['ban_user']";
 		$ban_user = mysqli_query($conn, $req) ;
 		mysqli_query($conn, $sql) ;
 	} else {
 		$sql="DELETE FROM `users` WHERE `nickname`=$_POST['ban_user']" ;
-		req = "SELECT * FROM `users` WHERE `nickname`=$_POST['ban_user']";
+		$req = "SELECT * FROM `users` WHERE `nickname`=$_POST['ban_user']";
 		$ban_user = mysqli_query($conn, $req) ;
 		mysqli_query($conn, $sql) ;
 	}
