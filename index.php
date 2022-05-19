@@ -17,12 +17,12 @@ include("lib/head.php");
 		$result = select_all_quizz($conn);
 	}
 	
-	$result = array_reverse($result) ;
 	
 	if (mysqli_num_rows($result) == 0){
 		echo("<div id='quizz_name'>Aucun résultat pour \"$rSearch\"</div>");
 	} else {
-		while ($row = mysqli_fetch_assoc($result)){
+		$result = array_reverse(mysqli_fetch_assoc($result)) ;
+		while ($row = $result){
 			if(isset($row["image"])) {
 				$background = 'background-image: url("images/'.$row["image"].'");' ;
 			} else {

@@ -40,7 +40,7 @@
 					echo '<div class="compte_pic" style="background-image: url(\'/l1_info_4/Quizzy/images/'.$image.'\');"></div><h4>Connecté en tant que : '.$user['nickname'].'</h4>';
 					echo '<a href="profil.php">Profil</a>';
 					echo '<a href="favoris.php">Favoris</a>';
-					echo '<a href="mes_creation.php">Mes créations</a>';
+					echo '<a href="mes_creations.php">Mes créations</a>';
 					echo '<a href="quizz_played.php">Mes derniers Quizz</a>';
 					echo '<a href="creation.php">Créer un quizz</a>';
 					if ($_SESSION['admin']){
