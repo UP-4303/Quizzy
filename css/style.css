@@ -217,14 +217,6 @@
 	background-color: #eb5500;
 }
 
-
-#quizz_image {
-	background-color: rgba(0,0,0,1);
-	width: 30vw;
-	height: 30vw;
-	background-size: 30vw;
-}
-
 .form_wrapper {
 	display: flex;
 	flex-direction: column;

@@ -37,7 +37,6 @@ if(isset($_SESSION['id'])){
 	<span id="quizz_name">Nom du quizz</span>
 	<span id="quizz_question_number">Question n°X/Y</span>
 	<span id="quizz_question">Blablabla ?</span>
-	<div id="quizz_image"></div>
 	<div class="answer_wrapper">
 		<button id="choix_un" class="answer"><div class="answer_name">Oui</div></button>
 		<button id="choix_deux" class="answer"><div class="answer_name">Non</div></button>
