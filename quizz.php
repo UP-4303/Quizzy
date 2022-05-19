@@ -32,6 +32,7 @@ if(isset($_SESSION['id'])){
 }
 ?>
 
+<div class='icone_fav'></div>
 
 <div id="quizz_wrapper">
 	<span id="quizz_name">Nom du quizz</span>
