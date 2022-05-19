@@ -5,7 +5,7 @@ var buttons = [document.getElementById("choix_un"),document.getElementById("choi
 var index = -1
 
 quizz_name.innerHTML = quizz_data.name
-var is_quizz = quizz_data.is_quizz
+var is_quizz = quizz_data.is_quizz=="1"?true:false
 var questions = JSON.parse(quizz_data.questions)
 var results = JSON.parse(quizz_data.results)
 

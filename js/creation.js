@@ -22,8 +22,7 @@ function sendForm(){
 		results["required_points"] = document.getElementById("minpoints").valueAsNumber
 	}
 	var j = ["A", "B", "C", "D"]
-	for (var q of qwrapper.childNodes){
-		if (q.nodeType != 1) continue
+	for (var q of qwrapper.getElementsByClassName("qform")){
 		questions.push({"label":q.getElementsByClassName("questiontext")[0].value, "choices":[]})
 		for (var c of q.getElementsByClassName("ansinput")){
 			if (c.style.display != "") continue
@@ -66,6 +65,7 @@ function isquizz(){
 initform.addEventListener("click", isquizz)
 
 function addmore(button){
+	if (qwrapper..getElementsByClassName("qform").length > 20) return
 	var clone = button.parentElement.cloneNode(true)
 	clone.id = ""
 	button.parentElement.after(clone)
@@ -74,14 +74,13 @@ function addmore(button){
 
 function remove(button){
 	var div = button.parentElement
-	if (qwrapper.childNodes.length > 1) div.parentElement.removeChild(div)
+	if (qwrapper.getElementsByClassName("qform") > 1) div.parentElement.removeChild(div)
 	updateLabels()
 }
 
 function updateLabels(){
 	var nb = 1
-	for (var div of qwrapper.childNodes){
-		if (div.nodeType != 1) continue
+	for (var div of qwrapper..getElementsByClassName("qform")){
 		div.getElementsByClassName("ansnumber")[0].addEventListener("input", displayAnswers)
 		div.getElementsByClassName("qnumber")[0].textContent = `Question ${nb}`
 		for (var e of div.getElementsByClassName("jauges")){
