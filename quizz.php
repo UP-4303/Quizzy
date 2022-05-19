@@ -60,6 +60,7 @@ if ($is_favoris) {
 	</div>
 </div>
 
+<script src="js/favoris.js"></script>
 <script>
 <?php
 	echo "var quizz_data =".$json.";\n";
