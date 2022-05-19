@@ -115,11 +115,11 @@ if(isset($user["profile_picture"])) {
 				<input class="form_input" type="password" name="nvt_passwd_2">
 			</div>
 			<div class="form_wrapper">
-				<div class="form_title">Changer la photo de profil</div>
+				<label for="file" class="form_title">Changer la photo de profil</label>
 				<input class="form_input" type="file" name="photo_profil">
 			</div>
 		</div>
-		<input class="form_button" type="submit" value="Valider">
+		<input id="file" class="form_button" type="submit" value="Valider">
 	</div>
 </form>
 
