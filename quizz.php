@@ -3,7 +3,7 @@ include("lib/head.php");
 include_once("crud/quizz.crud.php");
 include_once("crud/users.crud.php");
 if(isset($_SESSION['id'])){
-	if (isset($_GET["id"])){
+	if (isset($_GET['id'])){
 		$id=$_GET['id'];
 		$quizz=select_quizz($conn, $id);
 		if (! $quizz){

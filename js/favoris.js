@@ -2,18 +2,18 @@ var icone_fav = document.getElementsByClassName("icone_fav");
 
 icone_fav.addEventListener("click", clicfav);
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+if (icone_fav.className == "icone_fav added") {
+	icone_fav.style.backgroundImage = "url('/l1_info_4/Quizzy/images/fav_full.png')";
+} else {
+	icone_fav.style.backgroundImage = "url('/l1_info_4/Quizzy/images/fav_empty.png')";
 }
 
-async function clicfav() {
+function clicfav() {
 	if (icone_fav.className == "icone_fav added") {
 		icone_fav.className = "icone_fav"
-		iconeMenu.style.backgroundImage = "url('/l1_info_4/Quizzy/images/fav_empty.png')";
-		await sleep(600);
+		icone_fav.style.backgroundImage = "url('/l1_info_4/Quizzy/images/fav_empty.png')";
 	} else {
 		icone_fav.className = "icone_fav added"
-		iconeMenu.style.backgroundImage = "url('/l1_info_4/Quizzy/images/fav_full.png')";
-		await sleep(600);
+		icone_fav.style.backgroundImage = "url('/l1_info_4/Quizzy/images/fav_full.png')";
 	}
 }

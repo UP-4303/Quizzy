@@ -36,7 +36,7 @@ include("lib/head.php");
 	?>
 </ul>
 
-<script src="js/script.js"></script>
+<script src="js/favoris.js"></script>
 
 <?php
 include("lib/foot.php");
