@@ -2,7 +2,7 @@
 include("lib/head.php");
 ?>
 
-<ul class="list_quizz">
+<div class="list_quizz">
 	<?php
 	if(isset($_SESSION["id"])) {
 		include_once("crud/quizz.crud.php");
@@ -24,7 +24,7 @@ include("lib/head.php");
 						} else {
 							$background = "background-color: ".$qizz["color"].";";
 						}
-						echo "<a href='quizz.php?id=".$qizz["id"]."'  class='quizz' style='".$background."'><li><div class='nomQuizz'>".$qizz["name"]."</div></li></a>" ;
+						echo "<a href='quizz.php?id=".$qizz["id"]."'  class='quizz' style='".$background."'><div class='nomQuizz'>".$qizz["name"]."</div></a>" ;
 					}
 				}
 			}
@@ -34,7 +34,7 @@ include("lib/head.php");
 		echo "<h3>Veuillez vous connecter pour accéder aux favoris</h3>" ;
 	}
 	?>
-</ul>
+</div>
 
 
 <?php
