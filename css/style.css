@@ -19,21 +19,6 @@
   width: 1px;
 }
 
-[type="file"] + label {
-  background-color: #000;
-  border-radius: 4rem;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: 'Poppins', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  height: 4rem;
-  line-height: 4rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
 #content {
 	margin-top: 200px;
 }
