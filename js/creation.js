@@ -77,7 +77,7 @@ function addmore(button){
 
 function remove(button){
 	var div = button.parentElement
-	if (qwrapper.getElementsByClassName("qform") > 1){
+	if (qwrapper.getElementsByClassName("qform").length > 1){
 		div.parentElement.removeChild(div)
 		updateLabels()
 	}else{
