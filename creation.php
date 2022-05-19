@@ -9,9 +9,9 @@ if(isset($_SESSION['id'])){
 		$id=$_SESSION["id"];
 		$q=$_POST["questions"];
 		$r=$_POST["results"];
-		#unset($_POST['name']);
-		#unset($_POST['questions']);
-		#unset($_POST['results']);
+		unset($_POST['name']);
+		unset($_POST['questions']);
+		unset($_POST['results']);
 		$a=create_quizz($conn, $name, $is_quizz, $id, $q, $r);
 		print_r($a);
 		print("<h1>Quizz créé !</h1>");
@@ -30,7 +30,7 @@ if(isset($_SESSION['id'])){
 	<div class="form_wrapper">
 		<div class="form_title">Création de Quizz</div>
 		<div class="form_wrapper" id="initform">
-			<label class="form_label">Nom du quizz : </label><input class="form_input" type="text" name="name">
+			<label class="form_label">Nom du quizz : </label><input class="form_input" id="quizzname" type="text" name="name">
 			<div><input id="qcminput" type="radio" name="is_quizz" value="0" checked><label for="qcminput" id="qcmtext">Quizz à points</label></div>
 			<div><input id="quizzinput" type="radio" name="is_quizz" value="1"><label for="quizzinput" id="quizztext">Quizz à résultats multiples</label></div>
 		</div>
