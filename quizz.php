@@ -48,7 +48,7 @@ if (isset($_GET['id'])){
 	</div>
 	<form method="post" action="index.php" style="display:none;" id="like">
 		<?php
-		echo('<a href="index.php?fav='.$id.'" class="icone_fav" >');
+		echo('<a href="index.php?fav='.$id.'" class="icone_fav" ></a>');
 		?>
 	</form>
 </div>
