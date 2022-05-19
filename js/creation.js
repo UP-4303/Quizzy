@@ -48,19 +48,12 @@ function sendForm(){
 	res.setAttribute("value", makeSafer(JSON.stringify(results)))
 	quizzname.value = makeSafer(quizzname.value)
 	formulaire.appendChild(res)
-	formulaire.submit()
-}
-
-formulaire.addEventListener("submit", function(event){
-	var inputs = form.getElementsByClassName("form_input")
-
-	for (var element of inputs){
-		if (!element.validity.valid){
-			errorbalise.innerHTML = "Veuillez remplir correctement tout les champs."
-			event.preventDefault()
-		}
+	if (formulaire.checkValidity()){
+		formulaire.submit()
+	}else{
+		formulaire.reportValidity()
 	}
-})
+}
 
 function makeSafer(text){
 	//On met des antislash devant les caractères bizarres
