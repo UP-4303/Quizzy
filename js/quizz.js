@@ -76,7 +76,7 @@ function end_quizz(){
 		quizz_question.style.display = "none"
 	}else{
 		var res = find_qcm_answer(points)
-		quizz_question_number.innerHTML = res[2]?"Test passé !":"Test raté !" + " " + `${res[0]}/${res[1]}`
+		quizz_question_number.innerHTML = `${res[2]?"Test passé !":"Test raté !"} ${res[0]}/${res[1]}`
 		quizz_question.innerHTML = `Note minimale requise : ${results.required_points}/${res[1]}`
 	}
 }
