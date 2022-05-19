@@ -8,6 +8,8 @@ if (icone_fav.className == "icone_fav added") {
 	icone_fav.style.backgroundImage = "url('/l1_info_4/Quizzy/images/fav_empty.png')";
 }
 
+console.log("favoris") ;
+
 function clicfav() {
 	if (icone_fav.className == "icone_fav added") {
 		icone_fav.className = "icone_fav"
