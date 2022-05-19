@@ -1,7 +1,7 @@
 <?php
 include("lib/head.php");
 
-if(isset($_SESSION["id"]) and isset($_GET["fav"]) and $_GET["fav"] != '')) {
+if(isset($_SESSION["id"]) and isset($_GET["fav"]) and $_GET["fav"] != '') {
 	$user = select_user($conn, $_SESSION["id"]) ;
 	$fav = $user["favoris"] ;
 	$liste_fav = explode('.', $user["favoris"]) ;
