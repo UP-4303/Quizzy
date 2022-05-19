@@ -3,11 +3,11 @@
 <head>
     <meta charset="utf-8">
     <title>Quizzy</title>
-    <link rel="stylesheet" href="/l1_info_4/Quizzy/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="no_margin no_padding">
     <?php
-        include_once('/l1_info_4/Quizzy/db/db_connect.php');
+        include_once('db/db_connect.php');
         session_start()
     ?>
     <header id="header">
@@ -30,7 +30,7 @@
         <div id="menu_top_wrapper">				
 			<?php
 				if(isset($_SESSION['id'])){
-					include_once('/l1_info_4/Quizzy/crud/users.crud.php');
+					include_once('crud/users.crud.php');
 					$user=select_user($conn, $_SESSION['id']);
 					if(isset($user['profile_picture'])) {
 						$image = $user['profile_picture'];
@@ -38,18 +38,18 @@
 						$image = 'default-avatar.jpg';
 					}
 					echo '<div class="compte_pic" style="background-image: url(\'/l1_info_4/Quizzy/images/'.$image.'\');"></div><h4>Connecté en tant que : '.$user['nickname'].'</h4>';
-					echo '<a href="/l1_info_4/Quizzy/profil.php">Profil</a>';
-					echo '<a href="/l1_info_4/Quizzy/favoris.php">Favoris</a>';
-					echo '<a href="/l1_info_4/Quizzy/mes_creations.php">Mes créations</a>';
-					echo '<a href="/l1_info_4/Quizzy/quizz_played.php">Mes derniers Quizz</a>';
-					echo '<a href="/l1_info_4/Quizzy/creation.php">Créer un quizz</a>';
+					echo '<a href="profil.php">Profil</a>';
+					echo '<a href="favoris.php">Favoris</a>';
+					echo '<a href="mes_creation.php">Mes créations</a>';
+					echo '<a href="quizz_played.php">Mes derniers Quizz</a>';
+					echo '<a href="creation.php">Créer un quizz</a>';
 					if ($_SESSION['admin']){
-						echo '<a href="/l1_info_4/Quizzy/admin/index.php">Accéder au dark web</a>';
+						echo '<a href="admin/index.php">Accéder au dark web</a>';
 					}
 				}else{
 					echo '<h4>Déconnecté</h4>';
-					echo '<a href="/l1_info_4/Quizzy/user_connect.php">Connexion</a>';
-					echo '<a href="/l1_info_4/Quizzy/user_signup.php">Inscription</a>';
+					echo '<a href="user_connect.php">Connexion</a>';
+					echo '<a href="user_signup.php">Inscription</a>';
 				}
 			?>
 		</div>
@@ -57,7 +57,7 @@
 		<div id="menu_bottom_wrapper">
 			<?php
 			if(isset($_SESSION['id'])){
-				echo '<a href="/l1_info_4/Quizzy/user_disconnect.php">Déconnexion</a>' ;
+				echo '<a href="user_disconnect.php">Déconnexion</a>' ;
 			}
 			?>
 			<p>
@@ -69,4 +69,4 @@
 
     </header>
     <div id="content">
-    <script src="/l1_info_4/Quizzy/js/script.js"></script>
+    <script src="js/script.js"></script>
