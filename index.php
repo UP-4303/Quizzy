@@ -5,7 +5,7 @@ if(isset($_SESSION["id"])) {
 	$user = select_user($conn, $_SESSION["id"]) ;
 	$fav = $user["favoris"] ;
 	if(isset($_post["add"])) {
-		$fav .= ".".$_post["add"] ;
+		$fav = ".".$_post["add"].$fav ;
 		update_quizz_favoris($conn, $_SESSION["id"], $fav) ;
 		unset($_post["add"]) ;
 	}
