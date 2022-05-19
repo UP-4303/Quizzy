@@ -22,7 +22,7 @@ if(isset($_SESSION['id'])){
 		}
 		$fav = $user["favoris"] ;
 		$favoris = explode('.', $done) ;
-		if(in_array($id, $favoris) and $id != "") {
+		if(in_array($id, $favoris) and !empty($id)) {
 			$is_favoris = true ;
 		} else {
 			$is_favoris = false ;
