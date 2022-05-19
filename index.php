@@ -7,17 +7,16 @@ if(isset($_SESSION["id"])) {
 	if(isset($_post["add"])) {
 		$fav .= ".".$_post["add"] ;
 		update_quizz_favoris($conn, $_SESSION["id"], $fav) ;
+		unset($_post["add"]) ;
 	}
 	if(isset($_post["remove"])) {
 		$liste_fav = explode('.', $user["favoris"]) ;
 		$liste_fav = array_diff($liste_fav, [$_post["remove"]]);
 		$fav = implode('.', $user["favoris"]) ;
 		update_quizz_favoris($conn, $_SESSION["id"], $fav) ;
+		unset($_post["remove"]) ;
 	}
 }
-
-unset($_post["remove"]) ;
-unset($_post["add"]) ;
 ?>
 
 <div class="list_quizz">
