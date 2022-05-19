@@ -9,6 +9,7 @@ include("lib/head.php");
 		
 		$user = select_user($conn, $_SESSION["id"]) ;
 		
+		$done = "" ;
 		$played = explode('.', $user["quizz_done"]) ;
 		$played = array_reverse($played) ;
 		
@@ -18,6 +19,7 @@ include("lib/head.php");
 			foreach($played as $played_id) {
 				if($played_id != '') {
 					if($qizz = select_quizz($conn, intval($played_id))) {
+						$done .= ".".$played_id ;
 						if(isset($qizz["image"])) {
 							$background = 'background-image: url("images/'.$qizz["image"].'");' ;
 						} else {
@@ -27,6 +29,7 @@ include("lib/head.php");
 					}
 				}
 			}
+			update_quizz_done($conn, $_SESSION["id"], $done) ;
 		}
 	}  else {
 		echo "<h3>Veuillez vous connecter pour accéder aux quizz réalisés</h3>" ;
