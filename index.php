@@ -22,7 +22,7 @@ include("lib/head.php");
 		echo("<div id='quizz_name'>Aucun résultat pour \"$rSearch\"</div>");
 	} else {
 		$result = array_reverse(mysqli_fetch_assoc($result)) ;
-		while ($row = $result){
+		foreach($result as $row){
 			if(isset($row["image"])) {
 				$background = 'background-image: url("images/'.$row["image"].'");' ;
 			} else {
