@@ -50,7 +50,7 @@ if(isset($_POST["del_quizz"])) {
 </head>
 <body class="no_margin no_padding">
 
-<a href="../" >retour</a>
+<p><a href="../" >retour</a></p>
 
 <form action="#" method="post">
 	<div class="form_wrapper">
