@@ -20,6 +20,13 @@ if(isset($_SESSION['id'])){
 			$up_done = $done.'.'.$id ;
 			update_quizz_done($conn, $_SESSION['id'], $up_done) ;
 		}
+		$fav = $user["favoris"] ;
+		$favoris = explode('.', $done) ;
+		if(in_array($id, $favoris) and $id != "") {
+			$is_favoris = true ;
+		} else {
+			$is_favoris = false ;
+		}
 	}else{
 		print("Aucun quizz n'a été chargé.");
 		include("db/db_disconnect.php") ;
