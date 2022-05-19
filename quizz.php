@@ -53,7 +53,6 @@ if (isset($_GET['id'])){
 	</form>
 </div>
 
-<script src="js/favoris.js"></script>
 <script>
 <?php
 	echo "var quizz_data =".$json.";\n";
@@ -61,6 +60,7 @@ if (isset($_GET['id'])){
 ?>
 </script>
 <script src="js/quizz.js"></script>
+<script src="js/favoris.js"></script>
 
 <?php
 	include("db/db_disconnect.php") ;
