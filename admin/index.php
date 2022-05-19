@@ -41,7 +41,6 @@ if(isset($_POST["del_quizz"])) {
 	echo "<h3>Le quizz a été supprimée</h3>" ;
 }
 
-unset($_POST) ;
 ?>
 
 <!doctype html>
@@ -60,12 +59,12 @@ unset($_POST) ;
 		<div class="form_title">Gestion des utilisateurs</div>
 		<div class="form_row_wrapper">
 			<div class="form_wrapper">
-				<div class="form_title">Suprimmer un utilisateur</div>
+				<div class="form_title">Suprimer un utilisateur</div>
 				<div class="form_label">Pseudo ou mail</div>
 				<input class="form_input" type="text" name="del_user">
 			</div>
 			<div class="form_wrapper">
-				<div class="form_title">bannir un utilisateur</div>
+				<div class="form_title">Bannir un utilisateur</div>
 				<div class="form_label">Pseudo ou mail</div>
 				<input class="form_input" type="text" name="ban_user">
 			</div>
