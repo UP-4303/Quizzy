@@ -58,8 +58,8 @@ function find_answer(jauges){
 function find_qcm_answer(points){
 	var maxi = 0
 	for (var q of questions){
-		if (q.points > 0){
-			maxi=maxi+q.points
+		if (parseInt(q.points) > 0){
+			maxi=maxi+parseInt(q.points)
 		}
 	}
 	return [points, maxi, results.required_points<=points]
