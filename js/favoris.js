@@ -2,6 +2,10 @@ var icone_fav = document.getElementsByClassName("icone_fav");
 
 icone_fav.addEventListener("click", clicfav);
 
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 async function clicfav() {
 	if (icone_fav.className == "icone_fav added") {
 		icone_fav.className = "icone_fav"
