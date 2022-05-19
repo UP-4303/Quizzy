@@ -7,6 +7,7 @@ var quizzform = document.getElementById("quizzform")
 var formulaire = document.getElementById("formulaire")
 var is_quizz = false
 var quizzname = document.getElementById("quizzname")
+var errorbalise = document.getElementById("error")
 
 function sendForm(){
 	var questions = []
@@ -33,6 +34,11 @@ function sendForm(){
 			}
 		}
 	}
+	if (questions.length < 5){
+		errorbalise.innerHTML = "Vous devez mettre au moins 5 questions."
+		return
+	}
+
 	var quest = document.createElement("input")
 	quest.setAttribute("type", "text")
 	quest.setAttribute("name", "questions")
