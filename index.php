@@ -2,7 +2,7 @@
 include("lib/head.php");
 ?>
 
-<ul class="list_quizz">
+<div class="list_quizz">
 	<?php
 	include_once("crud/quizz.crud.php");
 	
@@ -30,11 +30,11 @@ include("lib/head.php");
 			} else {
 				$background = "background-color: ".$quizz["color"].";";
 			}		
-			echo "<a href='quizz.php?id=".$quizz["id"]."'  class='quizz' style='".$background."'><li><div class='nomQuizz'>".$quizz["name"]."</div></li></a>" ;
+			echo "<a href='quizz.php?id=".$quizz["id"]."'  class='quizz' style='".$background."'><div class='nomQuizz'>".$quizz["name"]."</div></a>" ;
 		}
 	}
 	?>
-</ul>
+</div>
 
 <?php
 include("lib/foot.php");
