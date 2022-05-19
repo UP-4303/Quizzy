@@ -7,7 +7,7 @@ if(isset($_SESSION["id"])) {
 	print_r($_POST) ;
 	if(isset($_POST["not_added"])) {
 		print($_POST["not_added"]) ;
-		$fav = ".".$_post["not_added"].$fav ;
+		$fav = ".".$_POST["not_added"].$fav ;
 		update_quizz_favoris($conn, $_SESSION["id"], $fav) ;
 		unset($_POST["not_added"]) ;
 	}
