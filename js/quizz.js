@@ -20,7 +20,7 @@ function buttonClicked(evt){
 	if (is_quizz){
 		jauges[evt.currentTarget.value]++
 	}else{
-		points = points + evt.currentTarget.value
+		points = points + parseInt(evt.currentTarget.value)
 	}
 	next_question()
 }
