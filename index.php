@@ -5,18 +5,18 @@ if(isset($_SESSION["id"])) {
 	$user = select_user($conn, $_SESSION["id"]) ;
 	$fav = $user["favoris"] ;
 	print_r($_POST) ;
-	if(isset($_post["not_added"])) {
-		print($_post["not_added"]) ;
+	if(isset($_POST["not_added"])) {
+		print($_POST["not_added"]) ;
 		$fav = ".".$_post["not_added"].$fav ;
 		update_quizz_favoris($conn, $_SESSION["id"], $fav) ;
-		unset($_post["not_added"]) ;
+		unset($_POST["not_added"]) ;
 	}
-	if(isset($_post["remove"])) {
+	if(isset($_POST["remove"])) {
 		$liste_fav = explode('.', $user["favoris"]) ;
 		$liste_fav = array_diff($liste_fav, [$_post["remove"]]);
 		$fav = implode('.', $user["favoris"]) ;
 		update_quizz_favoris($conn, $_SESSION["id"], $fav) ;
-		unset($_post["remove"]) ;
+		unset($_POST["remove"]) ;
 	}
 }
 ?>
