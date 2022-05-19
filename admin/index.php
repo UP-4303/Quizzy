@@ -14,15 +14,16 @@ if(isset($_POST["ban_user"]) and $_POST["ban_user"] !== "") {
 		$req = "SELECT * FROM `users` WHERE `email`='".$_POST['ban_user']."'" ;
 		$ban_user = mysqli_query($conn, $req) ;
 		mysqli_query($conn, $sql) ;
-		echo "<h3>L'utilisateur qui a pour email ".$_POST["ban_user"]." et tous ses quizzs on été suprimmé</h3>" ;
+		echo "<h3>L'utilisateur qui a pour email ".$_POST["ban_user"]." a été suprimmé</h3>" ;
 	} else {
 		$sql = "DELETE FROM `users` WHERE `nickname`='".$_POST['ban_user']."'" ;
 		$req = "SELECT * FROM `users` WHERE `nickname`='".$_POST['ban_user']."'" ;
 		$ban_user = mysqli_query($conn, $req) ;
 		mysqli_query($conn, $sql) ;
-		echo "<h3>L'utilisateur nomé ".$_POST["ban_user"]." et tous ses quizzs on été suprimmé</h3>" ;
+		echo "<h3>L'utilisateur nomé ".$_POST["ban_user"]." a été suprimmé</h3>" ;
 	}
-	$sql = "DELETE FROM `quizz` WHERE `owner`=".$_POST['ban_user'] ;
+	
+	$sql = "DELETE FROM `quizz` WHERE `owner`=".$ban_user["id"] ;
 	$ret = mysqli_query($conn, $sql) ;
 }
 
