@@ -33,12 +33,15 @@ if(isset($_POST["del_user"])) {
 		$sql = "DELETE FROM `users` WHERE `nickname`=".$_POST['del_user'] ;
 		mysqli_query($conn, $sql) ;
 	}
+	echo "<h3>L'utilisateur a été supprimé</h3>" ;
 }
 
 if(isset($_POST["del_quizz"])) {
 	delete_quizz($conn, $_POST["del_quizz"]) ;
+	echo "<h3>Le quizz a été supprimée</h3>" ;
 }
 
+unset($_POST) ;
 ?>
 
 <!doctype html>
@@ -72,7 +75,7 @@ if(isset($_POST["del_quizz"])) {
 			<div class="form_wrapper">
 				<div class="form_title">Suprimmer un quizz</div>
 				<div class="form_label">ID du quizz</div>
-				<input class="form_input" type="text" name="del_quizz">
+				<input class="form_input" type="number" name="del_quizz">
 			</div>
 		</div>
 		<input class="form_button" type="submit" value="Valider">
