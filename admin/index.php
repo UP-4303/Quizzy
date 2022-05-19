@@ -10,27 +10,27 @@ include_once("../crud/quizz.crud.php") ;
 
 if(isset($_POST["ban_user"])) {
 	if(filter_var($_POST["ban_user"], FILTER_VALIDATE_EMAIL)){
-		$sql="DELETE FROM `users` WHERE `email`=$_POST['ban_user']" ;
-		$req = "SELECT * FROM `users` WHERE `email`=$_POST['ban_user']";
+		$sql = "DELETE FROM `users` WHERE `email`=".$_POST['ban_user'] ;
+		$req = "SELECT * FROM `users` WHERE `email`=".$_POST['ban_user'] ;
 		$ban_user = mysqli_query($conn, $req) ;
 		mysqli_query($conn, $sql) ;
 	} else {
-		$sql="DELETE FROM `users` WHERE `nickname`=$_POST['ban_user']" ;
-		$req = "SELECT * FROM `users` WHERE `nickname`=$_POST['ban_user']";
+		$sql = "DELETE FROM `users` WHERE `nickname`=".$_POST['ban_user'] ;
+		$req = "SELECT * FROM `users` WHERE `nickname`=".$_POST['ban_user'];
 		$ban_user = mysqli_query($conn, $req) ;
 		mysqli_query($conn, $sql) ;
 	}
-	$sql="DELETE FROM `quizz` WHERE `owner`=$_POST['ban_user']" ;
-	$ret=mysqli_query($conn, $sql) ;
+	$sql = "DELETE FROM `quizz` WHERE `owner`=".$_POST['ban_user'] ;
+	$ret = mysqli_query($conn, $sql) ;
 	echo "<h3>L'utilisateur et tous ses quizzs on été suprimmé</h3>" ;
 }
 
 if(isset($_POST["del_user"])) {
 	if(filter_var($_POST["del_user"], FILTER_VALIDATE_EMAIL)){
-		$sql="DELETE FROM `users` WHERE `email`=$_POST['del_user']" ;
+		$sql = "DELETE FROM `users` WHERE `email`=".$_POST['del_user'] ;
 		mysqli_query($conn, $sql) ;
 	} else {
-		$sql="DELETE FROM `users` WHERE `nickname`=$_POST['del_user']" ;
+		$sql = "DELETE FROM `users` WHERE `nickname`=".$_POST['del_user'] ;
 		mysqli_query($conn, $sql) ;
 	}
 }
