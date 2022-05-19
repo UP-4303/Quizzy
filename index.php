@@ -4,9 +4,11 @@ include("lib/head.php");
 if(isset($_SESSION["id"])) {
 	$user = select_user($conn, $_SESSION["id"]) ;
 	$fav = $user["favoris"] ;
+	print("étape1") ;
 	if(isset($_post["not_added"])) {
 		$fav = ".".$_post["not_added"].$fav ;
 		update_quizz_favoris($conn, $_SESSION["id"], $fav) ;
+		print("add") ;
 		unset($_post["not_added"]) ;
 	}
 	if(isset($_post["remove"])) {
