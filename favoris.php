@@ -33,7 +33,6 @@ include("lib/head.php");
 	?>
 </ul>
 
-<script src="js/script.js"></script>
 
 <?php
 include("lib/foot.php");

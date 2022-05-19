@@ -14,26 +14,28 @@ if(isset($_POST["ban_user"])) {
 		$req = "SELECT * FROM `users` WHERE `email`=".$_POST['ban_user'] ;
 		$ban_user = mysqli_query($conn, $req) ;
 		mysqli_query($conn, $sql) ;
+		echo "<h3>L'utilisateur qui a pour email ".$_POST["ban_user"]." et tous ses quizzs on été suprimmé</h3>" ;
 	} else {
 		$sql = "DELETE FROM `users` WHERE `nickname`=".$_POST['ban_user'] ;
 		$req = "SELECT * FROM `users` WHERE `nickname`=".$_POST['ban_user'];
 		$ban_user = mysqli_query($conn, $req) ;
 		mysqli_query($conn, $sql) ;
+		echo "<h3>L'utilisateur nomé ".$_POST["ban_user"]." et tous ses quizzs on été suprimmé</h3>" ;
 	}
 	$sql = "DELETE FROM `quizz` WHERE `owner`=".$_POST['ban_user'] ;
 	$ret = mysqli_query($conn, $sql) ;
-	echo "<h3>L'utilisateur et tous ses quizzs on été suprimmé</h3>" ;
 }
 
 if(isset($_POST["del_user"])) {
 	if(filter_var($_POST["del_user"], FILTER_VALIDATE_EMAIL)){
 		$sql = "DELETE FROM `users` WHERE `email`=".$_POST['del_user'] ;
 		mysqli_query($conn, $sql) ;
+		echo "<h3>L'utilisateur qui a pour email ".$_POST["del_user"]." a été supprimé</h3>" ;
 	} else {
 		$sql = "DELETE FROM `users` WHERE `nickname`=".$_POST['del_user'] ;
 		mysqli_query($conn, $sql) ;
+		echo "<h3>L'utilisateur nomé ".$_POST["del_user"]." a été supprimé</h3>" ;
 	}
-	echo "<h3>L'utilisateur a été supprimé</h3>" ;
 }
 
 if(isset($_POST["del_quizz"])) {
@@ -41,6 +43,7 @@ if(isset($_POST["del_quizz"])) {
 	echo "<h3>Le quizz a été supprimée</h3>" ;
 }
 
+var_dump($_POST)
 ?>
 
 <!doctype html>
