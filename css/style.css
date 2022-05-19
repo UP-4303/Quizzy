@@ -326,13 +326,13 @@
 	border: solid black ;
 	margin: 5%;
 	text-align: center;
-	padding: 15%;
 	border-radius: 20%;
 	background-position: center;
 	display: flex;
 	justify-content: center;
-	width: 5vw;
-	height: 5vw;
+	align-items: center;
+	width: 20vw;
+	height: 20vw;
 	font-size: 1.5em;
 	background-size: cover;
 	background-repeat: no-repeat;
