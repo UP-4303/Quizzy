@@ -8,7 +8,7 @@ if(isset($_SESSION["id"]) and isset($_GET["fav"] and $_GET["fav"] != '')) {
 	if(in_array($_GET["fav"], $liste_fav)) {
 		$liste_fav = array_diff($liste_fav, [$_GET["fav"]]);
 	} else {
-		$liste_fav = ".".$_GET["fav"].$liste_fav
+		$liste_fav = ".".$_GET["fav"].$liste_fav ;
 	}
 	$fav = implode('.', $liste_fav) ;
 	update_quizz_favoris($conn, $_SESSION["id"], $fav) ;
