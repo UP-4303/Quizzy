@@ -81,7 +81,7 @@ function remove(button){
 		div.parentElement.removeChild(div)
 		updateLabels()
 	}else{
-		errorbalise.innerHTML = "Quizz limité à 20 questions."
+		errorbalise.innerHTML = "Vous ne pouvez pas avoir un quizz sans question. . _." //c'est un smiley, pas du morse
 	}
 	
 }
