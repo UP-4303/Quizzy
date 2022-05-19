@@ -7,10 +7,10 @@ if(isset($_SESSION["id"]) and isset($_GET["fav"]) and $_GET["fav"] != '') {
 	$liste_fav = explode('.', $user["favoris"]) ;
 	if(in_array($_GET["fav"], $liste_fav)) {
 		$liste_fav = array_diff($liste_fav, [$_GET["fav"]]);
+		$fav = implode('.', $liste_fav) ;
 	} else {
-		$liste_fav = ".".$_GET["fav"].$liste_fav ;
+		$fav = ".".$_GET["fav"].$fav ;
 	}
-	$fav = implode('.', $liste_fav) ;
 	update_quizz_favoris($conn, $_SESSION["id"], $fav) ;
 }
 ?>
