@@ -9,7 +9,8 @@ include("lib/head.php");
 		
 		$sql = "SELECT * FROM `quizz` WHERE `owner`=".$_SESSION['id'] ;
 		$result=mysqli_query($conn, $sql) ;
-	
+		$result = array_reverse($result) ;
+		
 		if (mysqli_num_rows($result) == 0){
 			echo("<div id='quizz_name'>vous n'avez créé aucun quizz</div>");
 		} else {

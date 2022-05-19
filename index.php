@@ -16,6 +16,9 @@ include("lib/head.php");
 	} else {
 		$result = select_all_quizz($conn);
 	}
+	
+	$result = array_reverse($result) ;
+	
 	if (mysqli_num_rows($result) == 0){
 		echo("<div id='quizz_name'>Aucun résultat pour \"$rSearch\"</div>");
 	} else {
