@@ -37,7 +37,8 @@ function next_question(){
 	for (var i in data.choices){
 		var choice = data.choices[i]
 		buttons[i].innerHTML = "<div class=\"answer_name\">" + choice.label + "</div>"
-		buttons[i].value = choice.jauge
+		if (is_quizz) buttons[i].value = choice.jauge
+		else buttons[i].value = choice.points
 		buttons[i].style.display = ""
 		buttons[i].addEventListener("click", buttonClicked)
 	}
