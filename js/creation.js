@@ -64,7 +64,7 @@ function isquizz(){
 initform.addEventListener("click", isquizz)
 
 function addmore(button){
-	if (qwrapper.getElementsByClassName("qform").length > 20){
+	if (qwrapper.getElementsByClassName("qform").length >= 20){
 		errorbalise.innerHTML = "Quizz limité à 20 questions."
 	}else{
 		var clone = button.parentElement.cloneNode(true)
