@@ -11,7 +11,6 @@ var errorbalise = document.getElementById("error")
 function sendForm(){
 	var questions = []
 	var results = {}
-
 	if (is_quizz){
 		results["jauges"] = []
 		for (var i of document.getElementsByClassName("jaugelabel")){
@@ -32,23 +31,24 @@ function sendForm(){
 			}
 		}
 	}
-	if (questions.length < 5){
-		errorbalise.innerHTML = "Vous devez mettre au moins 5 questions."
+	if (questions.length < 3){
+		errorbalise.innerHTML = "Vous devez mettre au moins 3 questions."
 		return
 	}
-
-	var quest = document.createElement("input")
-	quest.setAttribute("type", "text")
-	quest.setAttribute("name", "questions")
-	quest.setAttribute("value", makeSafer(JSON.stringify(questions)))
-	formulaire.appendChild(quest)
-	var res = document.createElement("input")
-	res.setAttribute("type", "text")
-	res.setAttribute("name", "results")
-	res.setAttribute("value", makeSafer(JSON.stringify(results)))
-	quizzname.value = makeSafer(quizzname.value)
-	formulaire.appendChild(res)
 	if (formulaire.checkValidity()){
+		var quest = document.createElement("input")
+		quest.setAttribute("type", "text")
+		quest.setAttribute("name", "questions")
+		quest.setAttribute("value", makeSafer(JSON.stringify(questions)))
+		quest.style.display = "none"
+		formulaire.appendChild(quest)
+		var res = document.createElement("input")
+		res.setAttribute("type", "text")
+		res.setAttribute("name", "results")
+		res.setAttribute("value", makeSafer(JSON.stringify(results)))
+		res.style.display = "none"
+		quizzname.value = makeSafer(quizzname.value)
+		formulaire.appendChild(res)
 		formulaire.submit()
 	}else{
 		formulaire.reportValidity()
