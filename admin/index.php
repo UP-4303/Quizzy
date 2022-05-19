@@ -53,11 +53,6 @@ if(isset($_POST["del_quizz"]) and $_POST["del_quizz"] !== "") {
 	}
 }
 
-var_dump($_POST) ;
-unset($_POST["ban_user"]) ;
-unset($_POST["del_user"]) ;
-unset($_POST["del_quizz"]) ;
-var_dump($_POST) ;
 ?>
 
 <!doctype html>
