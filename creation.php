@@ -27,7 +27,6 @@ if(isset($_SESSION['id'])){
 
 ?>
 <form method="POST" action="creation.php" id="formulaire">
-	<div class="form_title" id="error"></div>
 	<div class="form_wrapper">
 		<div class="form_title">Création de Quizz</div>
 		<div class="form_wrapper" id="initform">
@@ -47,7 +46,7 @@ if(isset($_SESSION['id'])){
 		<div class="form_wrapper" id="qwrapper">
 			<div class="qform form_wrapper" id="qform1">
 				<label class="qnumber form_label">Question 1</label><br/>
-				<label>Question : </label><input type="text" name="questiontext" class="questiontext form_input"><br/>
+				<label>Question : </label><input type="text" pattern="[a-zA-Z0-9:]{6-30}" name="questiontext" class="questiontext form_input"><br/>
 				<select class="ansnumber form_input">
 					<option value="2">2 réponses possibles</option>
 					<option value="3">3 réponses possibles</option>
@@ -56,7 +55,7 @@ if(isset($_SESSION['id'])){
 				
 				<div class="ansinput form_wrapper">
 					<label class="form_label">Réponse 1 : </label>
-					<input type="text" name="repinput1" class="anslabel form_input">
+					<input type="text" name="repinput1" pattern="[a-zA-Z0-9:]{1-30}" class="anslabel form_input">
 					<select class="jauges form_input" style="display: none;">
 						<option value="A">Jauge A</option>
 						<option value="B">Jauge B</option>
@@ -67,7 +66,7 @@ if(isset($_SESSION['id'])){
 				</div>
 				<div class="ansinput form_wrapper">
 					<label class="form_label">Réponse 2 : </label>
-					<input type="text" name="repinput2" class="anslabel form_input">
+					<input type="text" name="repinput2" pattern="[a-zA-Z0-9:]{1-30}" class="anslabel form_input">
 					<select class="jauges form_input" style="display: none;">
 						<option value="A">Jauge A</option>
 						<option value="B">Jauge B</option>
@@ -78,7 +77,7 @@ if(isset($_SESSION['id'])){
 				</div>
 				<div class="ansinput form_wrapper" style="display: none;">
 					<label class="form_label">Réponse 3 : </label>
-					<input type="text" name="repinput3" class="anslabel form_input">
+					<input type="text" name="repinput3" pattern="[a-zA-Z0-9:]{1-30}" class="anslabel form_input">
 					<select class="jauges form_input" style="display: none;">
 						<option value="A">Jauge A</option>
 						<option value="B">Jauge B</option>
@@ -89,7 +88,7 @@ if(isset($_SESSION['id'])){
 				</div>
 				<div class="ansinput form_wrapper" style="display: none;">
 					<label class="form_label">Réponse 4 : </label>
-					<input type="text" name="repinput4" class="anslabel form_input">
+					<input type="text" name="repinput4" pattern="[a-zA-Z0-9:]{1-30}" class="anslabel form_input">
 					<select class="jauges form_input" style="display: none;">
 						<option value="A">Jauge A</option>
 						<option value="B">Jauge B</option>
@@ -106,7 +105,7 @@ if(isset($_SESSION['id'])){
 	<button class="form_button" type="button" onclick="sendForm()">Valider et créer</button>
 	</div>
 </form>
-
+<div class="form_title" id="error"></div>
 
 
 <script src="js/creation.js"></script>
