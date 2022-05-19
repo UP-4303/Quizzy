@@ -1,4 +1,4 @@
-var icone_fav = document.getElementsByClassName("icone_fav");
+var icone_fav = document.querySelector(".icone_fav");
 
 icone_fav.addEventListener("click", clicfav);
 
