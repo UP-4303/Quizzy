@@ -28,7 +28,7 @@ include("lib/head.php");
 					}
 				}
 			}
-			update_quizz_favoris($conn, $_SESSION["id"], $fav)
+			update_quizz_favoris($conn, $_SESSION["id"], $fav) ;
 		}
 	} else {
 		echo "<h3>Veuillez vous connecter pour accéder aux favoris</h3>" ;
