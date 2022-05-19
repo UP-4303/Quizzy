@@ -281,7 +281,15 @@
 	background-position: center;
 }
 
-
+.icone_fav {
+	position: absolute;
+	background-image: url("images/fav_empty.png");
+	background-size: 3vw;
+	background-repeat: no-repeat;
+	background-position: center;
+	bottom: 0;
+	right: 0;
+}
 
 
 
@@ -322,8 +330,8 @@
 	background-position: center;
 	display: flex;
 	justify-content: center;
-	width: 3em;
-	height: 3em;
+	width: 30vw;
+	height: 30vw;
 	font-size: 1.5em;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -350,8 +358,4 @@
 	height: 50px;
 	width: 50px;
 	margin-left: 5%;
-}
-
-.icone_fav {
-	scale: 50% ;
 }
