@@ -10,6 +10,7 @@ include("lib/head.php");
 		$user = select_user($conn, $_SESSION["id"]) ;
 		
 		$played = explode('.', $user["quizz_done"]) ;
+		$played = array_reverse($played) ;
 		
 		if (count($played) < 2){
 			echo("<div id='quizz_name'>vous n'avez fait aucun quizz</div>");
