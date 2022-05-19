@@ -1,4 +1,4 @@
-var fileInput = document.querySelector(".form_file");
+var fileInput = document.querySelector("#file");
 
 fileInput.addEventListener("change", changeFileName);
 
@@ -7,5 +7,5 @@ function changeFileName() {
 	if (fileInput.files.length == 1) {
 		fileName = fileInput.target.value.split('\\').pop();
 	}
-	fileInput.innerHTML = fileName;
+	fileInput.nextElementSibling.innerHTML = fileName;
 }
