@@ -51,6 +51,17 @@ function sendForm(){
 	formulaire.submit()
 }
 
+formulaire.addEventListener("submit", function(event){
+	var inputs = form.getElementsByClassName("form_input")
+
+	for (var element of inputs){
+		if (!element.validity.valid){
+			errorbalise.innerHTML = "Veuillez remplir correctement tout les champs."
+			event.preventDefault()
+		}
+	}
+})
+
 function makeSafer(text){
 	//On met des antislash devant les caractères bizarres
 	return text.replace(/'/g, "\\'").replace(/`/g, "\\`").replace(/</g, "&lt;")
