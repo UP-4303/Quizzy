@@ -37,6 +37,7 @@ include_once("../crud/quizz.crud.php") ;
 				<div class="form_label">ID du quizz</div>
 				<input class="form_input" type="text" name="del_quizz">
 			</div>
+			
 		</div>
 		<input class="form_button" type="submit" value="Valider">
 	</div>
