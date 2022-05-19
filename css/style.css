@@ -283,7 +283,6 @@
 
 .icone_fav {
 	position: fixed;
-	background-image: url("../images/fav_empty.png");
 	width: 3vw;
 	height: 3vw;
 	background-size: 3vw;

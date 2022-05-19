@@ -37,9 +37,12 @@ if(isset($_SESSION['id'])){
 	include("db/db_disconnect.php") ;
 	return;
 }
-?>
 
-<div class='icone_fav'></div>
+if ($is_favoris) {
+	echo("<div class='icone_fav added'></div>");
+} else {
+	echo("<div class='icone_fav'></div>");
+}
 
 <div id="quizz_wrapper">
 	<span id="quizz_name">Nom du quizz</span>
