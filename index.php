@@ -1,23 +1,17 @@
 <?php
 include("lib/head.php");
 
-if(isset($_SESSION["id"])) {
+if(isset($_SESSION["id"]) and isset($_GET["fav"] and $_GET["fav"] != '')) {
 	$user = select_user($conn, $_SESSION["id"]) ;
 	$fav = $user["favoris"] ;
-	print_r($_POST) ;
-	if(isset($_POST["not_added"])) {
-		print($_POST["not_added"]) ;
-		$fav = ".".$_POST["not_added"].$fav ;
-		update_quizz_favoris($conn, $_SESSION["id"], $fav) ;
-		unset($_POST["not_added"]) ;
+	$liste_fav = explode('.', $user["favoris"]) ;
+	if(in_array($_GET["fav"], $liste_fav)) {
+		$liste_fav = array_diff($liste_fav, [$_GET["fav"]]);
+	} else {
+		$liste_fav = ".".$_GET["fav"].$liste_fav
 	}
-	if(isset($_POST["remove"])) {
-		$liste_fav = explode('.', $user["favoris"]) ;
-		$liste_fav = array_diff($liste_fav, [$_post["remove"]]);
-		$fav = implode('.', $user["favoris"]) ;
-		update_quizz_favoris($conn, $_SESSION["id"], $fav) ;
-		unset($_POST["remove"]) ;
-	}
+	$fav = implode('.', $liste_fav) ;
+	update_quizz_favoris($conn, $_SESSION["id"], $fav) ;
 }
 ?>
 
