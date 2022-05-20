@@ -14,7 +14,7 @@ if (isset($_GET['id'])){
 	}
 	$json=json_encode($quizz);
 	if (isset($_SESSION["id"])){
-		$can_like = "1"
+		$can_like = "1";
 		$user = select_user($conn, $_SESSION['id']) ;
 		$done = $user["quizz_done"] ;
 		$played = explode('.', $done) ;
