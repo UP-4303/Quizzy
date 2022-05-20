@@ -1,11 +1,12 @@
 <?php
 include("lib/head.php");
 
+# ajout / suppression de favoris
 if(isset($_SESSION["id"]) and isset($_GET["fav"]) and $_GET["fav"] != '') {
 	$user = select_user($conn, $_SESSION["id"]) ;
-	$fav = $user["favoris"] ;
-	$liste_fav = explode('.', $user["favoris"]) ;
-	if(in_array($_GET["fav"], $liste_fav)) {
+	$fav = $user["favoris"] ; # dans la base de donnée favopris stocké sous la forme .id_favoris_1.id_favoris_2.ect
+	$liste_fav = explode('.', $user["favoris"]) ; 
+	if(in_array($_GET["fav"], $liste_fav)) { # vérifie si le quizz est déjà dans les favoris pour l'ajouter ou l'enlever
 		$liste_fav = array_diff($liste_fav, [$_GET["fav"]]);
 		$fav = implode('.', $liste_fav) ;
 	} else {
@@ -13,37 +14,33 @@ if(isset($_SESSION["id"]) and isset($_GET["fav"]) and $_GET["fav"] != '') {
 	}
 	update_quizz_favoris($conn, $_SESSION["id"], $fav) ;
 }
+
 ?>
 
 <div class="list_quizz">
 	<?php
 	include_once("crud/quizz.crud.php");
 	
-	if (isset($_GET["q"])){
+	# système de recherche
+	if (isset($_GET["q"])){ # vérifie si une recherche a été faite
 		$rSearch = $_GET["q"];
-		$search = str_replace(" ","%",$rSearch);
-		$search = '%'.$search.'%';
+		$search = str_replace(" ","%",$rSearch);	# ajout des jokers
+		$search = '%'.$search.'%';					#
 		$sql = "SELECT * FROM `quizz` WHERE `name` LIKE '$search'";
 		$result=mysqli_query($conn, $sql);
-
-	} else {
+	} else { # si pas de recherche, on prend tous les quiz de la base de données
 		$result = select_all_quizz($conn);
 	}
-	
-	if (mysqli_num_rows($result) == 0){
+	# système d'affichege
+	if (mysqli_num_rows($result) == 0){ # vérifie si on a des quizz à afficher
 		echo("<div id='quizz_name'>Aucun rÃ©sultat pour \"$rSearch\"</div>");
 	} else {
 		while ($row = mysqli_fetch_assoc($result)){
 			$quizzs[] = $row ;
 		}
-		$quizzs = array_reverse($quizzs ,true);
-		foreach($quizzs as $quizz) {
-			if(isset($quizz["image"])) {
-				$background = 'background-image: url("images/'.$quizz["image"].'");' ;
-			} else {
-				$background = "background-color: ".$quizz["color"].";";
-			}		
-			echo "<a href='quizz.php?id=".$quizz["id"]."'  class='quizz' style='".$background."'><div class='nomQuizz'>".$quizz["name"]."</div></a>" ;
+		$quizzs = array_reverse($quizzs ,true); # inversion de l'ordre des quizz pour que les plus récents soient en premier
+		foreach($quizzs as $quizz) {		
+			echo "<a href='quizz.php?id=".$quizz["id"]."'  class='quizz' ><div class='nomQuizz'>".$quizz["name"]."</div></a>" ; # affichage
 		}
 	}
 	?>

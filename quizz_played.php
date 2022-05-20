@@ -19,12 +19,7 @@ include("lib/head.php");
 				if($played_id != '') {
 					if($qizz = select_quizz($conn, intval($played_id))) {
 						$done .= ".".$played_id ;
-						if(isset($qizz["image"])) {
-							$background = 'background-image: url("images/'.$qizz["image"].'");' ;
-						} else {
-							$background = "background-color: ".$qizz["color"].";";
-						}
-						echo "<a href='quizz.php?id=".$qizz["id"]."'  class='quizz' style='".$background."'><div class='nomQuizz'>".$qizz["name"]."</div></a>" ;
+						echo "<a href='quizz.php?id=".$qizz["id"]."'  class='quizz' ><div class='nomQuizz'>".$qizz["name"]."</div></a>" ;
 					}
 				}
 			}

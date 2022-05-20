@@ -4,7 +4,7 @@ include("lib/head.php");
 
 <div class="list_quizz">
 	<?php
-	if(isset($_SESSION["id"])) {
+	if(isset($_SESSION["id"])) { # vérifie si l'utilisateur est connecté
 		include_once("crud/quizz.crud.php");
 		
 		$user = select_user($conn, $_SESSION["id"]) ;
@@ -12,19 +12,14 @@ include("lib/head.php");
 		$fav = "" ;
 		$favoris = explode('.', $user["favoris"]) ;
 		
-		if (count($favoris) < 2){
+		if (count($favoris) < 2){ # vérifie que l'utilisateur a des favoris (la valeur par défault est '' ce qui
 			echo("<div id='quizz_name'>Vous n'avez aucun favoris</div>");
 		} else {
 			foreach($favoris as $fav_id) {
 				if($fav_id != '') {
 					if($qizz = select_quizz($conn, intval($fav_id))) {
 						$fav .= ".".$fav_id ;
-						if(isset($qizz["image"])) {
-							$background = 'background-image: url("images/'.$qizz["image"].'");' ;
-						} else {
-							$background = "background-color: ".$qizz["color"].";";
-						}
-						echo "<a href='quizz.php?id=".$qizz["id"]."'  class='quizz' style='".$background."'><div class='nomQuizz'>".$qizz["name"]."</div></a>" ;
+						echo "<a href='quizz.php?id=".$qizz["id"]."'  class='quizz' ><div class='nomQuizz'>".$qizz["name"]."</div></a>" ;
 					}
 				}
 			}

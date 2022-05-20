@@ -17,13 +17,8 @@ include("lib/head.php");
 				$quizzs[] = $row ;
 			}
 			$quizzs = array_reverse($quizzs ,true);
-			foreach($quizzs as $quizz) {
-				if(isset($row["image"])) {
-					$background = 'background-image: url("images/'.$quizz["image"].'");' ;
-				} else {
-					$background = "background-color: ".$quizz["color"].";";
-				}		
-				echo "<a href='quizz.php?id=".$quizz["id"]."'  class='quizz' style='".$background."'><div class='nomQuizz'>".$quizz["name"]."</div></a>" ;
+			foreach($quizzs as $quizz) {	
+				echo "<a href='quizz.php?id=".$quizz["id"]."'  class='quizz' ><div class='nomQuizz'>".$quizz["name"]."</div></a>" ;
 			}
 		}
 	}  else {
