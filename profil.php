@@ -5,7 +5,7 @@ include('lib/head.php');
 <?php
 include_once('crud/users.crud.php');
 
-if (! isset($_SESSION['id'])){  # vérifie si l'utilisateur est connecté
+if (! isset($_SESSION['id'])){ # vérifie si l'utilisateur est connecté
 	header('location: index.php');
 }
 
@@ -82,7 +82,7 @@ if(isset($_FILES['photo_profil']) and $_FILES['photo_profil']['size'] != 0) {  #
 
 $user = select_user($conn, $_SESSION['id']) ;
 
-if(isset($user["profile_picture"])) {
+if(isset($user["profile_picture"])) { # varifie si l'utilisateur a une photo de profil sinon prend la photo pat défault
 	$image = $user["profile_picture"] ;
 } else {
 	$image = "default-avatar.jpg" ;

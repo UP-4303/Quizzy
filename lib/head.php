@@ -29,24 +29,26 @@
     <div id="menu_pannel" class="no_margin">
         <div id="menu_top_wrapper">				
 			<?php
-				if(isset($_SESSION['id'])){
+			# menu
+				if(isset($_SESSION['id'])){ # vérifie si l'utisisateur est connecté
 					include_once('crud/users.crud.php');
 					$user=select_user($conn, $_SESSION['id']);
-					if(isset($user['profile_picture'])) {
+					if(isset($user['profile_picture'])) { # affiche l'image de profile sinon la photo de base
 						$image = $user['profile_picture'];
 					} else {
 						$image = 'default-avatar.jpg';
 					}
+					# affiche les liens utilisateur
 					echo '<div class="compte_pic" style="background-image: url(\'/l1_info_4/Quizzy/images/'.$image.'\');"></div><h4>Connecté en tant que : '.$user['nickname'].'</h4>';
 					echo '<a href="profil.php">Profil</a>';
 					echo '<a href="favoris.php">Favoris</a>';
 					echo '<a href="mes_creations.php">Mes créations</a>';
 					echo '<a href="quizz_played.php">Mes derniers Quizz</a>';
 					echo '<a href="creation.php">Créer un quizz</a>';
-					if ($_SESSION['admin']){
+					if ($_SESSION['admin']){ # vérifie si l'utisisateur est connecté en tant qu'administrateur
 						echo '<a href="admin/index.php">Accéder à l\'interface administrateur</a>';
 					}
-				}else{
+				}else{ # affiche les liens de connexion / inscription
 					echo '<h4>Déconnecté</h4>';
 					echo '<a href="user_connect.php">Connexion</a>';
 					echo '<a href="user_signup.php">Inscription</a>';

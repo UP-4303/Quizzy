@@ -2,8 +2,8 @@
 include("lib/head.php");
 include_once("crud/quizz.crud.php");
 
-if(isset($_SESSION['id'])){
-	if (isset($_POST["questions"])){
+if(isset($_SESSION['id'])){ # vérifie si l'utisisateur est connecté
+	if (isset($_POST["questions"])){ # vérifie si le quizz (formulaire) a été créé (envoyé)
 		$is_quizz=$_POST['is_quizz'];
 		$name=$_POST['name'];
 		$id=$_SESSION["id"];
@@ -12,10 +12,10 @@ if(isset($_SESSION['id'])){
 		unset($_POST['name']);
 		unset($_POST['questions']);
 		unset($_POST['results']);
-		$a=create_quizz($conn, $name, $is_quizz, $id, $q, $r);
+		$a=create_quizz($conn, $name, $is_quizz, $id, $q, $r); # met la base de donnée à jour
 		print("<h1>Quizz créé !</h1>");
 		include("db/db_disconnect.php") ;
-		return;
+		return; #bloque l'affchage du formulaire
 	}
 }else{
 	print("Veuillez vous connecter pour créer un quizz.");

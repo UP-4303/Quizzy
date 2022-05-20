@@ -2,14 +2,14 @@
 include_once("lib/head.php");
 include_once("crud/users.crud.php");
 
-if (isset($_SESSION['id'])){
+if (isset($_SESSION['id'])){ # vérifie si l'utilisateur est connecté
 	header("Location: index.php");
 }else{
-	if (isset($_POST["login"])){
-		if (connect($conn, $_POST["login"], $_POST["passwd"])){
+	if (isset($_POST["login"])){  # vérifie si un login a été saisie
+		if (connect($conn, $_POST["login"], $_POST["passwd"])){ # connexion
 			header("Location: index.php");
 		}else{
-			print("<h3>Login ou mot de passe incorrect.</h3>");
+			print("<h3>Login ou mot de passe incorrect.</h3>"); #message d'erreure
 		}
 	}
 }

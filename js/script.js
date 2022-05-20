@@ -4,10 +4,12 @@ var menu = "close";
 
 iconeMenu.addEventListener("click", clicMenu);
 
+// met fonction en pause pour que l'animation puisse se faire
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+// gère l'affichage ou non du menu latérale
 async function clicMenu() {
 	if (menu == "close") {
 		menu_col.className = "no_margin menu_open";

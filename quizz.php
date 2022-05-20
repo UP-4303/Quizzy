@@ -3,28 +3,28 @@ include("lib/head.php");
 include_once("crud/quizz.crud.php");
 include_once("crud/users.crud.php");
 
-if (isset($_GET['id'])){
+if (isset($_GET['id'])){ # récupère l'id du quizz à afficher depuis l'url
 	$can_like = "0";
 	$id=$_GET['id'];
 	$quizz=select_quizz($conn, $id);
-	if (! $quizz){
+	if (! $quizz){ # vérifie si le quizz existe
 		print("Quizz inconnu/introuvable.");
 		include("db/db_disconnect.php") ;
 		return;
 	}
 	$json=json_encode($quizz);
-	if (isset($_SESSION["id"])){
+	if (isset($_SESSION["id"])){ # vérifie si l'utisisateur est connecté
 		$can_like = "1";
 		$user = select_user($conn, $_SESSION['id']) ;
 		$done = $user["quizz_done"] ;
 		$played = explode('.', $done) ;
-		if(!in_array($id, $played)) {
-			$up_done = $done.'.'.$id ;
+		if(!in_array($id, $played)) { # vérifie si le quizz est dans les quizz réalisé pour éventuellement l'y ajouter
+			$up_done = '.'.$id.$done ;
 			update_quizz_done($conn, $_SESSION['id'], $up_done) ;
 		}
 		$fav = $user["favoris"] ;
 		$favoris = explode('.', $fav) ;
-		if(! in_array($id, $favoris) ) {
+		if(! in_array($id, $favoris) ) { # vérifie si le quizz est dans les favoris
 			$can_like = "2" ;
 		}
 	}
