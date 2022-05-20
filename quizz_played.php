@@ -25,7 +25,6 @@ include("lib/head.php");
 			}
 			update_quizz_done($conn, $_SESSION["id"], $done) ; # met les quizzs jouée à jours (si un des quizz favoris avais été supprimé il sera retiré
 		}
-		}
 	}  else {
 		echo "<h3>Veuillez vous connecter pour accéder aux quizz réalisés</h3>" ;
 	}
