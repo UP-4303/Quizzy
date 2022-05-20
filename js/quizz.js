@@ -13,6 +13,9 @@ var results = JSON.parse(quizz_data.results)
 var is_quizz = quizz_data.is_quizz=="1"?true:false //false => qcm / true => jauges
 var index = -1 //Correspond à l'index de la question
 
+//Affiche le nom du quizz
+quizz_name.innerHTML = quizz_data.name
+
 if (is_quizz){
 	var jauges = [0,0,0,0]
 }else{
