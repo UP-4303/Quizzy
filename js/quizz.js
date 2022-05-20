@@ -1,20 +1,23 @@
+//Gestion des quizz
+
+//Note : quizz_data et can_like sont chargés dans la page quizz.php
+
+//Récupération des éléments html
 var quizz_name = document.getElementById("quizz_name")
 var quizz_question_number = document.getElementById("quizz_question_number")
 var quizz_question = document.getElementById("quizz_question")
 var buttons = [document.getElementById("choix_un"),document.getElementById("choix_deux"),document.getElementById("choix_trois"),document.getElementById("choix_quatre")]
-var index = -1
-
-quizz_name.innerHTML = quizz_data.name
-var is_quizz = quizz_data.is_quizz=="1"?true:false
 var questions = JSON.parse(quizz_data.questions)
 var results = JSON.parse(quizz_data.results)
+//Set les variables
+var is_quizz = quizz_data.is_quizz=="1"?true:false //false => qcm / true => jauges
+var index = -1 //Correspond à l'index de la question
 
 if (is_quizz){
 	var jauges = [0,0,0,0]
 }else{
 	var points = 0
 }
-
 
 function buttonClicked(evt){
 	if (is_quizz){
@@ -27,23 +30,36 @@ function buttonClicked(evt){
 
 
 function next_question(){
-	for (var button of buttons){button.style.display = "none"; button.onclick = null}
+	//Appelé au début et à chaque changement de question
 	index++
-	if (index == questions.length) return end_quizz()
-	var data = questions[index]
-	quizz_question.innerHTML = data.label
-	quizz_question_number.innerHTML = `Question ${index+1}/${questions.length}`
-	for (var i in data.choices){
-		var choice = data.choices[i]
-		buttons[i].innerHTML = "<div class=\"answer_name\">" + choice.label + "</div>"
-		if (is_quizz) buttons[i].value = choice.jauge
-		else buttons[i].value = choice.points
-		buttons[i].style.display = ""
-		buttons[i].addEventListener("click", buttonClicked)
+	for (var button of buttons){ //Réinitialisation des boutons
+		button.style.display = "none"
+		button.onclick = null
+	}
+	if (index == questions.length){ // Questions finies ?
+		end_quizz()
+	}else{
+		//Affichage prochaine question
+		var data = questions[index] //Sous forme {"label":string, choices:[{"label":string, "points":int OU "jauge":int}, ...]}
+		quizz_question.innerHTML = data.label
+		quizz_question_number.innerHTML = `Question ${index+1}/${questions.length}`
+		for (var i in data.choices){
+			var choice = data.choices[i]
+			buttons[i].innerHTML = "<div class=\"answer_name\">" + choice.label + "</div>"
+			//Redéfini les boutons
+			if (is_quizz){
+				buttons[i].value = choice.jauge
+			}else{
+				buttons[i].value = choice.points
+			}
+			buttons[i].style.display = "" //affiche le bouton (donc uniquement ceux dont on a besoin.)
+			buttons[i].addEventListener("click", buttonClicked)
+		}
 	}
 }
 
 function find_answer(jauges){
+	//Fonction sortant la jauge maximale des 4 jauges.
 	var maxi = jauges[0]
 	var index = 0
 	for (var i in jauges){
@@ -56,6 +72,7 @@ function find_answer(jauges){
 }
 
 function find_qcm_answer(points){
+	//Fonction sortant un tableau avec le nb de points, sur combien au maximum et si oui ou non on a réussi le test
 	var maxi = 0
 	for (var q of questions){
 		var p = 0
@@ -70,6 +87,8 @@ function find_qcm_answer(points){
 }
 
 function end_quizz(){
+	//Fonction appelé à la fin du quizz
+	//Récupération des résultats et affichage
 	if (is_quizz){
 		var res = find_answer(jauges)
 		quizz_question_number.innerHTML = res.label
@@ -79,6 +98,8 @@ function end_quizz(){
 		quizz_question_number.innerHTML = `${res[2]?"Test passé !":"Test raté !"} ${res[0]}/${res[1]}`
 		quizz_question.innerHTML = `Note minimale requise : ${results.required_points}/${res[1]}`
 	}
+	//Gestion du bouton de like
+	//can_like prend 3 valeurs : 0 => non connecté, 1 => connecté et liké, 2 => connecté et pas liké
 	var like = document.getElementById("like")
 	var icone_fav = document.querySelector(".icone_fav");
 	if(can_like == 0) {
@@ -92,4 +113,6 @@ function end_quizz(){
 	}
 }
 
+
+//Premier appel permettant d'afficher la question 1
 next_question()
