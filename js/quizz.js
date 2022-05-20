@@ -81,11 +81,14 @@ function end_quizz(){
 	}
 	var like = document.getElementById("like")
 	var icone_fav = document.querySelector(".icone_fav");
-	like.style.display = ""
-	if(can_like) {
+	if(can_like == 0) {
+		like.style.display = "none"
+	}else if (can_like == 1){
 		icone_fav.style.backgroundImage = "url('/l1_info_4/Quizzy/images/fav_full.png')";
+		like.style.display = ""
 	} else {
 		icone_fav.style.backgroundImage = "url('/l1_info_4/Quizzy/images/fav_empty.png')";
+		like.style.display = ""
 	}
 }
 

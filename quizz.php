@@ -4,7 +4,7 @@ include_once("crud/quizz.crud.php");
 include_once("crud/users.crud.php");
 
 if (isset($_GET['id'])){
-	$can_like = "true";
+	$can_like = "0";
 	$id=$_GET['id'];
 	$quizz=select_quizz($conn, $id);
 	if (! $quizz){
@@ -14,6 +14,7 @@ if (isset($_GET['id'])){
 	}
 	$json=json_encode($quizz);
 	if (isset($_SESSION["id"])){
+		$can_like = "1"
 		$user = select_user($conn, $_SESSION['id']) ;
 		$done = $user["quizz_done"] ;
 		$played = explode('.', $done) ;
@@ -24,7 +25,7 @@ if (isset($_GET['id'])){
 		$fav = $user["favoris"] ;
 		$favoris = explode('.', $fav) ;
 		if(! in_array($id, $favoris) ) {
-			$can_like = "false" ;
+			$can_like = "2" ;
 		}
 	}
 }else{
