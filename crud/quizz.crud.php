@@ -10,7 +10,6 @@ CRUD: Gestion de l'entité quizz
 */
 function create_quizz($conn, $name, $is_quizz, $ownerID, $questions, $results){
 	$sql="INSERT INTO `quizz`(`name`, `is_quizz`, `owner`, `questions`, `results`) values ('$name', '$is_quizz', '$ownerID', '$questions', '$results')";
-	print_r($sql);
 	$ret=mysqli_query($conn, $sql) ;
 	return $ret ;
 }
